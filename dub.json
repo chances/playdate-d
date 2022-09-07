@@ -1,0 +1,23 @@
+{
+  "name": "playdate",
+  "description": "D bindings to the Playdate SDK",
+	"authors": [
+    "Chance Snow"
+	],
+  "license": "MIT",
+	"copyright": "Copyright © 2022, Chance Snow",
+  "targetType": "sourceLibrary",
+  "systemDependencies": "Playdate SDK >= 1.12.1",
+  "subPackages": [
+    "./examples/shapes"
+  ],
+  "configurations": [
+    {
+      "name": "library",
+      "buildOptions": ["betterC"]
+    },
+    {
+      "name": "unittest"
+    }
+  ]
+}

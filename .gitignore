@@ -1,0 +1,16 @@
+.dub
+dub.selections.json
+docs.json
+__dummy.html
+docs/
+/playdate
+playdate.so
+playdate.dylib
+playdate.dll
+playdate.a
+playdate.lib
+playdate-test-*
+*.exe
+*.o
+*.obj
+*.lst
