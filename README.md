@@ -1,4 +1,4 @@
-# playdate-d
+# Playdate D SDK
 
 [![DUB Package](https://img.shields.io/dub/v/playdate.svg)](https://code.dlang.org/packages/playdate)
 ![Playdate D SDK CI](https://github.com/chances/playdate-d/actions/workflows/ci.yml/badge.svg)
