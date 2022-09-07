@@ -1,0 +1,37 @@
+{
+  "name": "shapes",
+  "description": "Shapes example for Playdate D SDK",
+  "authors": [
+    "Chance Snow"
+  ],
+  "license": "BSD 3-clause",
+  "copyright": "Copyright © 2022, Chance Snow",
+  "targetPath": "dist",
+  "targetName": "pdex",
+  "systemDependencies": "Playdate SDK >= 1.12.1",
+  "dependencies": {
+    "playdate": {
+      "path": "../../"
+    }
+  },
+  "configurations": [
+    {
+      "name": "simulator",
+      "targetType": "dynamicLibrary",
+      "postBuildCommands-osx": [
+        "mv dist/libpdex.dylib dist/pdex.dylib"
+      ],
+      "postBuildCommands-posix": [
+        "touch dist/pdex.bin",
+        "$PLAYDATE_SDK_PATH/bin/pdc $PACKAGE_DIR/dist app.pdx"
+      ],
+      "postBuildCommands-windows": [
+        "pdc $PACKAGE_DIR/dist app.pdx"
+      ]
+    },
+    {
+      "name": "device",
+      "targetType": "staticLibrary"
+    }
+  ]
+}
