@@ -53,7 +53,7 @@ struct LCDRect {
   int bottom;
 
   ///
-	pragma(inline) LCDRect translate(int dx, int dy) {
+	pragma(inline) LCDRect translate(int dx, int dy) const {
 		return LCDRect(this.left + dx, this.right + dx, this.top + dy, this.bottom + dy);
 	}
 }
@@ -61,6 +61,20 @@ struct LCDRect {
 /// Remarks: Assumes width and height are positive.
 pragma(inline) LCDRect makeRect(int x, int y, int width, int height) {
 	return LCDRect(x, x + width, y, y + height);
+}
+
+unittest {
+  const rect = makeRect(5, 10, 20, 40);
+  assert(rect.left == 5);
+  assert(rect.right == 25);
+  assert(rect.top == 10);
+  assert(rect.bottom == 50);
+
+  const translatedRect = rect.translate(20, 20);
+  assert(translatedRect.left == 25);
+  assert(translatedRect.right == 45);
+  assert(translatedRect.top == 30);
+  assert(translatedRect.bottom == 70);
 }
 
 ///
@@ -232,6 +246,19 @@ struct System {
 ///
 void logToConsole(System* system, string message) {
   system.logToConsole(message.ptr);
+}
+
+version (unittest) {
+  static message = "test";
+  extern (C) void log(const(char*) msg, ...) {
+    assert(msg == message.ptr);
+  }
+}
+
+unittest {
+  auto system = System();
+  system.logToConsole = &log;
+  logToConsole(&system, message);
 }
 
 ///
@@ -418,6 +445,22 @@ struct Graphics {
 ///
 int drawText(Graphics* gfx, string text, int x, int y, PDStringEncoding encoding = PDStringEncoding.asciiEncoding) {
   return gfx.drawText(text.ptr, text.length, encoding, x, y);
+}
+
+version (unittest) {
+  static txt = "test";
+  extern (C) int drawTextTest(const void* text, size_t len, PDStringEncoding encoding, int x, int y) {
+    assert(text == txt.ptr);
+    assert(len == txt.length);
+    assert(encoding == PDStringEncoding.asciiEncoding);
+    return 0;
+  }
+}
+
+unittest {
+  auto gfx = Graphics();
+  gfx.drawText = &drawTextTest;
+  assert(drawText(&gfx, message, 5, 5) == 0);
 }
 
 ///
