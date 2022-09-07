@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Module playdate</title>
+		<link rel="stylesheet" type="text/css" href="./styles/ddox.css"/>
+		<link rel="stylesheet" href="./prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="./scripts/jquery.js">/**/</script><script type="text/javascript" src="./scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="./symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "./";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module selected">
+						<a href="./playdate.html">playdate</a>
+					</div>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>Module playdate</h1><p></p>
+			<section></section>
+			<section>
+				<h2>Functions</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="drawText" class="public" href="./playdate/drawText.html">drawText</a><span class="tableEntryAnnotation">(gfx, text, x, y, encoding)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="logToConsole" class="public" href="./playdate/logToConsole.html">logToConsole</a><span class="tableEntryAnnotation">(system, message)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="makeRect" class="public" href="./playdate/makeRect.html">makeRect</a><span class="tableEntryAnnotation">(x, y, width, height)</span>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Structs</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="Display" class="public" href="./playdate/Display.html">Display</a>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="File" class="public" href="./playdate/File.html">File</a>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="Graphics" class="public" href="./playdate/Graphics.html">Graphics</a>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="Json" class="public" href="./playdate/Json.html">Json</a>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="LCDRect" class="public" href="./playdate/LCDRect.html">LCDRect</a>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="Lua" class="public" href="./playdate/Lua.html">Lua</a>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="PlaydateAPI" class="public" href="./playdate/PlaydateAPI.html">PlaydateAPI</a>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="Scoreboards" class="public" href="./playdate/Scoreboards.html">Scoreboards</a>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="Sound" class="public" href="./playdate/Sound.html">Sound</a>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="Sprite" class="public" href="./playdate/Sprite.html">Sprite</a>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="System" class="public" href="./playdate/System.html">System</a>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="Video" class="public" href="./playdate/Video.html">Video</a>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Enums</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="LCDBitmapDrawMode" class="public" href="./playdate/LCDBitmapDrawMode.html">LCDBitmapDrawMode</a>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="LCDBitmapFlip" class="public" href="./playdate/LCDBitmapFlip.html">LCDBitmapFlip</a>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="LCDLineCapStyle" class="public" href="./playdate/LCDLineCapStyle.html">LCDLineCapStyle</a>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="LCDPolygonFillRule" class="public" href="./playdate/LCDPolygonFillRule.html">LCDPolygonFillRule</a>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="LCDSolidColor" class="public" href="./playdate/LCDSolidColor.html">LCDSolidColor</a>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="PDButtons" class="public" href="./playdate/PDButtons.html">PDButtons</a>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="PDLanguage" class="public" href="./playdate/PDLanguage.html">PDLanguage</a>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="PDPeripherals" class="public" href="./playdate/PDPeripherals.html">PDPeripherals</a>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="PDStringEncoding" class="public" href="./playdate/PDStringEncoding.html">PDStringEncoding</a>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="PDSystemEvent" class="public" href="./playdate/PDSystemEvent.html">PDSystemEvent</a>
+							</code>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Templates</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="EventHandlerShim" class="public" href="./playdate/EventHandlerShim.html">EventHandlerShim</a>
+							</code>
+						</td>
+						<td>Generates a shim around your <code class="lang-d"><span class="pln">eventHandler</span></code> used by the Playdate OS as the entry-point to your application.
+</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Manifest constants</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Type</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a id="LCD_COLUMNS" class="public" href="./playdate/LCD_COLUMNS.html">
+								<code>LCD_COLUMNS</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="LCD_ROWS" class="public" href="./playdate/LCD_ROWS.html">
+								<code>LCD_ROWS</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="LCD_ROWSIZE" class="public" href="./playdate/LCD_ROWSIZE.html">
+								<code>LCD_ROWSIZE</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="LCD_SCREEN_RECT" class="public" href="./playdate/LCD_SCREEN_RECT.html">
+								<code>LCD_SCREEN_RECT</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Aliases</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Type</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a id="PDCallbackFunction" class="public" href="./playdate/PDCallbackFunction.html">
+								<code>PDCallbackFunction</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"><span class="typ">int</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span></code>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a id="PDMenuItemCallbackFunction" class="public" href="./playdate/PDMenuItemCallbackFunction.html">
+								<code>PDMenuItemCallbackFunction</code>
+							</a>
+						</td>
+						<td>
+							<code class="prettyprint lang-d"><span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span></code>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			<footer>
+				<table class="license-info">
+					<tr>
+						<th>Authors</th>
+						<td>
+							<p>Chance Snow
+</p>
+
+						</td>
+					</tr>
+					<tr>
+						<th>Copyright</th>
+						<td>
+							<p>Copyright © 2022 Chance Snow. All rights reserved.
+</p>
+
+						</td>
+					</tr>
+					<tr>
+						<th>License</th>
+						<td>
+							<p>MIT License
+</p>
+
+						</td>
+					</tr>
+				</table>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>
