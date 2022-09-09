@@ -13,7 +13,7 @@ static PlaydateAPI* pd;
 
 mixin EventHandlerShim;
 
-int eventHandler(PlaydateAPI* playdate, PDSystemEvent event, uint arg) {
+int eventHandler(PlaydateAPI* playdate, PDSystemEvent event, uint arg) @nogc {
 	final switch (event) {
 		case PDSystemEvent.init:
 			pd = playdate;
@@ -49,7 +49,7 @@ int eventHandler(PlaydateAPI* playdate, PDSystemEvent event, uint arg) {
     return 0;
 }
 
-static int update(void* userData) {
+static int update(void* userData) @nogc {
   pd.graphics.clear(LCDSolidColor.white);
 	pd.graphics.drawRect(5, 5, LCD_COLUMNS - 10, LCD_ROWS - 10, LCDSolidColor.black);
   pd.graphics.drawLine(LCD_COLUMNS / 2, 5, 5, LCD_ROWS - 5, 1, LCDSolidColor.black);

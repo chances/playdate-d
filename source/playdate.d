@@ -149,102 +149,102 @@ enum PDSystemEvent {
 }
 
 ///
-alias PDCallbackFunction = int function(void* userData);
+alias PDCallbackFunction = int function(void* userData) @nogc;
 ///
-alias PDMenuItemCallbackFunction = void function(void* userdata);
+alias PDMenuItemCallbackFunction = void function(void* userdata) @nogc;
 
 extern (C):
 
 ///
 struct System {
 	/// ptr = NULL -> malloc, size = 0 -> free
-	void* function(void* ptr, size_t size) realloc;
+	void* function(void* ptr, size_t size) @nogc realloc;
   ///
-	int function(char **ret, const char *fmt, ...) formatString;
+	int function(char **ret, const char *fmt, ...) @nogc formatString;
   ///
-	void function(const char* fmt, ...) logToConsole;
+	void function(const char* fmt, ...) @nogc logToConsole;
   ///
-	void function(const char* fmt, ...) error;
+	void function(const char* fmt, ...) @nogc error;
   ///
 	///
-  PDLanguage function() getLanguage;
+  PDLanguage function() @nogc getLanguage;
 	///
-  uint function() getCurrentTimeMilliseconds;
+  uint function() @nogc getCurrentTimeMilliseconds;
 	///
-  uint function(uint *milliseconds) getSecondsSinceEpoch;
+  uint function(uint *milliseconds) @nogc getSecondsSinceEpoch;
 	///
-  void function(int x, int y) drawFPS;
+  void function(int x, int y) @nogc drawFPS;
 
 	///
-  void function(PDCallbackFunction update, void* userdata) setUpdateCallback;
+  void function(PDCallbackFunction update, void* userdata) @nogc setUpdateCallback;
 	///
-  void function(PDButtons* current, PDButtons* pushed, PDButtons* released) getButtonState;
+  void function(PDButtons* current, PDButtons* pushed, PDButtons* released) @nogc getButtonState;
 	///
-  void function(PDPeripherals mask) setPeripheralsEnabled;
+  void function(PDPeripherals mask) @nogc setPeripheralsEnabled;
 	///
-  void function(float* outx, float* outy, float* outz) getAccelerometer;
+  void function(float* outx, float* outy, float* outz) @nogc getAccelerometer;
 
 	///
-  float function() getCrankChange;
+  float function() @nogc getCrankChange;
 	///
-  float function() getCrankAngle;
+  float function() @nogc getCrankAngle;
 	///
-  int function() isCrankDocked;
+  int function() @nogc isCrankDocked;
 	/// returns previous setting
-	int function(int flag) setCrankSoundsDisabled;
+	int function(int flag) @nogc setCrankSoundsDisabled;
 
 	///
-  int function() getFlipped;
+  int function() @nogc getFlipped;
 	///
-  void function(int disable) setAutoLockDisabled;
+  void function(int disable) @nogc setAutoLockDisabled;
 
 	///
-  void function(LCDBitmap* bitmap, int xOffset) setMenuImage;
+  void function(LCDBitmap* bitmap, int xOffset) @nogc setMenuImage;
 	///
-  PDMenuItem* function(const char *title, PDMenuItemCallbackFunction callback, void* userdata) addMenuItem;
+  PDMenuItem* function(const char *title, PDMenuItemCallbackFunction callback, void* userdata) @nogc addMenuItem;
 	///
   PDMenuItem* function(
 		const char *title, int value, PDMenuItemCallbackFunction callback, void* userdata
-	) addCheckmarkMenuItem;
+	) @nogc addCheckmarkMenuItem;
 	///
   PDMenuItem* function(
 		const char *title, const char** optionTitles, int optionsCount, PDMenuItemCallbackFunction f, void* userdata
-	) addOptionsMenuItem;
+	) @nogc addOptionsMenuItem;
 	///
-  void function() removeAllMenuItems;
+  void function() @nogc removeAllMenuItems;
 	///
-  void function(PDMenuItem *menuItem) removeMenuItem;
+  void function(PDMenuItem *menuItem) @nogc removeMenuItem;
 	///
-  int function(PDMenuItem *menuItem) getMenuItemValue;
+  int function(PDMenuItem *menuItem) @nogc getMenuItemValue;
 	///
-  void function(PDMenuItem *menuItem, int value) setMenuItemValue;
+  void function(PDMenuItem *menuItem, int value) @nogc setMenuItemValue;
 	///
-  const(char*) function(PDMenuItem *menuItem) getMenuItemTitle;
+  const(char*) function(PDMenuItem *menuItem) @nogc getMenuItemTitle;
 	///
-  void function(PDMenuItem *menuItem, const char *title) setMenuItemTitle;
+  void function(PDMenuItem *menuItem, const char *title) @nogc setMenuItemTitle;
 	///
-  void* function(PDMenuItem *menuItem) getMenuItemUserdata;
+  void* function(PDMenuItem *menuItem) @nogc getMenuItemUserdata;
 	///
-  void function(PDMenuItem *menuItem, void *ud) setMenuItemUserdata;
+  void function(PDMenuItem *menuItem, void *ud) @nogc setMenuItemUserdata;
 
 	///
-  int function() getReduceFlashing;
+  int function() @nogc getReduceFlashing;
 
 	// 1.1
 	///
-  float function() getElapsedTime;
+  float function() @nogc getElapsedTime;
 	///
-  void function() resetElapsedTime;
+  void function() @nogc resetElapsedTime;
 
 	// 1.4
 	///
-  float function() getBatteryPercentage;
+  float function() @nogc getBatteryPercentage;
 	///
-  float function() getBatteryVoltage;
+  float function() @nogc getBatteryVoltage;
 }
 
 ///
-void logToConsole(System* system, string message) {
+void logToConsole(System* system, string message) @nogc {
   system.logToConsole(message.ptr);
 }
 
@@ -295,155 +295,157 @@ struct Graphics {
 
 	// Drawing Functions
 	///
-  void function(LCDColor color) clear;
+  void function(LCDColor color) @nogc clear;
 	///
-  void function(LCDSolidColor color) setBackgroundColor;
+  void function(LCDSolidColor color) @nogc setBackgroundColor;
 	///
-  void function(LCDBitmap* stencil) setStencil; // deprecated in favor of setStencilImage, which adds a "tile" flag
+  void function(LCDBitmap* stencil) setStencil; // deprecated in favor of setStencilImage, which adds a "tile" @nogc flag
 	///
-  void function(LCDBitmapDrawMode mode) setDrawMode;
+  void function(LCDBitmapDrawMode mode) @nogc setDrawMode;
 	///
-  void function(int dx, int dy) setDrawOffset;
+  void function(int dx, int dy) @nogc setDrawOffset;
 	///
-  void function(int x, int y, int width, int height) setClipRect;
+  void function(int x, int y, int width, int height) @nogc setClipRect;
 	///
-  void function() clearClipRect;
+  void function() @nogc clearClipRect;
 	///
-  void function(LCDLineCapStyle endCapStyle) setLineCapStyle;
+  void function(LCDLineCapStyle endCapStyle) @nogc setLineCapStyle;
 	///
-  void function(LCDFont* font) setFont;
+  void function(LCDFont* font) @nogc setFont;
 	///
-  void function(int tracking) setTextTracking;
+  void function(int tracking) @nogc setTextTracking;
 	///
-  void function(LCDBitmap* target) pushContext;
+  void function(LCDBitmap* target) @nogc pushContext;
 	///
-  void function() popContext;
+  void function() @nogc popContext;
 
 	///
-  void function(LCDBitmap* bitmap, int x, int y, LCDBitmapFlip flip) drawBitmap;
+  void function(LCDBitmap* bitmap, int x, int y, LCDBitmapFlip flip) @nogc drawBitmap;
 	///
-  void function(LCDBitmap* bitmap, int x, int y, int width, int height, LCDBitmapFlip flip) tileBitmap;
+  void function(LCDBitmap* bitmap, int x, int y, int width, int height, LCDBitmapFlip flip) @nogc tileBitmap;
 	///
-  void function(int x1, int y1, int x2, int y2, int width, LCDColor color) drawLine;
+  void function(int x1, int y1, int x2, int y2, int width, LCDColor color) @nogc drawLine;
 	///
-  void function(int x1, int y1, int x2, int y2, int x3, int y3, LCDColor color) fillTriangle;
+  void function(int x1, int y1, int x2, int y2, int x3, int y3, LCDColor color) @nogc fillTriangle;
 	///
-  void function(int x, int y, int width, int height, LCDColor color) drawRect;
+  void function(int x, int y, int width, int height, LCDColor color) @nogc drawRect;
 	///
-  void function(int x, int y, int width, int height, LCDColor color) fillRect;
+  void function(int x, int y, int width, int height, LCDColor color) @nogc fillRect;
 	/// stroked inside the rect
 	void function(
 		int x, int y, int width, int height, int lineWidth, float startAngle, float endAngle, LCDColor color
-	) drawEllipse;
+	) @nogc drawEllipse;
 	///
-  void function(int x, int y, int width, int height, float startAngle, float endAngle, LCDColor color) fillEllipse;
+  void function(int x, int y, int width, int height, float startAngle, float endAngle, LCDColor color) @nogc fillEllipse;
 	///
-  void function(LCDBitmap* bitmap, int x, int y, float xscale, float yscale) drawScaledBitmap;
+  void function(LCDBitmap* bitmap, int x, int y, float xscale, float yscale) @nogc drawScaledBitmap;
 	///
-  int  function(const void* text, size_t len, PDStringEncoding encoding, int x, int y) drawText;
+  int  function(const void* text, size_t len, PDStringEncoding encoding, int x, int y) @nogc drawText;
 
 	// LCDBitmap
 	///
-  LCDBitmap* function(int width, int height, LCDColor bgcolor) newBitmap;
+  LCDBitmap* function(int width, int height, LCDColor bgcolor) @nogc newBitmap;
 	///
-  void function(LCDBitmap*) freeBitmap;
+  void function(LCDBitmap*) @nogc freeBitmap;
 	///
-  LCDBitmap* function(const char* path, const char** outerr) loadBitmap;
+  LCDBitmap* function(const char* path, const char** outerr) @nogc loadBitmap;
 	///
-  LCDBitmap* function(LCDBitmap* bitmap) copyBitmap;
+  LCDBitmap* function(LCDBitmap* bitmap) @nogc copyBitmap;
 	///
-  void function(const char* path, LCDBitmap* bitmap, const char** outerr) loadIntoBitmap;
+  void function(const char* path, LCDBitmap* bitmap, const char** outerr) @nogc loadIntoBitmap;
 	///
-  void function(LCDBitmap* bitmap, int* width, int* height, int* rowbytes, ubyte** mask, ubyte** data) getBitmapData;
+  void function(LCDBitmap* bitmap, int* width, int* height, int* rowbytes, ubyte** mask, ubyte** data) @nogc getBitmapData;
 	///
-  void function(LCDBitmap* bitmap, LCDColor bgcolor) clearBitmap;
+  void function(LCDBitmap* bitmap, LCDColor bgcolor) @nogc clearBitmap;
 	///
-  LCDBitmap* function(LCDBitmap* bitmap, float rotation, float xscale, float yscale, int* allocedSize) rotatedBitmap;
+  LCDBitmap* function(LCDBitmap* bitmap, float rotation, float xscale, float yscale, int* allocedSize) @nogc rotatedBitmap;
 
 	// LCDBitmapTable
 	///
-  LCDBitmapTable* function(int count, int width, int height) newBitmapTable;
+  LCDBitmapTable* function(int count, int width, int height) @nogc newBitmapTable;
 	///
-  void function(LCDBitmapTable* table) freeBitmapTable;
+  void function(LCDBitmapTable* table) @nogc freeBitmapTable;
 	///
-  LCDBitmapTable* function(const char* path, const char** outerr) loadBitmapTable;
+  LCDBitmapTable* function(const char* path, const char** outerr) @nogc loadBitmapTable;
 	///
-  void function(const char* path, LCDBitmapTable* table, const char** outerr) loadIntoBitmapTable;
+  void function(const char* path, LCDBitmapTable* table, const char** outerr) @nogc loadIntoBitmapTable;
 	///
-  LCDBitmap* function(LCDBitmapTable* table, int idx) getTableBitmap;
+  LCDBitmap* function(LCDBitmapTable* table, int idx) @nogc getTableBitmap;
 
 	// LCDFont
 	///
-  LCDFont* function(const char* path, const char** outErr) loadFont;
+  LCDFont* function(const char* path, const char** outErr) @nogc loadFont;
 	///
-  LCDFontPage* function(LCDFont* font, uint c) getFontPage;
+  LCDFontPage* function(LCDFont* font, uint c) @nogc getFontPage;
 	///
-  LCDFontGlyph* function(LCDFontPage* page, uint c, LCDBitmap** bitmap, int* advance) getPageGlyph;
+  LCDFontGlyph* function(LCDFontPage* page, uint c, LCDBitmap** bitmap, int* advance) @nogc getPageGlyph;
 	///
-  int function(LCDFontGlyph* glyph, uint glyphcode, uint nextcode) getGlyphKerning;
+  int function(LCDFontGlyph* glyph, uint glyphcode, uint nextcode) @nogc getGlyphKerning;
 	///
-  int function(LCDFont* font, const void* text, size_t len, PDStringEncoding encoding, int tracking) getTextWidth;
+  int function(LCDFont* font, const void* text, size_t len, PDStringEncoding encoding, int tracking) @nogc getTextWidth;
 
 	// raw framebuffer access
 	///
-  ubyte* function() getFrame; // row stride = LCD_ROWSIZE
+  ubyte* function() getFrame; // row stride = @nogc LCD_ROWSIZE
 	///
-  ubyte* function() getDisplayFrame; // row stride = LCD_ROWSIZE
+  ubyte* function() getDisplayFrame; // row stride = @nogc LCD_ROWSIZE
 	///
-  LCDBitmap* function() getDebugBitmap; // valid in simulator only, function is NULL on device
+  LCDBitmap* function() getDebugBitmap; // valid in simulator only, function is NULL on @nogc device
 	///
-  LCDBitmap* function() copyFrameBufferBitmap;
+  LCDBitmap* function() @nogc copyFrameBufferBitmap;
 	///
-  void function(int start, int end) markUpdatedRows;
+  void function(int start, int end) @nogc markUpdatedRows;
 	///
-  void function() display;
+  void function() @nogc display;
 
 	/// misc util.
-  void function(LCDColor* color, LCDBitmap* bitmap, int x, int y) setColorToPattern;
+  void function(LCDColor* color, LCDBitmap* bitmap, int x, int y) @nogc setColorToPattern;
   ///
 	int function(
 		LCDBitmap* bitmap1, int x1, int y1, LCDBitmapFlip flip1,
 		LCDBitmap* bitmap2, int x2, int y2, LCDBitmapFlip flip2,
 		LCDRect rect
-	) checkMaskCollision;
+	) @nogc checkMaskCollision;
 
 	// 1.1
   ///
-	void function(int x, int y, int width, int height) setScreenClipRect;
+	void function(int x, int y, int width, int height) @nogc setScreenClipRect;
 
 	// 1.1.1
   ///
-	void function(int nPoints, int* coords, LCDColor color, LCDPolygonFillRule fillrule) fillPolygon;
+	void function(int nPoints, int* coords, LCDColor color, LCDPolygonFillRule fillrule) @nogc fillPolygon;
 	///
-  ubyte function(LCDFont* font) getFontHeight;
+  ubyte function(LCDFont* font) @nogc getFontHeight;
 
 	// 1.7
   ///
-	LCDBitmap* function() getDisplayBufferBitmap;
+	LCDBitmap* function() @nogc getDisplayBufferBitmap;
   ///
 	void function(
 		LCDBitmap* bitmap, int x, int y, float rotation, float centerx, float centery, float xscale, float yscale
-	) drawRotatedBitmap;
+	) @nogc drawRotatedBitmap;
   ///
-	void function(int lineHeightAdustment) setTextLeading;
+	void function(int lineHeightAdustment) @nogc setTextLeading;
 
 	// 1.8
   ///
-	int function(LCDBitmap* bitmap, LCDBitmap* mask) setBitmapMask;
+	int function(LCDBitmap* bitmap, LCDBitmap* mask) @nogc setBitmapMask;
   ///
-	LCDBitmap* function(LCDBitmap* bitmap) getBitmapMask;
+	LCDBitmap* function(LCDBitmap* bitmap) @nogc getBitmapMask;
 
 	// 1.10
   ///
-	void function(LCDBitmap* stencil, int tile) setStencilImage;
+	void function(LCDBitmap* stencil, int tile) @nogc setStencilImage;
 
 	// 1.12
   ///
-	LCDFont* function(LCDFontData* data, int wide) makeFontFromData;
+	LCDFont* function(LCDFontData* data, int wide) @nogc makeFontFromData;
 }
 
 ///
-int drawText(Graphics* gfx, string text, int x, int y, PDStringEncoding encoding = PDStringEncoding.asciiEncoding) {
+int drawText(
+  Graphics* gfx, string text, int x, int y, PDStringEncoding encoding = PDStringEncoding.asciiEncoding
+) @nogc {
   return gfx.drawText(text.ptr, text.length, encoding, x, y);
 }
 
@@ -471,23 +473,23 @@ struct Sprite {
 ///
 struct Display {
 	///
-  int function() getWidth;
+  int function() @nogc getWidth;
 	///
-  int function() getHeight;
+  int function() @nogc getHeight;
 
 	///
-  void function(float rate) setRefreshRate;
+  void function(float rate) @nogc setRefreshRate;
 
 	///
-  void function(int flag) setInverted;
+  void function(int flag) @nogc setInverted;
 	///
-  void function(uint s) setScale;
+  void function(uint s) @nogc setScale;
 	///
-  void function(uint x, uint y) setMosaic;
+  void function(uint x, uint y) @nogc setMosaic;
 	///
-  void function(int x, int y) setFlipped;
+  void function(int x, int y) @nogc setFlipped;
 	///
-  void function(int x, int y) setOffset;
+  void function(int x, int y) @nogc setOffset;
 }
 
 ///
@@ -534,7 +536,7 @@ struct PlaydateAPI {
 
 /// Generates a shim around your `eventHandler` used by the Playdate OS as the entry-point to your application.
 mixin template EventHandlerShim() {
-  extern (C) int eventHandlerShim(PlaydateAPI* playdate, PDSystemEvent event, uint arg) {
+  extern (C) int eventHandlerShim(PlaydateAPI* playdate, PDSystemEvent event, uint arg) @nogc {
     return eventHandler(playdate, event, arg);
   }
 }
