@@ -16,6 +16,7 @@ alias LCDFontPage = Alias!(void*);
 alias LCDFontGlyph = Alias!(void*);
 alias LCDVideoPlayer = Alias!(void*);
 alias PDMenuItem = Alias!(void*);
+alias SDFile = Alias!(void*);
 
 ///
 enum PDButtons : int {
@@ -262,8 +263,70 @@ unittest {
 }
 
 ///
+enum FileOptions {
+	///
+  read      = (1<<0),
+	///
+  readData  = (1<<1),
+	///
+  write     = (1<<2),
+	///
+  append    = (2<<2)
+}
+
+///
+struct FileStat {
+	/// Whether the file is a directory.
+  int isDir;
+	/// Size of the file, in bytes.
+  uint size;
+	/// Year component of the file's last modified date.
+  int m_year;
+	/// Month component of the file's last modified date.
+  int m_month;
+	/// Day component of the file's last modified date.
+  int m_day;
+	/// Hour component of the file's last modified date.
+  int m_hour;
+	/// Minute component of the file's last modified date.
+  int m_minute;
+	/// Second component of the file's last modified date.
+  int m_second;
+}
+
+///
 struct File {
-  // TODO: Implement Playdate File API
+  ///
+  const(char*) function(void) @nogc getErr;
+
+	///
+  int function(
+    const char* path, void function(const char* path, void* userdata) callback, void* userdata,
+    bool showHidden
+  ) @nogc listFiles;
+	///
+  int function(const char* path, FileStat* stat) @nogc stat;
+	///
+  int function(const char* path) @nogc mkdir;
+	///
+  int function(const char* name, int recursive) @nogc unlink;
+  ///
+	int function(const char* from, const char* to) @nogc rename;
+
+	///
+  SDFile function(const char* name, FileOptions mode) @nogc open;
+	///
+  int function(SDFile file) @nogc close;
+	///
+  int function(SDFile file, void* buf, uint len) @nogc read;
+	///
+  int function(SDFile file, const void* buf, uint len) @nogc write;
+	///
+  int function(SDFile file) @nogc flush;
+	///
+  int function(SDFile file) @nogc tell;
+	///
+  int function(SDFile file, int pos, int whence) @nogc seek;
 }
 
 ///
