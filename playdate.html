@@ -475,7 +475,7 @@ $('#symbolSearchPane').show();</script>
 							</a>
 						</td>
 						<td>
-							<code class="prettyprint lang-d"><span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">bool</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">, </span><span class="typ">short</span><span class="pun">*</span><span class="pun">, </span><span class="typ">short</span><span class="pun">*</span><span class="pun">, </span><span class="typ">int</span><span class="pun">)</span></code>
+							<code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="typ">bool</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">, </span><span class="typ">short</span><span class="pun">*</span><span class="pun">, </span><span class="typ">short</span><span class="pun">*</span><span class="pun">, </span><span class="typ">int</span><span class="pun">)</span></code>
 						</td>
 						<td>Fill the passed-in <code class="lang-d"><span class="pln">left</span></code> buffer (and <code class="lang-d"><span class="pln">right</span></code> if it’s a stereo source) with <code class="lang-d"><span class="pln">len</span></code> samples each and return <code class="lang-d"><span class="kwd">true</span></code>, or <code class="lang-d"><span class="kwd">false</span></code> if the source is silent through the cycle.
 </td>
@@ -487,7 +487,7 @@ $('#symbolSearchPane').show();</script>
 							</a>
 						</td>
 						<td>
-							<code class="prettyprint lang-d"><span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">bool</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">, </span><span class="typ">int</span><span class="pun">*</span><span class="pun">, </span><span class="typ">int</span><span class="pun">*</span><span class="pun">, </span><span class="typ">int</span><span class="pun">, </span><span class="typ">bool</span><span class="pun">)</span></code>
+							<code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="typ">bool</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">, </span><span class="typ">int</span><span class="pun">*</span><span class="pun">, </span><span class="typ">int</span><span class="pun">*</span><span class="pun">, </span><span class="typ">int</span><span class="pun">, </span><span class="typ">bool</span><span class="pun">)</span></code>
 						</td>
 						<td><code class="lang-d"><span class="pln">bufactive</span></code> is <code class="lang-d"><span class="kwd">true</span></code> if samples have been set in the left or right buffers.
 Return <code class="lang-d"><span class="kwd">true</span></code> if it changed the buffer samples, otherwise <code class="lang-d"><span class="kwd">false</span></code>.
@@ -537,7 +537,7 @@ Its <code class="lang-d"><span class="typ">PDSynthSignal</span></code> subclass 
 							</a>
 						</td>
 						<td>
-							<code class="prettyprint lang-d"><span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">bool</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">, </span><span class="typ">short</span><span class="pun">*</span><span class="pun">, </span><span class="typ">int</span><span class="pun">)</span></code>
+							<code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="typ">bool</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">, </span><span class="typ">short</span><span class="pun">*</span><span class="pun">, </span><span class="typ">int</span><span class="pun">)</span></code>
 						</td>
 						<td>Called with the recorded audio data, a monophonic stream of samples.
 </td>
