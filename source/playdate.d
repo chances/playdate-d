@@ -266,7 +266,7 @@ void logToConsole(System* system, string message) @nogc {
 
 version (unittest) {
   static message = "test";
-  extern (C) void log(const(char*) msg, ...) {
+  extern (C) void log(const(char*) msg, ...) @nogc {
     assert(msg == message.ptr);
   }
 }
@@ -529,7 +529,7 @@ int drawText(
 
 version (unittest) {
   static txt = "test";
-  extern (C) int drawTextTest(const void* text, size_t len, PDStringEncoding encoding, int x, int y) {
+  extern (C) int drawTextTest(const void* text, size_t len, PDStringEncoding encoding, int x, int y) @nogc {
     assert(text == txt.ptr);
     assert(len == txt.length);
     assert(encoding == PDStringEncoding.asciiEncoding);
