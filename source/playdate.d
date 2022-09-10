@@ -169,6 +169,20 @@ alias PDCallbackFunction = int function(void* userData) @nogc;
 ///
 alias PDMenuItemCallbackFunction = void function(void* userdata) @nogc;
 
+/// Fill the passed-in `left` buffer (and `right` if it’s a stereo source) with `len` samples each and return `true`, or `false` if the source is silent through the cycle.
+alias AudioSourceFunction = bool function(void* context, short* left, short* right, int len) @nogc;
+
+/// Called with the recorded audio data, a monophonic stream of samples.
+///
+/// Return `true` to continue recording, `false` to stop recording.
+/// See_Also: `Sound.setMicCallback`
+alias RecordCallback = bool function (void* context, short* buffer, int length) @nogc;
+
+/// `bufactive` is `true` if samples have been set in the left or right buffers.
+/// Return `true` if it changed the buffer samples, otherwise `false`.
+/// `left` and `right` (if the effect is on a stereo channel) are sample buffers in signed Q8.24 format.
+alias effectProc = bool function(SoundEffect e, int* left, int* right, int nsamples, bool bufactive) @nogc;
+
 extern (C):
 
 ///
@@ -573,15 +587,6 @@ struct Display {
 /// A SoundChannel contains `SoundSource`s and `SoundEffect`s.
 alias SoundChannel = Alias!(void*);
 
-/// Fill the passed-in `left` buffer (and `right` if it’s a stereo source) with `len` samples each and return `true`, or `false` if the source is silent through the cycle.
-alias AudioSourceFunction = bool function(void* context, short* left, short* right, int len);
-
-/// Called with the recorded audio data, a monophonic stream of samples.
-///
-/// Return `true` to continue recording, `false` to stop recording.
-/// See_Also: `Sound.setMicCallback`
-alias RecordCallback = bool function (void* context, short* buffer, int length);
-
 ///
 struct SoundChannelApi {
   ///
@@ -648,10 +653,6 @@ struct SoundSequence {
 
 ///
 alias SoundEffect = Alias!(void*);
-/// `bufactive` is `true` if samples have been set in the left or right buffers.
-/// Return `true` if it changed the buffer samples, otherwise `false`.
-/// `left` and `right` (if the effect is on a stereo channel) are sample buffers in signed Q8.24 format.
-alias effectProc = bool function(SoundEffect e, int* left, int* right, int nsamples, bool bufactive);
 
 ///
 struct SoundEffectApi {
