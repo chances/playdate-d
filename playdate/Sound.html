@@ -38,6 +38,160 @@ $('#symbolSearchPane').show();</script>
 				</code>
 			</div>
 			
+			<section><h2>Fields</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Type</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../playdate/Sound.addChannel.html" class="public"><code>addChannel</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../playdate/Sound.addSource.html" class="public"><code>addSource</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <a href="../playdate/SoundSource.html"><span class="typ">SoundSource</span></a><span class="pun">*</span> <span class="kwd">function</span><span class="pun">(</span><span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">bool</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">, </span><span class="typ">short</span><span class="pun">*</span><span class="pun">, </span><span class="typ">short</span><span class="pun">*</span><span class="pun">, </span><span class="typ">int</span><span class="pun">)</span> *<span class="pun">, </span><span class="typ">void</span><span class="pun">*</span><span class="pun">, </span><span class="typ">bool</span><span class="pun">)</span></code></td><td>The <code class="lang-d"><span class="pln">callback</span></code> function you pass in will be called every audio render cycle.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../playdate/Sound.channel.html" class="public"><code>channel</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../playdate/SoundChannelApi.html"><span class="typ">SoundChannelApi</span></a><span class="pun">*</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../playdate/Sound.controlsignal.html" class="public"><code>controlsignal</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../playdate/ControlSignal.html"><span class="typ">ControlSignal</span></a><span class="pun">*</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../playdate/Sound.effect.html" class="public"><code>effect</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../playdate/SoundEffectApi.html"><span class="typ">SoundEffectApi</span></a><span class="pun">*</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../playdate/Sound.envelope.html" class="public"><code>envelope</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../playdate/SoundEnvelope.html"><span class="typ">SoundEnvelope</span></a><span class="pun">*</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../playdate/Sound.fileplayer.html" class="public"><code>fileplayer</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../playdate/SoundFileplayer.html"><span class="typ">SoundFileplayer</span></a><span class="pun">*</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../playdate/Sound.getCurrentTime.html" class="public"><code>getCurrentTime</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">uint</span> <span class="kwd">function</span><span class="pun">(</span><span class="pun">)</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../playdate/Sound.getDefaultChannel.html" class="public"><code>getDefaultChannel</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span><span class="pun">*</span> <span class="kwd">function</span><span class="pun">(</span><span class="pun">)</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../playdate/Sound.getHeadphoneState.html" class="public"><code>getHeadphoneState</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">bool</span><span class="pun">*</span><span class="pun">, </span><span class="typ">bool</span><span class="pun">*</span><span class="pun">, </span><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">bool</span><span class="pun">, </span><span class="typ">bool</span><span class="pun">)</span> *<span class="pun">)</span></code></td><td>If <code class="lang-d"><span class="pln">headphone</span></code> contains a non-null pointer, the value is set to <code class="lang-d"><span class="kwd">true</span></code> if headphones are currently plugged in.
+Likewise, mic is set if the headphones include a microphone.
+If <code class="lang-d"><span class="pln">changeCallback</span></code> is provided, it will be called when the headset or mic status changes, and audio output
+will not automatically switch from speaker to headphones when headphones are plugged in (and vice versa).
+In this case, the callback should use <code class="lang-d"><span class="pln">playdate<wbr/></span><span class="pun">.</span><span class="pln">sound<wbr/></span><span class="pun">.</span><span class="pln">setOutputsActive</span><span class="pun">()</span></code> to change the output if needed.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../playdate/Sound.instrument.html" class="public"><code>instrument</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../playdate/SoundInstrument.html"><span class="typ">SoundInstrument</span></a><span class="pun">*</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../playdate/Sound.lfo.html" class="public"><code>lfo</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../playdate/SoundLfo.html"><span class="typ">SoundLfo</span></a><span class="pun">*</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../playdate/Sound.removeChannel.html" class="public"><code>removeChannel</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../playdate/Sound.removeSource.html" class="public"><code>removeSource</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><a href="../playdate/SoundSource.html"><span class="typ">SoundSource</span></a><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../playdate/Sound.sample.html" class="public"><code>sample</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../playdate/SoundSample.html"><span class="typ">SoundSample</span></a><span class="pun">*</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../playdate/Sound.sampleplayer.html" class="public"><code>sampleplayer</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../playdate/SoundSampleplayer.html"><span class="typ">SoundSampleplayer</span></a><span class="pun">*</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../playdate/Sound.sequence.html" class="public"><code>sequence</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../playdate/SoundSequence.html"><span class="typ">SoundSequence</span></a><span class="pun">*</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../playdate/Sound.setMicCallback.html" class="public"><code>setMicCallback</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">bool</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">, </span><span class="typ">short</span><span class="pun">*</span><span class="pun">, </span><span class="typ">int</span><span class="pun">)</span> *<span class="pun">, </span><span class="typ">void</span><span class="pun">*</span><span class="pun">, </span><span class="typ">bool</span><span class="pun">)</span></code></td><td>The <code class="lang-d"><span class="pln">callback</span></code> you pass in will be called every audio cycle.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../playdate/Sound.setOutputsActive.html" class="public"><code>setOutputsActive</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">bool</span><span class="pun">, </span><span class="typ">bool</span><span class="pun">)</span></code></td><td>Force audio output to the given outputs, regardless of headphone status.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../playdate/Sound.signal.html" class="public"><code>signal</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../playdate/SoundSignal.html"><span class="typ">SoundSignal</span></a><span class="pun">*</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../playdate/Sound.source.html" class="public"><code>source</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../playdate/SoundSource.html"><span class="typ">SoundSource</span></a><span class="pun">*</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../playdate/Sound.synth.html" class="public"><code>synth</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../playdate/SoundSynth.html"><span class="typ">SoundSynth</span></a><span class="pun">*</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../playdate/Sound.track.html" class="public"><code>track</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><a href="../playdate/SoundTrack.html"><span class="typ">SoundTrack</span></a><span class="pun">*</span></code></td><td></td>
+					</tr>
+				</table>
+			</section>
 			
 			<footer>
 				<table class="license-info">
