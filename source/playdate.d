@@ -5,6 +5,12 @@ module playdate;
 
 import std.meta : Alias;
 
+/// Attribute specifing which version a symbol was added to the Playdate C SDK.
+struct AddedIn {
+  ///
+  this(ubyte major, ubyte minor, ubyte patch = 0) {}
+}
+
 alias LCDPattern = ubyte;
 alias LCDColor = ubyte;
 
@@ -240,14 +246,14 @@ struct System {
 	///
   int function() @nogc getReduceFlashing;
 
-	// 1.1
 	///
+  @AddedIn(1, 1)
   float function() @nogc getElapsedTime;
 	///
   void function() @nogc resetElapsedTime;
 
-	// 1.4
 	///
+  @AddedIn(1, 4)
   float function() @nogc getBatteryPercentage;
 	///
   float function() @nogc getBatteryVoltage;
@@ -479,18 +485,18 @@ struct Graphics {
 		LCDRect rect
 	) @nogc checkMaskCollision;
 
-	// 1.1
-  ///
+	///
+  @AddedIn(1, 1)
 	void function(int x, int y, int width, int height) @nogc setScreenClipRect;
 
-	// 1.1.1
-  ///
+	///
+  @AddedIn(1, 1, 1)
 	void function(int nPoints, int* coords, LCDColor color, LCDPolygonFillRule fillrule) @nogc fillPolygon;
 	///
   ubyte function(LCDFont* font) @nogc getFontHeight;
 
-	// 1.7
-  ///
+	///
+  @AddedIn(1, 7)
 	LCDBitmap* function() @nogc getDisplayBufferBitmap;
   ///
 	void function(
@@ -499,18 +505,18 @@ struct Graphics {
   ///
 	void function(int lineHeightAdustment) @nogc setTextLeading;
 
-	// 1.8
-  ///
+	///
+  @AddedIn(1, 8)
 	int function(LCDBitmap* bitmap, LCDBitmap* mask) @nogc setBitmapMask;
   ///
 	LCDBitmap* function(LCDBitmap* bitmap) @nogc getBitmapMask;
 
-	// 1.10
-  ///
+	///
+  @AddedIn(1, 10)
 	void function(LCDBitmap* stencil, int tile) @nogc setStencilImage;
 
-	// 1.12
-  ///
+	///
+  @AddedIn(1, 12)
 	LCDFont* function(LCDFontData* data, int wide) @nogc makeFontFromData;
 }
 
@@ -750,12 +756,12 @@ struct Sound {
 	/// Force audio output to the given outputs, regardless of headphone status.
   void function(bool headphone, bool speaker) setOutputsActive;
 
-	// 1.5
 	///
+  @AddedIn(1, 5)
   void function(SoundSource* source) removeSource;
 
-	// 1.12
-  ///
+	///
+  @AddedIn(1, 12)
 	SoundSignal* signal;
 }
 
