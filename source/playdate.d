@@ -20,19 +20,28 @@ alias SDFile = Alias!(void*);
 
 ///
 enum PDButtons : int {
-	buttonLeft	= (1<<0),
-	buttonRight	= (1<<1),
-	buttonUp	= (1<<2),
-	buttonDown	= (1<<3),
-	buttonB		= (1<<4),
-	buttonA		= (1<<5)
+  ///
+  buttonLeft  = (1<<0),
+  ///
+  buttonRight = (1<<1),
+  ///
+  buttonUp    = (1<<2),
+  ///
+  buttonDown  = (1<<3),
+  ///
+  buttonB     = (1<<4),
+  ///
+  buttonA     = (1<<5)
 }
 
 ///
 enum PDLanguage {
-	kPDLanguageEnglish,
-	kPDLanguageJapanese,
-	kPDLanguageUnknown,
+	///
+  english,
+	///
+  japanese,
+	///
+  unknown,
 }
 
 ///
