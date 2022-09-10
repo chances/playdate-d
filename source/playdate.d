@@ -306,7 +306,7 @@ struct FileStat {
 ///
 struct File {
   ///
-  const(char*) function(void) @nogc getErr;
+  const(char*) function() @nogc getErr;
 
 	///
   int function(
@@ -564,9 +564,199 @@ struct Display {
   void function(int x, int y) @nogc setOffset;
 }
 
+/// A SoundChannel contains `SoundSource`s and `SoundEffect`s.
+alias SoundChannel = Alias!(void*);
+
+/// Fill the passed-in `left` buffer (and `right` if it’s a stereo source) with `len` samples each and return `true`, or `false` if the source is silent through the cycle.
+alias AudioSourceFunction = bool function(void* context, short* left, short* right, int len);
+
+/// Called with the recorded audio data, a monophonic stream of samples.
+///
+/// Return `true` to continue recording, `false` to stop recording.
+/// See_Also: `Sound.setMicCallback`
+alias RecordCallback = bool function (void* context, short* buffer, int length);
+
+///
+struct SoundChannelApi {
+  ///
+  SoundChannel function() @nogc newChannel;
+	///
+  void function(SoundChannel channel) @nogc freeChannel;
+	///
+  int function(SoundChannel channel, SoundSource* source) @nogc addSource;
+	///
+  int function(SoundChannel channel, SoundSource* source) @nogc removeSource;
+  /// Creates a new `SoundSource` using the given data provider `callback` and adds it to the default channel.
+  /// Remarks: The caller takes ownership of the allocated `SoundSource`, and should free it with `playdate.system.realloc(source, NULL);` when it is no longer in use.
+  SoundSource* function(
+    SoundChannel channel, AudioSourceFunction* callback, void* context, int stereo
+  ) @nogc addCallbackSource;
+	///
+  void function(SoundChannel channel, SoundEffect* effect) @nogc addEffect;
+	///
+  void function(SoundChannel channel, SoundEffect* effect) @nogc removeEffect;
+	///
+  void function(SoundChannel channel, float volume) @nogc setVolume;
+	///
+  float function(SoundChannel channel) @nogc getVolume;
+	///
+  void function(SoundChannel channel, PDSynthSignalValue mod) @nogc setVolumeModulator;
+	///
+  PDSynthSignalValue function(SoundChannel channel) @nogc getVolumeModulator;
+	///
+  void function(SoundChannel channel, float pan) @nogc setPan;
+	///
+  void function(SoundChannel channel, PDSynthSignalValue mod) @nogc setPanModulator;
+	///
+  PDSynthSignalValue function(SoundChannel channel) @nogc getPanModulator;
+	///
+  PDSynthSignalValue function(SoundChannel channel) @nogc getDryLevelSignal;
+	///
+  PDSynthSignalValue function(SoundChannel channel) @nogc getWetLevelSignal;
+}
+
+///
+struct SoundFileplayer {
+  // TODO: Implement Playdate Sound Fileplayer API
+}
+
+///
+struct SoundSample {
+  // TODO: Implement Playdate Sound Sample API
+}
+
+///
+struct SoundSampleplayer {
+  // TODO: Implement Playdate Sound Sampleplayer API
+}
+
+///
+struct SoundSynth {
+  // TODO: Implement Playdate Sound Synth API
+}
+
+///
+struct SoundSequence {
+  // TODO: Implement Playdate Sound Sequence API
+}
+
+///
+alias SoundEffect = Alias!(void*);
+/// `bufactive` is `true` if samples have been set in the left or right buffers.
+/// Return `true` if it changed the buffer samples, otherwise `false`.
+/// `left` and `right` (if the effect is on a stereo channel) are sample buffers in signed Q8.24 format.
+alias effectProc = bool function(SoundEffect e, int* left, int* right, int nsamples, bool bufactive);
+
+///
+struct SoundEffectApi {
+  // TODO: Implement Playdate Sound Effect API
+}
+
+///
+struct SoundLfo {
+  // TODO: Implement Playdate Sound Lfo API
+}
+
+///
+struct SoundEnvelope {
+  // TODO: Implement Playdate Sound Envelope API
+}
+
+///
+struct SoundSource {
+  // TODO: Implement Playdate Sound Source API
+}
+
+///
+struct ControlSignal {
+  // TODO: Implement Playdate Contr olSignal API
+}
+
+///
+struct SoundTrack {
+  // TODO: Implement Playdate Sound Track API
+}
+
+///
+struct SoundInstrument {
+  // TODO: Implement Playdate Sound Instrument API
+}
+
+/// A PDSynthSignalValue represents a signal that can be used as an input to a modulator.
+/// Its `PDSynthSignal` subclass is used for "active" signals that change their values automatically.
+/// `PDSynthLFO` and `PDSynthEnvelope` are subclasses of `PDSynthSignal`.
+alias PDSynthSignalValue = Alias!(void*);
+alias PDSynthSignal = Alias!(void*);
+
+///
+struct SoundSignal {
+  // TODO: Implement Playdate Sound Signal API
+}
+
 ///
 struct Sound {
-	// TODO: Implement Playdate Sound API
+	///
+  SoundChannelApi* channel;
+	///
+  SoundFileplayer* fileplayer;
+	///
+  SoundSample* sample;
+	///
+  SoundSampleplayer* sampleplayer;
+	///
+  SoundSynth* synth;
+	///
+  SoundSequence* sequence;
+	///
+  SoundEffectApi* effect;
+	///
+  SoundLfo* lfo;
+	///
+  SoundEnvelope* envelope;
+	///
+  SoundSource* source;
+	///
+  ControlSignal* controlsignal;
+	///
+  SoundTrack* track;
+	///
+  SoundInstrument* instrument;
+
+	///
+  uint function() @nogc getCurrentTime;
+	/// The `callback` function you pass in will be called every audio render cycle.
+  SoundSource* function(AudioSourceFunction callback, void* context, bool stereo) @nogc addSource;
+
+	///
+  SoundChannel function() @nogc getDefaultChannel;
+
+	///
+  void function(SoundChannel channel) @nogc addChannel;
+	///
+  void function(SoundChannel channel) @nogc removeChannel;
+
+	/// The `callback` you pass in will be called every audio cycle.
+  ///
+  /// If `forceInternal` is set, the device microphone is used regardless of whether the headset has a microphone.
+  void function(RecordCallback callback, void* context, bool forceInternal) @nogc setMicCallback;
+	/// If `headphone` contains a non-null pointer, the value is set to `true` if headphones are currently plugged in.
+  /// Likewise, mic is set if the headphones include a microphone.
+  /// If `changeCallback` is provided, it will be called when the headset or mic status changes, and audio output
+  /// will not automatically switch from speaker to headphones when headphones are plugged in (and vice versa).
+  /// In this case, the callback should use `playdate.sound.setOutputsActive()` to change the output if needed.
+  void function(
+    bool* headphone, bool* headsetmic, void function(bool headphone, bool mic) @nogc changeCallback
+  ) @nogc getHeadphoneState;
+	/// Force audio output to the given outputs, regardless of headphone status.
+  void function(bool headphone, bool speaker) setOutputsActive;
+
+	// 1.5
+	///
+  void function(SoundSource* source) removeSource;
+
+	// 1.12
+  ///
+	SoundSignal* signal;
 }
 
 ///
