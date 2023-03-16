@@ -1,3 +1,5 @@
+/// See_Also: <a href="https://sdk.play.date/1.12.3/Inside Playdate with C.html">Inside Playdate with C</a> - Official Playdate SDK Documentation
+///
 /// Authors: Chance Snow
 /// Copyright: Copyright © 2022 Chance Snow. All rights reserved.
 /// License: MIT License
@@ -5,7 +7,7 @@ module playdate;
 
 import std.meta : Alias;
 
-/// Attribute specifing which version a symbol was added to the Playdate C SDK.
+/// Attribute specifying which version a symbol was added to the Playdate C SDK.
 struct AddedIn {
   ///
   this(ubyte major, ubyte minor, ubyte patch = 0) {}
@@ -211,22 +213,33 @@ struct System {
   void function(PDButtons* current, PDButtons* pushed, PDButtons* released) @nogc getButtonState;
 	///
   void function(PDPeripherals mask) @nogc setPeripheralsEnabled;
-	///
+	/// Returns the last-read accelerometer data.
   void function(float* outx, float* outy, float* outz) @nogc getAccelerometer;
 
-	///
+	/// Returns the angle change of the crank since the last time this function was called. Negative values are anti-clockwise.
   float function() @nogc getCrankChange;
-	///
+	/// Returns the current position of the crank, in the range 0-360.
+  /// Zero is pointing up, and the value increases as the crank moves clockwise, as viewed from the right side of the device.
   float function() @nogc getCrankAngle;
-	///
-  int function() @nogc isCrankDocked;
-	/// returns previous setting
+	/// Returns `true` or `false` indicating whether or not the crank is folded into the unit.
+  bool function() @nogc isCrankDocked;
+	/// Returns the previous value for this setting.
+  /// Remarks:
+  /// 0.12 adds sound effects for various system events, such as the menu opening or closing, USB cable plugged or
+  /// unplugged, and the crank docked or undocked. Since games can receive notification of the crank docking and
+  /// undocking, and may incorporate this into the game, we’ve provided a function for muting the default sounds for
+  /// these events.
 	int function(int flag) @nogc setCrankSoundsDisabled;
 
 	///
   int function() @nogc getFlipped;
-	///
-  void function(int disable) @nogc setAutoLockDisabled;
+	/// Disables or enables the 60 second auto lock feature. When called, the timer is reset to 60 seconds.
+  /// Remarks:
+  /// As of 0.10.3, the device will automatically lock if the user doesn’t press any buttons or use the crank for more
+  /// than 60 seconds. In order for games that expect longer periods without interaction to continue to function, it is
+  /// possible to manually disable the auto lock feature. Note that when disabling the timeout, developers should take
+  /// care to re-enable the timeout when appropiate.
+  void function(bool disable) @nogc setAutoLockDisabled;
 
 	///
   void function(LCDBitmap* bitmap, int xOffset) @nogc setMenuImage;
@@ -428,7 +441,9 @@ struct Graphics {
 		int x, int y, int width, int height, int lineWidth, float startAngle, float endAngle, LCDColor color
 	) @nogc drawEllipse;
 	///
-  void function(int x, int y, int width, int height, float startAngle, float endAngle, LCDColor color) @nogc fillEllipse;
+  void function(
+    int x, int y, int width, int height, float startAngle, float endAngle, LCDColor color
+  ) @nogc fillEllipse;
 	///
   void function(LCDBitmap* bitmap, int x, int y, float xscale, float yscale) @nogc drawScaledBitmap;
 	///
@@ -446,11 +461,15 @@ struct Graphics {
 	///
   void function(const char* path, LCDBitmap* bitmap, const char** outerr) @nogc loadIntoBitmap;
 	///
-  void function(LCDBitmap* bitmap, int* width, int* height, int* rowbytes, ubyte** mask, ubyte** data) @nogc getBitmapData;
+  void function(
+    LCDBitmap* bitmap, int* width, int* height, int* rowbytes, ubyte** mask, ubyte** data
+  ) @nogc getBitmapData;
 	///
   void function(LCDBitmap* bitmap, LCDColor bgcolor) @nogc clearBitmap;
 	///
-  LCDBitmap* function(LCDBitmap* bitmap, float rotation, float xscale, float yscale, int* allocedSize) @nogc rotatedBitmap;
+  LCDBitmap* function(
+    LCDBitmap* bitmap, float rotation, float xscale, float yscale, int* allocedSize
+  ) @nogc rotatedBitmap;
 
 	// LCDBitmapTable
 	///
@@ -547,6 +566,8 @@ version (unittest) {
     assert(text == txt.ptr);
     assert(len == txt.length);
     assert(encoding == PDStringEncoding.asciiEncoding);
+    assert(x >= 0);
+    assert(y >= 0);
     return 0;
   }
 }

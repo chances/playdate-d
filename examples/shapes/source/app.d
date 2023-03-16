@@ -5,6 +5,7 @@ import playdate;
 static PlaydateAPI* pd;
 
 // Compilation
+// See https://github.com/JinShil/stm32f42_discovery_demo/blob/master/build.d#L61
 // Simulator:
 // ldc2 -shared playdate.d -of=dist/pdex.dylib
 // $PLAYDATE_SDK_PATH/bin/pdc dist app.pdx
