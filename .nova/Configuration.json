@@ -1,0 +1,5 @@
+{
+  "dvelop.fmt.braceStyle" : "knr",
+  "dvelop.fmt.overrideEditorConfig" : false,
+  "editor.default_syntax" : "d"
+}
