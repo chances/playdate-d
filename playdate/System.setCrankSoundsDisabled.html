@@ -28,7 +28,7 @@ $('#symbolSearchPane').show();</script>
 			</ul>
 		</nav>
 		<div id="main-contents">
-			<h1>Variable System.setCrankSoundsDisabled</h1><p>returns previous setting
+			<h1>Variable System.setCrankSoundsDisabled</h1><p>Returns the previous value for this setting.
 </p>
 			<div class="prototype">
 				<code class="lang-d">
@@ -51,7 +51,14 @@ $('#symbolSearchPane').show();</script>
 				</code>
 			</div>
 			
-			
+			<section><h2>Remarks</h2>
+<p>0.12 adds sound effects for various system events, such as the menu opening or closing, USB cable plugged or
+unplugged, and the crank docked or undocked. Since games can receive notification of the crank docking and
+undocking, and may incorporate this into the game, we’ve provided a function for muting the default sounds for
+these events.
+</p>
+</section>
+
 			<footer>
 				<table class="license-info">
 					<tr>

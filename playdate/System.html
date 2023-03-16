@@ -84,7 +84,8 @@ $('#symbolSearchPane').show();</script>
 						<td>
 							<a href="../playdate/System.getAccelerometer.html" class="public"><code>getAccelerometer</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">float</span><span class="pun">*</span><span class="pun">, </span><span class="typ">float</span><span class="pun">*</span><span class="pun">, </span><span class="typ">float</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">float</span><span class="pun">*</span><span class="pun">, </span><span class="typ">float</span><span class="pun">*</span><span class="pun">, </span><span class="typ">float</span><span class="pun">*</span><span class="pun">)</span></code></td><td>Returns the last-read accelerometer data.
+</td>
 					</tr>
 					<tr>
 						<td>
@@ -108,13 +109,16 @@ $('#symbolSearchPane').show();</script>
 						<td>
 							<a href="../playdate/System.getCrankAngle.html" class="public"><code>getCrankAngle</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">float</span> <span class="kwd">function</span><span class="pun">(</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">float</span> <span class="kwd">function</span><span class="pun">(</span><span class="pun">)</span></code></td><td>Returns the current position of the crank, in the range 0-360.
+Zero is pointing up, and the value increases as the crank moves clockwise, as viewed from the right side of the device.
+</td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/System.getCrankChange.html" class="public"><code>getCrankChange</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">float</span> <span class="kwd">function</span><span class="pun">(</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">float</span> <span class="kwd">function</span><span class="pun">(</span><span class="pun">)</span></code></td><td>Returns the angle change of the crank since the last time this function was called. Negative values are anti-clockwise.
+</td>
 					</tr>
 					<tr>
 						<td>
@@ -174,7 +178,8 @@ $('#symbolSearchPane').show();</script>
 						<td>
 							<a href="../playdate/System.isCrankDocked.html" class="public"><code>isCrankDocked</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">int</span> <span class="kwd">function</span><span class="pun">(</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">bool</span> <span class="kwd">function</span><span class="pun">(</span><span class="pun">)</span></code></td><td>Returns <code class="lang-d"><span class="kwd">true</span></code> or <code class="lang-d"><span class="kwd">false</span></code> indicating whether or not the crank is folded into the unit.
+</td>
 					</tr>
 					<tr>
 						<td>
@@ -211,13 +216,14 @@ $('#symbolSearchPane').show();</script>
 						<td>
 							<a href="../playdate/System.setAutoLockDisabled.html" class="public"><code>setAutoLockDisabled</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">int</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">bool</span><span class="pun">)</span></code></td><td>Disables or enables the 60 second auto lock feature. When called, the timer is reset to 60 seconds.
+</td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/System.setCrankSoundsDisabled.html" class="public"><code>setCrankSoundsDisabled</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">int</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">int</span><span class="pun">)</span></code></td><td>returns previous setting
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">int</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">int</span><span class="pun">)</span></code></td><td>Returns the previous value for this setting.
 </td>
 					</tr>
 					<tr>

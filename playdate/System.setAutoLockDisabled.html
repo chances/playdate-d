@@ -28,7 +28,8 @@ $('#symbolSearchPane').show();</script>
 			</ul>
 		</nav>
 		<div id="main-contents">
-			<h1>Variable System.setAutoLockDisabled</h1><p></p>
+			<h1>Variable System.setAutoLockDisabled</h1><p>Disables or enables the 60 second auto lock feature. When called, the timer is reset to 60 seconds.
+</p>
 			<div class="prototype">
 				<code class="lang-d">
 					<div class="single-prototype">
@@ -40,7 +41,7 @@ $('#symbolSearchPane').show();</script>
 			</span>
 			&nbsp;&nbsp;<span class="com">// ...</span>
 			<br/>
-			&nbsp;&nbsp;<span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">int</span><span class="pun">)</span> <span class="pln">setAutoLockDisabled</span>
+			&nbsp;&nbsp;<span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">bool</span><span class="pun">)</span> <span class="pln">setAutoLockDisabled</span>
 			<span class="pun">;</span>
 			<br/>
 			&nbsp;&nbsp;<span class="com">// ...</span>
@@ -50,7 +51,14 @@ $('#symbolSearchPane').show();</script>
 				</code>
 			</div>
 			
-			
+			<section><h2>Remarks</h2>
+<p>As of 0.10.3, the device will automatically lock if the user doesn’t press any buttons or use the crank for more
+than 60 seconds. In order for games that expect longer periods without interaction to continue to function, it is
+possible to manually disable the auto lock feature. Note that when disabling the timeout, developers should take
+care to re-enable the timeout when appropiate.
+</p>
+</section>
+
 			<footer>
 				<table class="license-info">
 					<tr>
