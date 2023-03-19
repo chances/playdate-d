@@ -291,7 +291,7 @@ struct System {
   void function(PDMenuItem *menuItem, void *ud) @nogc setMenuItemUserdata;
 
 	///
-  int function() @nogc getReduceFlashing;
+  bool function() @nogc getReduceFlashing;
 
 	///
   @AddedIn(1, 1)
@@ -354,7 +354,7 @@ enum FileOptions {
 ///
 struct FileStat {
 	/// Whether the file is a directory.
-  int isDir;
+  bool isDir;
 	/// Size of the file, in bytes.
   uint size;
 	/// Year component of the file's last modified date.
