@@ -21,8 +21,8 @@
 <url><loc>http://127.0.0.1/playdate/File.html</loc></url>
 <url><loc>http://127.0.0.1/playdate/File.close.html</loc></url>
 <url><loc>http://127.0.0.1/playdate/File.flush.html</loc></url>
-<url><loc>http://127.0.0.1/playdate/File.getErr.html</loc></url>
-<url><loc>http://127.0.0.1/playdate/File.listFiles.html</loc></url>
+<url><loc>http://127.0.0.1/playdate/File.geterr.html</loc></url>
+<url><loc>http://127.0.0.1/playdate/File.listfiles.html</loc></url>
 <url><loc>http://127.0.0.1/playdate/File.mkdir.html</loc></url>
 <url><loc>http://127.0.0.1/playdate/File.open.html</loc></url>
 <url><loc>http://127.0.0.1/playdate/File.read.html</loc></url>
@@ -123,6 +123,14 @@
 <url><loc>http://127.0.0.1/playdate/makeRect.html</loc></url>
 <url><loc>http://127.0.0.1/playdate/PDButtons.html</loc></url>
 <url><loc>http://127.0.0.1/playdate/PDCallbackFunction.html</loc></url>
+<url><loc>http://127.0.0.1/playdate/PDDateTime.html</loc></url>
+<url><loc>http://127.0.0.1/playdate/PDDateTime.day.html</loc></url>
+<url><loc>http://127.0.0.1/playdate/PDDateTime.hour.html</loc></url>
+<url><loc>http://127.0.0.1/playdate/PDDateTime.minute.html</loc></url>
+<url><loc>http://127.0.0.1/playdate/PDDateTime.month.html</loc></url>
+<url><loc>http://127.0.0.1/playdate/PDDateTime.second.html</loc></url>
+<url><loc>http://127.0.0.1/playdate/PDDateTime.weekday.html</loc></url>
+<url><loc>http://127.0.0.1/playdate/PDDateTime.year.html</loc></url>
 <url><loc>http://127.0.0.1/playdate/PDLanguage.html</loc></url>
 <url><loc>http://127.0.0.1/playdate/PDMenuItemCallbackFunction.html</loc></url>
 <url><loc>http://127.0.0.1/playdate/PDPeripherals.html</loc></url>
@@ -201,6 +209,8 @@
 <url><loc>http://127.0.0.1/playdate/System.addCheckmarkMenuItem.html</loc></url>
 <url><loc>http://127.0.0.1/playdate/System.addMenuItem.html</loc></url>
 <url><loc>http://127.0.0.1/playdate/System.addOptionsMenuItem.html</loc></url>
+<url><loc>http://127.0.0.1/playdate/System.convertDateTimeToEpoch.html</loc></url>
+<url><loc>http://127.0.0.1/playdate/System.convertEpochToDateTime.html</loc></url>
 <url><loc>http://127.0.0.1/playdate/System.drawFPS.html</loc></url>
 <url><loc>http://127.0.0.1/playdate/System.error.html</loc></url>
 <url><loc>http://127.0.0.1/playdate/System.formatString.html</loc></url>
@@ -219,6 +229,7 @@
 <url><loc>http://127.0.0.1/playdate/System.getMenuItemValue.html</loc></url>
 <url><loc>http://127.0.0.1/playdate/System.getReduceFlashing.html</loc></url>
 <url><loc>http://127.0.0.1/playdate/System.getSecondsSinceEpoch.html</loc></url>
+<url><loc>http://127.0.0.1/playdate/System.getTimezoneOffset.html</loc></url>
 <url><loc>http://127.0.0.1/playdate/System.isCrankDocked.html</loc></url>
 <url><loc>http://127.0.0.1/playdate/System.logToConsole.html</loc></url>
 <url><loc>http://127.0.0.1/playdate/System.realloc.html</loc></url>
@@ -233,6 +244,7 @@
 <url><loc>http://127.0.0.1/playdate/System.setMenuItemValue.html</loc></url>
 <url><loc>http://127.0.0.1/playdate/System.setPeripheralsEnabled.html</loc></url>
 <url><loc>http://127.0.0.1/playdate/System.setUpdateCallback.html</loc></url>
+<url><loc>http://127.0.0.1/playdate/System.shouldDisplay24HourTime.html</loc></url>
 <url><loc>http://127.0.0.1/playdate/Video.html</loc></url>
 <url><loc>http://127.0.0.1/playdate/Video.freePlayer.html</loc></url>
 <url><loc>http://127.0.0.1/playdate/Video.getContext.html</loc></url>

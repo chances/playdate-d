@@ -64,6 +64,18 @@ $('#symbolSearchPane').show();</script>
 					</tr>
 					<tr>
 						<td>
+							<a href="../playdate/System.convertDateTimeToEpoch.html" class="public"><code>convertDateTimeToEpoch</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">int</span> <span class="kwd">function</span><span class="pun">(</span><a href="../playdate/PDDateTime.html"><span class="typ">PDDateTime</span></a><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../playdate/System.convertEpochToDateTime.html" class="public"><code>convertEpochToDateTime</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">int</span><span class="pun">, </span><a href="../playdate/PDDateTime.html"><span class="typ">PDDateTime</span></a><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
 							<a href="../playdate/System.drawFPS.html" class="public"><code>drawFPS</code></a>
 						</td>
 						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">int</span><span class="pun">, </span><span class="typ">int</span><span class="pun">)</span></code></td><td></td>
@@ -166,13 +178,19 @@ Zero is pointing up, and the value increases as the crank moves clockwise, as vi
 						<td>
 							<a href="../playdate/System.getReduceFlashing.html" class="public"><code>getReduceFlashing</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">int</span> <span class="kwd">function</span><span class="pun">(</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">bool</span> <span class="kwd">function</span><span class="pun">(</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/System.getSecondsSinceEpoch.html" class="public"><code>getSecondsSinceEpoch</code></a>
 						</td>
 						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">uint</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">uint</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../playdate/System.getTimezoneOffset.html" class="public"><code>getTimezoneOffset</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">int</span> <span class="kwd">function</span><span class="pun">(</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
@@ -262,6 +280,12 @@ Zero is pointing up, and the value increases as the crank moves clockwise, as vi
 						</td>
 						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="kwd">@nogc</span> <span class="typ">int</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span> *<span class="pun">, </span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
 					</tr>
+					<tr>
+						<td>
+							<a href="../playdate/System.shouldDisplay24HourTime.html" class="public"><code>shouldDisplay24HourTime</code></a>
+						</td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">bool</span> <span class="kwd">function</span><span class="pun">(</span><span class="pun">)</span></code></td><td></td>
+					</tr>
 				</table>
 			</section>
 			
@@ -278,7 +302,8 @@ Zero is pointing up, and the value increases as the crank moves clockwise, as vi
 					<tr>
 						<th>Copyright</th>
 						<td>
-							<p>Copyright © 2022 Chance Snow. All rights reserved.
+							<p>Copyright © 2014-2017 Panic, Inc. All rights reserved.
+Copyright © 2022 Chance Snow.
 </p>
 
 						</td>
