@@ -55,6 +55,25 @@ enum PDLanguage {
 }
 
 ///
+@AddedIn(1, 13)
+struct PDDateTime {
+  ///
+  ushort year;
+  /// 1-12
+  ubyte month;
+  /// 1-31
+  ubyte day;
+  /// 1 = Monday, 7 = Sunday
+  ubyte weekday;
+  /// 0-23
+  ubyte hour;
+  ///
+  ubyte minute;
+  ///
+  ubyte second;
+}
+
+///
 enum PDPeripherals : int {
 	none            = 0,
 	accelerometer   = (1<<0),
@@ -199,7 +218,6 @@ struct System {
 	void function(const char* fmt, ...) @nogc logToConsole;
   ///
 	void function(const char* fmt, ...) @nogc error;
-  ///
 	///
   PDLanguage function() @nogc getLanguage;
 	///
@@ -279,13 +297,28 @@ struct System {
   @AddedIn(1, 1)
   float function() @nogc getElapsedTime;
 	///
+  @AddedIn(1, 1)
   void function() @nogc resetElapsedTime;
 
 	///
   @AddedIn(1, 4)
   float function() @nogc getBatteryPercentage;
 	///
+  @AddedIn(1, 4)
   float function() @nogc getBatteryVoltage;
+
+  ///
+  @AddedIn(1, 13)
+  int function() @nogc getTimezoneOffset;
+  ///
+  @AddedIn(1, 13)
+  bool function() @nogc shouldDisplay24HourTime;
+  ///
+  @AddedIn(1, 13)
+  void function(int epoch, PDDateTime* datetime) @nogc convertEpochToDateTime;
+  ///
+  @AddedIn(1, 13)
+  int function(PDDateTime* datetime) @nogc convertDateTimeToEpoch;
 }
 
 ///
@@ -341,13 +374,13 @@ struct FileStat {
 ///
 struct File {
   ///
-  const(char*) function() @nogc getErr;
+  const(char*) function() @nogc geterr;
 
 	///
   int function(
     const char* path, void function(const char* path, void* userdata) callback, void* userdata,
     bool showHidden
-  ) @nogc listFiles;
+  ) @nogc listfiles;
 	///
   int function(const char* path, FileStat* stat) @nogc stat;
 	///
@@ -405,8 +438,8 @@ struct Graphics {
   void function(LCDColor color) @nogc clear;
 	///
   void function(LCDSolidColor color) @nogc setBackgroundColor;
-	///
-  void function(LCDBitmap* stencil) setStencil; // deprecated in favor of setStencilImage, which adds a "tile" @nogc flag
+  /// Deprecated: In favor of `setStencilImage`, which adds a "tile" flag
+  void function(LCDBitmap* stencil) @nogc setStencil;
 	///
   void function(LCDBitmapDrawMode mode) @nogc setDrawMode;
 	///
@@ -528,16 +561,19 @@ struct Graphics {
   @AddedIn(1, 1, 1)
 	void function(int nPoints, int* coords, LCDColor color, LCDPolygonFillRule fillrule) @nogc fillPolygon;
 	///
+  @AddedIn(1, 1, 1)
   ubyte function(LCDFont* font) @nogc getFontHeight;
 
 	///
   @AddedIn(1, 7)
 	LCDBitmap* function() @nogc getDisplayBufferBitmap;
   ///
+  @AddedIn(1, 7)
 	void function(
 		LCDBitmap* bitmap, int x, int y, float rotation, float centerx, float centery, float xscale, float yscale
 	) @nogc drawRotatedBitmap;
   ///
+  @AddedIn(1, 7)
 	void function(int lineHeightAdustment) @nogc setTextLeading;
 
 	///
