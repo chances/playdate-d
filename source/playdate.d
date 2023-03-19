@@ -1,7 +1,9 @@
 /// See_Also: <a href="https://sdk.play.date/1.12.3/Inside Playdate with C.html">Inside Playdate with C</a> - Official Playdate SDK Documentation
 ///
 /// Authors: Chance Snow
-/// Copyright: Copyright © 2022 Chance Snow. All rights reserved.
+/// Copyright:
+/// Copyright © 2014-2017 Panic, Inc. All rights reserved.
+/// Copyright © 2022 Chance Snow.
 /// License: MIT License
 module playdate;
 
