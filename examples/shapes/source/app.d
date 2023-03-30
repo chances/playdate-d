@@ -14,7 +14,9 @@ static PlaydateAPI* pd;
 
 mixin EventHandlerShim;
 
-int eventHandler(PlaydateAPI* playdate, PDSystemEvent event, uint arg) @nogc {
+@nogc nothrow:
+
+int eventHandler(PlaydateAPI* playdate, PDSystemEvent event, uint arg) {
 	final switch (event) {
 		case PDSystemEvent.init:
 			pd = playdate;
