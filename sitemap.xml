@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url><loc>http://127.0.0.1/index.html</loc></url>
+<url><loc>http://127.0.0.1/playdate/allocator.html</loc></url>
+<url><loc>http://127.0.0.1/playdate/allocator/pd.html</loc></url>
+<url><loc>http://127.0.0.1/playdate/allocator/PDAllocator.html</loc></url>
+<url><loc>http://127.0.0.1/playdate/allocator/PDAllocator.alignment.html</loc></url>
+<url><loc>http://127.0.0.1/playdate/allocator/PDAllocator.allocate.html</loc></url>
+<url><loc>http://127.0.0.1/playdate/allocator/PDAllocator.deallocate.html</loc></url>
+<url><loc>http://127.0.0.1/playdate/allocator/PDAllocator.instance.html</loc></url>
+<url><loc>http://127.0.0.1/playdate/allocator/PDAllocator.reallocate.html</loc></url>
 <url><loc>http://127.0.0.1/playdate.html</loc></url>
 <url><loc>http://127.0.0.1/playdate/AddedIn.html</loc></url>
 <url><loc>http://127.0.0.1/playdate/AddedIn.this.html</loc></url>
+<url><loc>http://127.0.0.1/playdate/alloc.html</loc></url>
+<url><loc>http://127.0.0.1/playdate/alloc.html</loc></url>
 <url><loc>http://127.0.0.1/playdate/AudioSourceFunction.html</loc></url>
 <url><loc>http://127.0.0.1/playdate/ControlSignal.html</loc></url>
 <url><loc>http://127.0.0.1/playdate/Display.html</loc></url>
@@ -42,6 +52,7 @@
 <url><loc>http://127.0.0.1/playdate/FileStat.m_second.html</loc></url>
 <url><loc>http://127.0.0.1/playdate/FileStat.m_year.html</loc></url>
 <url><loc>http://127.0.0.1/playdate/FileStat.size.html</loc></url>
+<url><loc>http://127.0.0.1/playdate/free.html</loc></url>
 <url><loc>http://127.0.0.1/playdate/Graphics.html</loc></url>
 <url><loc>http://127.0.0.1/playdate/Graphics.checkMaskCollision.html</loc></url>
 <url><loc>http://127.0.0.1/playdate/Graphics.clear.html</loc></url>

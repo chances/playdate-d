@@ -20,10 +20,17 @@
 $('#symbolSearchPane').show();</script>
 			</div>
 			<ul class="tree-view">
-				<li>
-					<div class="module selected">
+				<li class="tree-view ">
+					<div class="package selected">
 						<a href="../playdate.html">playdate</a>
 					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../playdate/allocator.html">allocator</a>
+					</div>
+				</li>
+			</ul>
 				</li>
 			</ul>
 		</nav>
@@ -48,98 +55,98 @@ $('#symbolSearchPane').show();</script>
 						<td>
 							<a href="../playdate/SoundChannelApi.addCallbackSource.html" class="public"><code>addCallbackSource</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">extern </span><span class="pun">(</span><span class="pln">C</span><span class="pun">) </span><span class="pln">playdate<wbr/></span><span class="pun">.</span><span class="typ">SoundSource</span><span class="pun">* </span><span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*, </span><span class="typ">bool </span><span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*, </span><span class="typ">short</span><span class="pun">*, </span><span class="typ">short</span><span class="pun">*, </span><span class="typ">int</span><span class="pun">) </span><span class="kwd">@nogc</span><span class="pun">**, </span><span class="typ">void</span><span class="pun">*, </span><span class="typ">int</span><span class="pun">) </span><span class="kwd">@nogc</span><span class="pun">*</span></code></td><td>Creates a new <code class="lang-d"><a href="../playdate/SoundSource.html"><span class="typ">SoundSource</span></a></code> using the given data provider <code class="lang-d"><span class="pln">callback</span></code> and adds it to the default channel.
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">extern </span><span class="pun">(</span><span class="pln">C</span><span class="pun">) </span><span class="pln">playdate<wbr/></span><span class="pun">.</span><span class="typ">SoundSource</span><span class="pun">* </span><span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*, </span><span class="typ">bool </span><span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*, </span><span class="typ">short</span><span class="pun">*, </span><span class="typ">short</span><span class="pun">*, </span><span class="typ">int</span><span class="pun">) </span><span class="kwd">nothrow @nogc</span><span class="pun">**, </span><span class="typ">void</span><span class="pun">*, </span><span class="typ">int</span><span class="pun">) </span><span class="kwd">nothrow @nogc</span><span class="pun">*</span></code></td><td>Creates a new <code class="lang-d"><a href="../playdate/SoundSource.html"><span class="typ">SoundSource</span></a></code> using the given data provider <code class="lang-d"><span class="pln">callback</span></code> and adds it to the default channel.
 </td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/SoundChannelApi.addEffect.html" class="public"><code>addEffect</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">, </span><span class="typ">void</span><span class="pun">*</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">, </span><span class="typ">void</span><span class="pun">*</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/SoundChannelApi.addSource.html" class="public"><code>addSource</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">int</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">, </span><a href="../playdate/SoundSource.html"><span class="typ">SoundSource</span></a><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">int</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">, </span><a href="../playdate/SoundSource.html"><span class="typ">SoundSource</span></a><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/SoundChannelApi.freeChannel.html" class="public"><code>freeChannel</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/SoundChannelApi.getDryLevelSignal.html" class="public"><code>getDryLevelSignal</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span><span class="pun">*</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span><span class="pun">*</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/SoundChannelApi.getPanModulator.html" class="public"><code>getPanModulator</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span><span class="pun">*</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span><span class="pun">*</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/SoundChannelApi.getVolume.html" class="public"><code>getVolume</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">float</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">float</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/SoundChannelApi.getVolumeModulator.html" class="public"><code>getVolumeModulator</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span><span class="pun">*</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span><span class="pun">*</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/SoundChannelApi.getWetLevelSignal.html" class="public"><code>getWetLevelSignal</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span><span class="pun">*</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span><span class="pun">*</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/SoundChannelApi.newChannel.html" class="public"><code>newChannel</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span><span class="pun">*</span> <span class="kwd">function</span><span class="pun">(</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span><span class="pun">*</span> <span class="kwd">function</span><span class="pun">(</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/SoundChannelApi.removeEffect.html" class="public"><code>removeEffect</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">, </span><span class="typ">void</span><span class="pun">*</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">, </span><span class="typ">void</span><span class="pun">*</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/SoundChannelApi.removeSource.html" class="public"><code>removeSource</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">int</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">, </span><a href="../playdate/SoundSource.html"><span class="typ">SoundSource</span></a><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">int</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">, </span><a href="../playdate/SoundSource.html"><span class="typ">SoundSource</span></a><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/SoundChannelApi.setPan.html" class="public"><code>setPan</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">, </span><span class="typ">float</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">, </span><span class="typ">float</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/SoundChannelApi.setPanModulator.html" class="public"><code>setPanModulator</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">, </span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">, </span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/SoundChannelApi.setVolume.html" class="public"><code>setVolume</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">, </span><span class="typ">float</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">, </span><span class="typ">float</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/SoundChannelApi.setVolumeModulator.html" class="public"><code>setVolumeModulator</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">, </span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">, </span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 				</table>
 			</section>

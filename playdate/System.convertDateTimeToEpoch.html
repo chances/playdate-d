@@ -20,10 +20,17 @@
 $('#symbolSearchPane').show();</script>
 			</div>
 			<ul class="tree-view">
-				<li>
-					<div class="module selected">
+				<li class="tree-view ">
+					<div class="package selected">
 						<a href="../playdate.html">playdate</a>
 					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../playdate/allocator.html">allocator</a>
+					</div>
+				</li>
+			</ul>
 				</li>
 			</ul>
 		</nav>
@@ -40,7 +47,7 @@ $('#symbolSearchPane').show();</script>
 			</span>
 			&nbsp;&nbsp;<span class="com">// ...</span>
 			<br/>
-			&nbsp;&nbsp;<span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">int</span> <span class="kwd">function</span><span class="pun">(</span><a href="../playdate/PDDateTime.html"><span class="typ">PDDateTime</span></a><span class="pun">*</span><span class="pun">)</span> <span class="pln">convertDateTimeToEpoch</span>
+			&nbsp;&nbsp;<span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">int</span> <span class="kwd">function</span><span class="pun">(</span><a href="../playdate/PDDateTime.html"><span class="typ">PDDateTime</span></a><span class="pun">*</span><span class="pun">)</span> <span class="pln">convertDateTimeToEpoch</span>
 			<span class="pun">;</span>
 			<br/>
 			&nbsp;&nbsp;<span class="com">// ...</span>

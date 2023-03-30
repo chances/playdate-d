@@ -20,10 +20,17 @@
 $('#symbolSearchPane').show();</script>
 			</div>
 			<ul class="tree-view">
-				<li>
-					<div class="module selected">
+				<li class="tree-view ">
+					<div class="package selected">
 						<a href="../playdate.html">playdate</a>
 					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../playdate/allocator.html">allocator</a>
+					</div>
+				</li>
+			</ul>
 				</li>
 			</ul>
 		</nav>
@@ -48,79 +55,79 @@ $('#symbolSearchPane').show();</script>
 						<td>
 							<a href="../playdate/File.close.html" class="public"><code>close</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">int</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">int</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/File.flush.html" class="public"><code>flush</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">int</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">int</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/File.geterr.html" class="public"><code>geterr</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="kwd">const</span><span class="pun">(</span><span class="typ">char</span><span class="pun">*</span><span class="pun">)</span> <span class="kwd">function</span><span class="pun">(</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="kwd">const</span><span class="pun">(</span><span class="typ">char</span><span class="pun">*</span><span class="pun">)</span> <span class="kwd">function</span><span class="pun">(</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/File.listfiles.html" class="public"><code>listfiles</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">int</span> <span class="kwd">function</span><span class="pun">(</span><span class="kwd">const</span><span class="pun">(</span><span class="typ">char</span><span class="pun">*</span><span class="pun">)</span><span class="pun">, </span><span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="kwd">const</span><span class="pun">(</span><span class="typ">char</span><span class="pun">*</span><span class="pun">)</span><span class="pun">, </span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span> *<span class="pun">, </span><span class="typ">void</span><span class="pun">*</span><span class="pun">, </span><span class="typ">bool</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">int</span> <span class="kwd">function</span><span class="pun">(</span><span class="kwd">const</span><span class="pun">(</span><span class="typ">char</span><span class="pun">*</span><span class="pun">)</span><span class="pun">, </span><span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="kwd">const</span><span class="pun">(</span><span class="typ">char</span><span class="pun">*</span><span class="pun">)</span><span class="pun">, </span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span> *<span class="pun">, </span><span class="typ">void</span><span class="pun">*</span><span class="pun">, </span><span class="typ">bool</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/File.mkdir.html" class="public"><code>mkdir</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">int</span> <span class="kwd">function</span><span class="pun">(</span><span class="kwd">const</span><span class="pun">(</span><span class="typ">char</span><span class="pun">*</span><span class="pun">)</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">int</span> <span class="kwd">function</span><span class="pun">(</span><span class="kwd">const</span><span class="pun">(</span><span class="typ">char</span><span class="pun">*</span><span class="pun">)</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/File.open.html" class="public"><code>open</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span><span class="pun">*</span> <span class="kwd">function</span><span class="pun">(</span><span class="kwd">const</span><span class="pun">(</span><span class="typ">char</span><span class="pun">*</span><span class="pun">)</span><span class="pun">, </span><a href="../playdate/FileOptions.html"><span class="typ">FileOptions</span></a><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span><span class="pun">*</span> <span class="kwd">function</span><span class="pun">(</span><span class="kwd">const</span><span class="pun">(</span><span class="typ">char</span><span class="pun">*</span><span class="pun">)</span><span class="pun">, </span><a href="../playdate/FileOptions.html"><span class="typ">FileOptions</span></a><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/File.read.html" class="public"><code>read</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">int</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">, </span><span class="typ">void</span><span class="pun">*</span><span class="pun">, </span><span class="typ">uint</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">int</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">, </span><span class="typ">void</span><span class="pun">*</span><span class="pun">, </span><span class="typ">uint</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/File.rename.html" class="public"><code>rename</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">int</span> <span class="kwd">function</span><span class="pun">(</span><span class="kwd">const</span><span class="pun">(</span><span class="typ">char</span><span class="pun">*</span><span class="pun">)</span><span class="pun">, </span><span class="kwd">const</span><span class="pun">(</span><span class="typ">char</span><span class="pun">*</span><span class="pun">)</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">int</span> <span class="kwd">function</span><span class="pun">(</span><span class="kwd">const</span><span class="pun">(</span><span class="typ">char</span><span class="pun">*</span><span class="pun">)</span><span class="pun">, </span><span class="kwd">const</span><span class="pun">(</span><span class="typ">char</span><span class="pun">*</span><span class="pun">)</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/File.seek.html" class="public"><code>seek</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">int</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">, </span><span class="typ">int</span><span class="pun">, </span><span class="typ">int</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">int</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">, </span><span class="typ">int</span><span class="pun">, </span><span class="typ">int</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/File.stat.html" class="public"><code>stat</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">int</span> <span class="kwd">function</span><span class="pun">(</span><span class="kwd">const</span><span class="pun">(</span><span class="typ">char</span><span class="pun">*</span><span class="pun">)</span><span class="pun">, </span><a href="../playdate/FileStat.html"><span class="typ">FileStat</span></a><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">int</span> <span class="kwd">function</span><span class="pun">(</span><span class="kwd">const</span><span class="pun">(</span><span class="typ">char</span><span class="pun">*</span><span class="pun">)</span><span class="pun">, </span><a href="../playdate/FileStat.html"><span class="typ">FileStat</span></a><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/File.tell.html" class="public"><code>tell</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">int</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">int</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/File.unlink.html" class="public"><code>unlink</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">int</span> <span class="kwd">function</span><span class="pun">(</span><span class="kwd">const</span><span class="pun">(</span><span class="typ">char</span><span class="pun">*</span><span class="pun">)</span><span class="pun">, </span><span class="typ">int</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">int</span> <span class="kwd">function</span><span class="pun">(</span><span class="kwd">const</span><span class="pun">(</span><span class="typ">char</span><span class="pun">*</span><span class="pun">)</span><span class="pun">, </span><span class="typ">int</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/File.write.html" class="public"><code>write</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">int</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">, </span><span class="kwd">const</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span><span class="pun">, </span><span class="typ">uint</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">int</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">, </span><span class="kwd">const</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span><span class="pun">, </span><span class="typ">uint</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 				</table>
 			</section>

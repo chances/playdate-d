@@ -20,10 +20,17 @@
 $('#symbolSearchPane').show();</script>
 			</div>
 			<ul class="tree-view">
-				<li>
-					<div class="module selected">
+				<li class="tree-view ">
+					<div class="package selected">
 						<a href="../playdate.html">playdate</a>
 					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../playdate/allocator.html">allocator</a>
+					</div>
+				</li>
+			</ul>
 				</li>
 			</ul>
 		</nav>
@@ -48,80 +55,80 @@ $('#symbolSearchPane').show();</script>
 						<td>
 							<a href="../playdate/System.addCheckmarkMenuItem.html" class="public"><code>addCheckmarkMenuItem</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span><span class="pun">*</span><span class="pun">*</span> <span class="kwd">function</span><span class="pun">(</span><span class="kwd">const</span><span class="pun">(</span><span class="typ">char</span><span class="pun">*</span><span class="pun">)</span><span class="pun">, </span><span class="typ">int</span><span class="pun">, </span><span class="kwd">@nogc</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span> *<span class="pun">, </span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span><span class="pun">*</span><span class="pun">*</span> <span class="kwd">function</span><span class="pun">(</span><span class="kwd">const</span><span class="pun">(</span><span class="typ">char</span><span class="pun">*</span><span class="pun">)</span><span class="pun">, </span><span class="typ">int</span><span class="pun">, </span><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span> *<span class="pun">, </span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/System.addMenuItem.html" class="public"><code>addMenuItem</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span><span class="pun">*</span><span class="pun">*</span> <span class="kwd">function</span><span class="pun">(</span><span class="kwd">const</span><span class="pun">(</span><span class="typ">char</span><span class="pun">*</span><span class="pun">)</span><span class="pun">, </span><span class="kwd">@nogc</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span> *<span class="pun">, </span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span><span class="pun">*</span><span class="pun">*</span> <span class="kwd">function</span><span class="pun">(</span><span class="kwd">const</span><span class="pun">(</span><span class="typ">char</span><span class="pun">*</span><span class="pun">)</span><span class="pun">, </span><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span> *<span class="pun">, </span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/System.addOptionsMenuItem.html" class="public"><code>addOptionsMenuItem</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span><span class="pun">*</span><span class="pun">*</span> <span class="kwd">function</span><span class="pun">(</span><span class="kwd">const</span><span class="pun">(</span><span class="typ">char</span><span class="pun">*</span><span class="pun">)</span><span class="pun">, </span><span class="kwd">const</span><span class="pun">(</span><span class="typ">char</span><span class="pun">*</span><span class="pun">*</span><span class="pun">)</span><span class="pun">, </span><span class="typ">int</span><span class="pun">, </span><span class="kwd">@nogc</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span> *<span class="pun">, </span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span><span class="pun">*</span><span class="pun">*</span> <span class="kwd">function</span><span class="pun">(</span><span class="kwd">const</span><span class="pun">(</span><span class="typ">char</span><span class="pun">*</span><span class="pun">)</span><span class="pun">, </span><span class="kwd">const</span><span class="pun">(</span><span class="typ">char</span><span class="pun">*</span><span class="pun">*</span><span class="pun">)</span><span class="pun">, </span><span class="typ">int</span><span class="pun">, </span><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span> *<span class="pun">, </span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/System.convertDateTimeToEpoch.html" class="public"><code>convertDateTimeToEpoch</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">int</span> <span class="kwd">function</span><span class="pun">(</span><a href="../playdate/PDDateTime.html"><span class="typ">PDDateTime</span></a><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">int</span> <span class="kwd">function</span><span class="pun">(</span><a href="../playdate/PDDateTime.html"><span class="typ">PDDateTime</span></a><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/System.convertEpochToDateTime.html" class="public"><code>convertEpochToDateTime</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">int</span><span class="pun">, </span><a href="../playdate/PDDateTime.html"><span class="typ">PDDateTime</span></a><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">int</span><span class="pun">, </span><a href="../playdate/PDDateTime.html"><span class="typ">PDDateTime</span></a><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/System.drawFPS.html" class="public"><code>drawFPS</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">int</span><span class="pun">, </span><span class="typ">int</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">int</span><span class="pun">, </span><span class="typ">int</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/System.error.html" class="public"><code>error</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="kwd">const</span><span class="pun">(</span><span class="typ">char</span><span class="pun">*</span><span class="pun">)</span><span class="pun">, ...</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="kwd">const</span><span class="pun">(</span><span class="typ">char</span><span class="pun">*</span><span class="pun">)</span><span class="pun">, ...</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/System.formatString.html" class="public"><code>formatString</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">int</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">char</span><span class="pun">*</span><span class="pun">*</span><span class="pun">, </span><span class="kwd">const</span><span class="pun">(</span><span class="typ">char</span><span class="pun">*</span><span class="pun">)</span><span class="pun">, ...</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">int</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">char</span><span class="pun">*</span><span class="pun">*</span><span class="pun">, </span><span class="kwd">const</span><span class="pun">(</span><span class="typ">char</span><span class="pun">*</span><span class="pun">)</span><span class="pun">, ...</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/System.getAccelerometer.html" class="public"><code>getAccelerometer</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">float</span><span class="pun">*</span><span class="pun">, </span><span class="typ">float</span><span class="pun">*</span><span class="pun">, </span><span class="typ">float</span><span class="pun">*</span><span class="pun">)</span></code></td><td>Returns the last-read accelerometer data.
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">float</span><span class="pun">*</span><span class="pun">, </span><span class="typ">float</span><span class="pun">*</span><span class="pun">, </span><span class="typ">float</span><span class="pun">*</span><span class="pun">)</span></code></td><td>Returns the last-read accelerometer data.
 </td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/System.getBatteryPercentage.html" class="public"><code>getBatteryPercentage</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">float</span> <span class="kwd">function</span><span class="pun">(</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">float</span> <span class="kwd">function</span><span class="pun">(</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/System.getBatteryVoltage.html" class="public"><code>getBatteryVoltage</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">float</span> <span class="kwd">function</span><span class="pun">(</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">float</span> <span class="kwd">function</span><span class="pun">(</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/System.getButtonState.html" class="public"><code>getButtonState</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><a href="../playdate/PDButtons.html"><span class="typ">PDButtons</span></a><span class="pun">*</span><span class="pun">, </span><a href="../playdate/PDButtons.html"><span class="typ">PDButtons</span></a><span class="pun">*</span><span class="pun">, </span><a href="../playdate/PDButtons.html"><span class="typ">PDButtons</span></a><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><a href="../playdate/PDButtons.html"><span class="typ">PDButtons</span></a><span class="pun">*</span><span class="pun">, </span><a href="../playdate/PDButtons.html"><span class="typ">PDButtons</span></a><span class="pun">*</span><span class="pun">, </span><a href="../playdate/PDButtons.html"><span class="typ">PDButtons</span></a><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/System.getCrankAngle.html" class="public"><code>getCrankAngle</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">float</span> <span class="kwd">function</span><span class="pun">(</span><span class="pun">)</span></code></td><td>Returns the current position of the crank, in the range 0-360.
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">float</span> <span class="kwd">function</span><span class="pun">(</span><span class="pun">)</span></code></td><td>Returns the current position of the crank, in the range 0-360.
 Zero is pointing up, and the value increases as the crank moves clockwise, as viewed from the right side of the device.
 </td>
 					</tr>
@@ -129,162 +136,162 @@ Zero is pointing up, and the value increases as the crank moves clockwise, as vi
 						<td>
 							<a href="../playdate/System.getCrankChange.html" class="public"><code>getCrankChange</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">float</span> <span class="kwd">function</span><span class="pun">(</span><span class="pun">)</span></code></td><td>Returns the angle change of the crank since the last time this function was called. Negative values are anti-clockwise.
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">float</span> <span class="kwd">function</span><span class="pun">(</span><span class="pun">)</span></code></td><td>Returns the angle change of the crank since the last time this function was called. Negative values are anti-clockwise.
 </td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/System.getCurrentTimeMilliseconds.html" class="public"><code>getCurrentTimeMilliseconds</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">uint</span> <span class="kwd">function</span><span class="pun">(</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">uint</span> <span class="kwd">function</span><span class="pun">(</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/System.getElapsedTime.html" class="public"><code>getElapsedTime</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">float</span> <span class="kwd">function</span><span class="pun">(</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">float</span> <span class="kwd">function</span><span class="pun">(</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/System.getFlipped.html" class="public"><code>getFlipped</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">int</span> <span class="kwd">function</span><span class="pun">(</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">int</span> <span class="kwd">function</span><span class="pun">(</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/System.getLanguage.html" class="public"><code>getLanguage</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <a href="../playdate/PDLanguage.html"><span class="typ">PDLanguage</span></a> <span class="kwd">function</span><span class="pun">(</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <a href="../playdate/PDLanguage.html"><span class="typ">PDLanguage</span></a> <span class="kwd">function</span><span class="pun">(</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/System.getMenuItemTitle.html" class="public"><code>getMenuItemTitle</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="kwd">const</span><span class="pun">(</span><span class="typ">char</span><span class="pun">*</span><span class="pun">)</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="kwd">const</span><span class="pun">(</span><span class="typ">char</span><span class="pun">*</span><span class="pun">)</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/System.getMenuItemUserdata.html" class="public"><code>getMenuItemUserdata</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span><span class="pun">*</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span><span class="pun">*</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/System.getMenuItemValue.html" class="public"><code>getMenuItemValue</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">int</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">int</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/System.getReduceFlashing.html" class="public"><code>getReduceFlashing</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">bool</span> <span class="kwd">function</span><span class="pun">(</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">bool</span> <span class="kwd">function</span><span class="pun">(</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/System.getSecondsSinceEpoch.html" class="public"><code>getSecondsSinceEpoch</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">uint</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">uint</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">uint</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">uint</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/System.getTimezoneOffset.html" class="public"><code>getTimezoneOffset</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">int</span> <span class="kwd">function</span><span class="pun">(</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">int</span> <span class="kwd">function</span><span class="pun">(</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/System.isCrankDocked.html" class="public"><code>isCrankDocked</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">bool</span> <span class="kwd">function</span><span class="pun">(</span><span class="pun">)</span></code></td><td>Returns <code class="lang-d"><span class="kwd">true</span></code> or <code class="lang-d"><span class="kwd">false</span></code> indicating whether or not the crank is folded into the unit.
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">bool</span> <span class="kwd">function</span><span class="pun">(</span><span class="pun">)</span></code></td><td>Returns <code class="lang-d"><span class="kwd">true</span></code> or <code class="lang-d"><span class="kwd">false</span></code> indicating whether or not the crank is folded into the unit.
 </td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/System.logToConsole.html" class="public"><code>logToConsole</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="kwd">const</span><span class="pun">(</span><span class="typ">char</span><span class="pun">*</span><span class="pun">)</span><span class="pun">, ...</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="kwd">const</span><span class="pun">(</span><span class="typ">char</span><span class="pun">*</span><span class="pun">)</span><span class="pun">, ...</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/System.realloc.html" class="public"><code>realloc</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span><span class="pun">*</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">, </span><span class="typ">ulong</span><span class="pun">)</span></code></td><td>ptr = NULL -&gt; malloc, size = 0 -&gt; free
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span><span class="pun">*</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">, </span><span class="typ">ulong</span><span class="pun">)</span></code></td><td>ptr = NULL -&gt; malloc, size = 0 -&gt; free
 </td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/System.removeAllMenuItems.html" class="public"><code>removeAllMenuItems</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/System.removeMenuItem.html" class="public"><code>removeMenuItem</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/System.resetElapsedTime.html" class="public"><code>resetElapsedTime</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/System.setAutoLockDisabled.html" class="public"><code>setAutoLockDisabled</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">bool</span><span class="pun">)</span></code></td><td>Disables or enables the 60 second auto lock feature. When called, the timer is reset to 60 seconds.
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">bool</span><span class="pun">)</span></code></td><td>Disables or enables the 60 second auto lock feature. When called, the timer is reset to 60 seconds.
 </td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/System.setCrankSoundsDisabled.html" class="public"><code>setCrankSoundsDisabled</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">int</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">int</span><span class="pun">)</span></code></td><td>Returns the previous value for this setting.
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">int</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">int</span><span class="pun">)</span></code></td><td>Returns the previous value for this setting.
 </td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/System.setMenuImage.html" class="public"><code>setMenuImage</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">, </span><span class="typ">int</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">, </span><span class="typ">int</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/System.setMenuItemTitle.html" class="public"><code>setMenuItemTitle</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">*</span><span class="pun">, </span><span class="kwd">const</span><span class="pun">(</span><span class="typ">char</span><span class="pun">*</span><span class="pun">)</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">*</span><span class="pun">, </span><span class="kwd">const</span><span class="pun">(</span><span class="typ">char</span><span class="pun">*</span><span class="pun">)</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/System.setMenuItemUserdata.html" class="public"><code>setMenuItemUserdata</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">*</span><span class="pun">, </span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">*</span><span class="pun">, </span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/System.setMenuItemValue.html" class="public"><code>setMenuItemValue</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">*</span><span class="pun">, </span><span class="typ">int</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">*</span><span class="pun">, </span><span class="typ">int</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/System.setPeripheralsEnabled.html" class="public"><code>setPeripheralsEnabled</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><a href="../playdate/PDPeripherals.html"><span class="typ">PDPeripherals</span></a><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><a href="../playdate/PDPeripherals.html"><span class="typ">PDPeripherals</span></a><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/System.setUpdateCallback.html" class="public"><code>setUpdateCallback</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="kwd">@nogc</span> <span class="typ">int</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span> *<span class="pun">, </span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">void</span> <span class="kwd">function</span><span class="pun">(</span><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="typ">int</span> <span class="kwd">function</span><span class="pun">(</span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span> *<span class="pun">, </span><span class="typ">void</span><span class="pun">*</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 					<tr>
 						<td>
 							<a href="../playdate/System.shouldDisplay24HourTime.html" class="public"><code>shouldDisplay24HourTime</code></a>
 						</td>
-						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">bool</span> <span class="kwd">function</span><span class="pun">(</span><span class="pun">)</span></code></td><td></td>
+						<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">nothrow</span> <span class="kwd">@nogc</span> <span class="kwd">extern</span><span class="pun">(</span><span class="pln">C</span><span class="pun">)</span> <span class="typ">bool</span> <span class="kwd">function</span><span class="pun">(</span><span class="pun">)</span></code></td><td></td>
 					</tr>
 				</table>
 			</section>
