@@ -9,6 +9,8 @@ module playdate;
 
 import std.meta : Alias;
 
+@nogc nothrow:
+
 /// Attribute specifying which version a symbol was added to the Playdate C SDK.
 struct AddedIn {
   ///
