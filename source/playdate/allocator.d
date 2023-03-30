@@ -27,6 +27,7 @@ struct PDAllocator {
 
   ///
   void[] allocate(size_t bytes) const {
+    assert(pd, "Playdate API is inaccessible!");
     if (!bytes) return null;
     auto p = pd.system.realloc(null, bytes);
     return p ? p[0 .. bytes] : null;
@@ -35,12 +36,14 @@ struct PDAllocator {
   ///
   @system bool deallocate(void[] b) const {
     import playdate : free;
+    assert(pd, "Playdate API is inaccessible!");
     pd.system.free(b.ptr);
     return true;
   }
 
   ///
   @system bool reallocate(ref void[] b, size_t s) const {
+    assert(pd, "Playdate API is inaccessible!");
     if (!s) {
       assert(deallocate(b));
       b = null;
