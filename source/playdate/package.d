@@ -84,6 +84,8 @@ enum PDPeripherals : int {
 
 ///
 struct LCDRect {
+  @nogc nothrow:
+
   /// Left edge along x-axis.
 	int left;
 	/// Right edge along x-axis, not inclusive.
@@ -212,125 +214,143 @@ extern (C):
 
 ///
 struct System {
+  @nogc nothrow:
+
 	/// ptr = NULL -> malloc, size = 0 -> free
-	void* function(void* ptr, size_t size) @nogc realloc;
+	void* function(void* ptr, size_t size) realloc;
   ///
-	int function(char **ret, const char *fmt, ...) @nogc formatString;
+	int function(char **ret, const char *fmt, ...) formatString;
   ///
-	void function(const char* fmt, ...) @nogc logToConsole;
+	void function(const char* fmt, ...) logToConsole;
   ///
-	void function(const char* fmt, ...) @nogc error;
+	void function(const char* fmt, ...) error;
 	///
-  PDLanguage function() @nogc getLanguage;
+  PDLanguage function() getLanguage;
 	///
-  uint function() @nogc getCurrentTimeMilliseconds;
+  uint function() getCurrentTimeMilliseconds;
 	///
-  uint function(uint *milliseconds) @nogc getSecondsSinceEpoch;
+  uint function(uint *milliseconds) getSecondsSinceEpoch;
 	///
-  void function(int x, int y) @nogc drawFPS;
+  void function(int x, int y) drawFPS;
 
 	///
-  void function(PDCallbackFunction update, void* userdata) @nogc setUpdateCallback;
+  void function(PDCallbackFunction update, void* userdata) setUpdateCallback;
 	///
-  void function(PDButtons* current, PDButtons* pushed, PDButtons* released) @nogc getButtonState;
+  void function(PDButtons* current, PDButtons* pushed, PDButtons* released) getButtonState;
 	///
-  void function(PDPeripherals mask) @nogc setPeripheralsEnabled;
+  void function(PDPeripherals mask) setPeripheralsEnabled;
 	/// Returns the last-read accelerometer data.
-  void function(float* outx, float* outy, float* outz) @nogc getAccelerometer;
+  void function(float* outx, float* outy, float* outz) getAccelerometer;
 
 	/// Returns the angle change of the crank since the last time this function was called. Negative values are anti-clockwise.
-  float function() @nogc getCrankChange;
+  float function() getCrankChange;
 	/// Returns the current position of the crank, in the range 0-360.
   /// Zero is pointing up, and the value increases as the crank moves clockwise, as viewed from the right side of the device.
-  float function() @nogc getCrankAngle;
+  float function() getCrankAngle;
 	/// Returns `true` or `false` indicating whether or not the crank is folded into the unit.
-  bool function() @nogc isCrankDocked;
+  bool function() isCrankDocked;
 	/// Returns the previous value for this setting.
   /// Remarks:
   /// 0.12 adds sound effects for various system events, such as the menu opening or closing, USB cable plugged or
   /// unplugged, and the crank docked or undocked. Since games can receive notification of the crank docking and
   /// undocking, and may incorporate this into the game, we’ve provided a function for muting the default sounds for
   /// these events.
-	int function(int flag) @nogc setCrankSoundsDisabled;
+	int function(int flag) setCrankSoundsDisabled;
 
 	///
-  int function() @nogc getFlipped;
+  int function() getFlipped;
 	/// Disables or enables the 60 second auto lock feature. When called, the timer is reset to 60 seconds.
   /// Remarks:
   /// As of 0.10.3, the device will automatically lock if the user doesn’t press any buttons or use the crank for more
   /// than 60 seconds. In order for games that expect longer periods without interaction to continue to function, it is
   /// possible to manually disable the auto lock feature. Note that when disabling the timeout, developers should take
   /// care to re-enable the timeout when appropiate.
-  void function(bool disable) @nogc setAutoLockDisabled;
+  void function(bool disable) setAutoLockDisabled;
 
 	///
-  void function(LCDBitmap* bitmap, int xOffset) @nogc setMenuImage;
+  void function(LCDBitmap* bitmap, int xOffset) setMenuImage;
 	///
-  PDMenuItem* function(const char *title, PDMenuItemCallbackFunction callback, void* userdata) @nogc addMenuItem;
+  PDMenuItem* function(const char *title, PDMenuItemCallbackFunction callback, void* userdata) addMenuItem;
 	///
   PDMenuItem* function(
 		const char *title, int value, PDMenuItemCallbackFunction callback, void* userdata
-	) @nogc addCheckmarkMenuItem;
+	) addCheckmarkMenuItem;
 	///
   PDMenuItem* function(
 		const char *title, const char** optionTitles, int optionsCount, PDMenuItemCallbackFunction f, void* userdata
-	) @nogc addOptionsMenuItem;
+	) addOptionsMenuItem;
 	///
-  void function() @nogc removeAllMenuItems;
+  void function() removeAllMenuItems;
 	///
-  void function(PDMenuItem *menuItem) @nogc removeMenuItem;
+  void function(PDMenuItem *menuItem) removeMenuItem;
 	///
-  int function(PDMenuItem *menuItem) @nogc getMenuItemValue;
+  int function(PDMenuItem *menuItem) getMenuItemValue;
 	///
-  void function(PDMenuItem *menuItem, int value) @nogc setMenuItemValue;
+  void function(PDMenuItem *menuItem, int value) setMenuItemValue;
 	///
-  const(char*) function(PDMenuItem *menuItem) @nogc getMenuItemTitle;
+  const(char*) function(PDMenuItem *menuItem) getMenuItemTitle;
 	///
-  void function(PDMenuItem *menuItem, const char *title) @nogc setMenuItemTitle;
+  void function(PDMenuItem *menuItem, const char *title) setMenuItemTitle;
 	///
-  void* function(PDMenuItem *menuItem) @nogc getMenuItemUserdata;
+  void* function(PDMenuItem *menuItem) getMenuItemUserdata;
 	///
-  void function(PDMenuItem *menuItem, void *ud) @nogc setMenuItemUserdata;
+  void function(PDMenuItem *menuItem, void *ud) setMenuItemUserdata;
 
 	///
-  bool function() @nogc getReduceFlashing;
+  bool function() getReduceFlashing;
 
 	///
   @AddedIn(1, 1)
-  float function() @nogc getElapsedTime;
+  float function() getElapsedTime;
 	///
   @AddedIn(1, 1)
-  void function() @nogc resetElapsedTime;
+  void function() resetElapsedTime;
 
 	///
   @AddedIn(1, 4)
-  float function() @nogc getBatteryPercentage;
+  float function() getBatteryPercentage;
 	///
   @AddedIn(1, 4)
-  float function() @nogc getBatteryVoltage;
+  float function() getBatteryVoltage;
 
   ///
   @AddedIn(1, 13)
-  int function() @nogc getTimezoneOffset;
+  int function() getTimezoneOffset;
   ///
   @AddedIn(1, 13)
-  bool function() @nogc shouldDisplay24HourTime;
+  bool function() shouldDisplay24HourTime;
   ///
   @AddedIn(1, 13)
-  void function(int epoch, PDDateTime* datetime) @nogc convertEpochToDateTime;
+  void function(int epoch, PDDateTime* datetime) convertEpochToDateTime;
   ///
   @AddedIn(1, 13)
-  int function(PDDateTime* datetime) @nogc convertDateTimeToEpoch;
+  int function(PDDateTime* datetime) convertDateTimeToEpoch;
 }
 
 ///
-void logToConsole(System* system, string message) @nogc {
+T* alloc(T)(System* system) {
+  import std.conv : castFrom;
+  return castFrom!(void*).to!(T*)(system.realloc(null, T.sizeof));
+}
+///
+T[] alloc(T)(System* system, ulong size) {
+  import std.conv : castFrom;
+  return castFrom!(void*).to!(T*)(system.realloc(null, T.sizeof * size))[0..size];
+}
+
+///
+void free(T)(System* system, T* value) {
+  system.realloc(value, 0);
+}
+
+///
+void logToConsole(System* system, string message) {
   system.logToConsole(message.ptr);
 }
 
 version (unittest) {
   static message = "test";
-  extern (C) void log(const(char*) msg, ...) @nogc {
+  extern (C) void log(const(char*) msg, ...) {
     assert(msg == message.ptr);
   }
 }
@@ -375,41 +395,45 @@ struct FileStat {
 
 ///
 struct File {
+  @nogc nothrow:
+
   ///
-  const(char*) function() @nogc geterr;
+  const(char*) function() geterr;
 
 	///
   int function(
     const char* path, void function(const char* path, void* userdata) callback, void* userdata,
     bool showHidden
-  ) @nogc listfiles;
+  ) listfiles;
 	///
-  int function(const char* path, FileStat* stat) @nogc stat;
+  int function(const char* path, FileStat* stat) stat;
 	///
-  int function(const char* path) @nogc mkdir;
+  int function(const char* path) mkdir;
 	///
-  int function(const char* name, int recursive) @nogc unlink;
+  int function(const char* name, int recursive) unlink;
   ///
-	int function(const char* from, const char* to) @nogc rename;
+	int function(const char* from, const char* to) rename;
 
 	///
-  SDFile function(const char* name, FileOptions mode) @nogc open;
+  SDFile function(const char* name, FileOptions mode) open;
 	///
-  int function(SDFile file) @nogc close;
+  int function(SDFile file) close;
 	///
-  int function(SDFile file, void* buf, uint len) @nogc read;
+  int function(SDFile file, void* buf, uint len) read;
 	///
-  int function(SDFile file, const void* buf, uint len) @nogc write;
+  int function(SDFile file, const void* buf, uint len) write;
 	///
-  int function(SDFile file) @nogc flush;
+  int function(SDFile file) flush;
 	///
-  int function(SDFile file) @nogc tell;
+  int function(SDFile file) tell;
 	///
-  int function(SDFile file, int pos, int whence) @nogc seek;
+  int function(SDFile file, int pos, int whence) seek;
 }
 
 ///
 struct Video {
+  @nogc nothrow:
+
 	///
   LCDVideoPlayer*function (const char* path) loadVideo;
 	///
@@ -432,177 +456,179 @@ struct Video {
 
 ///
 struct Graphics {
+  @nogc nothrow:
+
   ///
 	Video* video;
 
 	// Drawing Functions
 	///
-  void function(LCDColor color) @nogc clear;
+  void function(LCDColor color) clear;
 	///
-  void function(LCDSolidColor color) @nogc setBackgroundColor;
+  void function(LCDSolidColor color) setBackgroundColor;
   /// Deprecated: In favor of `setStencilImage`, which adds a "tile" flag
-  void function(LCDBitmap* stencil) @nogc setStencil;
+  void function(LCDBitmap* stencil) setStencil;
 	///
-  void function(LCDBitmapDrawMode mode) @nogc setDrawMode;
+  void function(LCDBitmapDrawMode mode) setDrawMode;
 	///
-  void function(int dx, int dy) @nogc setDrawOffset;
+  void function(int dx, int dy) setDrawOffset;
 	///
-  void function(int x, int y, int width, int height) @nogc setClipRect;
+  void function(int x, int y, int width, int height) setClipRect;
 	///
-  void function() @nogc clearClipRect;
+  void function() clearClipRect;
 	///
-  void function(LCDLineCapStyle endCapStyle) @nogc setLineCapStyle;
+  void function(LCDLineCapStyle endCapStyle) setLineCapStyle;
 	///
-  void function(LCDFont* font) @nogc setFont;
+  void function(LCDFont* font) setFont;
 	///
-  void function(int tracking) @nogc setTextTracking;
+  void function(int tracking) setTextTracking;
 	///
-  void function(LCDBitmap* target) @nogc pushContext;
+  void function(LCDBitmap* target) pushContext;
 	///
-  void function() @nogc popContext;
+  void function() popContext;
 
 	///
-  void function(LCDBitmap* bitmap, int x, int y, LCDBitmapFlip flip) @nogc drawBitmap;
+  void function(LCDBitmap* bitmap, int x, int y, LCDBitmapFlip flip) drawBitmap;
 	///
-  void function(LCDBitmap* bitmap, int x, int y, int width, int height, LCDBitmapFlip flip) @nogc tileBitmap;
+  void function(LCDBitmap* bitmap, int x, int y, int width, int height, LCDBitmapFlip flip) tileBitmap;
 	///
-  void function(int x1, int y1, int x2, int y2, int width, LCDColor color) @nogc drawLine;
+  void function(int x1, int y1, int x2, int y2, int width, LCDColor color) drawLine;
 	///
-  void function(int x1, int y1, int x2, int y2, int x3, int y3, LCDColor color) @nogc fillTriangle;
+  void function(int x1, int y1, int x2, int y2, int x3, int y3, LCDColor color) fillTriangle;
 	///
-  void function(int x, int y, int width, int height, LCDColor color) @nogc drawRect;
+  void function(int x, int y, int width, int height, LCDColor color) drawRect;
 	///
-  void function(int x, int y, int width, int height, LCDColor color) @nogc fillRect;
+  void function(int x, int y, int width, int height, LCDColor color) fillRect;
 	/// stroked inside the rect
 	void function(
 		int x, int y, int width, int height, int lineWidth, float startAngle, float endAngle, LCDColor color
-	) @nogc drawEllipse;
+	) drawEllipse;
 	///
   void function(
     int x, int y, int width, int height, float startAngle, float endAngle, LCDColor color
-  ) @nogc fillEllipse;
+  ) fillEllipse;
 	///
-  void function(LCDBitmap* bitmap, int x, int y, float xscale, float yscale) @nogc drawScaledBitmap;
+  void function(LCDBitmap* bitmap, int x, int y, float xscale, float yscale) drawScaledBitmap;
 	///
-  int  function(const void* text, size_t len, PDStringEncoding encoding, int x, int y) @nogc drawText;
+  int  function(const void* text, size_t len, PDStringEncoding encoding, int x, int y) drawText;
 
 	// LCDBitmap
 	///
-  LCDBitmap* function(int width, int height, LCDColor bgcolor) @nogc newBitmap;
+  LCDBitmap* function(int width, int height, LCDColor bgcolor) newBitmap;
 	///
-  void function(LCDBitmap*) @nogc freeBitmap;
+  void function(LCDBitmap*) freeBitmap;
 	///
-  LCDBitmap* function(const char* path, const char** outerr) @nogc loadBitmap;
+  LCDBitmap* function(const char* path, const char** outerr) loadBitmap;
 	///
-  LCDBitmap* function(LCDBitmap* bitmap) @nogc copyBitmap;
+  LCDBitmap* function(LCDBitmap* bitmap) copyBitmap;
 	///
-  void function(const char* path, LCDBitmap* bitmap, const char** outerr) @nogc loadIntoBitmap;
+  void function(const char* path, LCDBitmap* bitmap, const char** outerr) loadIntoBitmap;
 	///
   void function(
     LCDBitmap* bitmap, int* width, int* height, int* rowbytes, ubyte** mask, ubyte** data
-  ) @nogc getBitmapData;
+  ) getBitmapData;
 	///
-  void function(LCDBitmap* bitmap, LCDColor bgcolor) @nogc clearBitmap;
+  void function(LCDBitmap* bitmap, LCDColor bgcolor) clearBitmap;
 	///
   LCDBitmap* function(
     LCDBitmap* bitmap, float rotation, float xscale, float yscale, int* allocedSize
-  ) @nogc rotatedBitmap;
+  ) rotatedBitmap;
 
 	// LCDBitmapTable
 	///
-  LCDBitmapTable* function(int count, int width, int height) @nogc newBitmapTable;
+  LCDBitmapTable* function(int count, int width, int height) newBitmapTable;
 	///
-  void function(LCDBitmapTable* table) @nogc freeBitmapTable;
+  void function(LCDBitmapTable* table) freeBitmapTable;
 	///
-  LCDBitmapTable* function(const char* path, const char** outerr) @nogc loadBitmapTable;
+  LCDBitmapTable* function(const char* path, const char** outerr) loadBitmapTable;
 	///
-  void function(const char* path, LCDBitmapTable* table, const char** outerr) @nogc loadIntoBitmapTable;
+  void function(const char* path, LCDBitmapTable* table, const char** outerr) loadIntoBitmapTable;
 	///
-  LCDBitmap* function(LCDBitmapTable* table, int idx) @nogc getTableBitmap;
+  LCDBitmap* function(LCDBitmapTable* table, int idx) getTableBitmap;
 
 	// LCDFont
 	///
-  LCDFont* function(const char* path, const char** outErr) @nogc loadFont;
+  LCDFont* function(const char* path, const char** outErr) loadFont;
 	///
-  LCDFontPage* function(LCDFont* font, uint c) @nogc getFontPage;
+  LCDFontPage* function(LCDFont* font, uint c) getFontPage;
 	///
-  LCDFontGlyph* function(LCDFontPage* page, uint c, LCDBitmap** bitmap, int* advance) @nogc getPageGlyph;
+  LCDFontGlyph* function(LCDFontPage* page, uint c, LCDBitmap** bitmap, int* advance) getPageGlyph;
 	///
-  int function(LCDFontGlyph* glyph, uint glyphcode, uint nextcode) @nogc getGlyphKerning;
+  int function(LCDFontGlyph* glyph, uint glyphcode, uint nextcode) getGlyphKerning;
 	///
-  int function(LCDFont* font, const void* text, size_t len, PDStringEncoding encoding, int tracking) @nogc getTextWidth;
+  int function(LCDFont* font, const void* text, size_t len, PDStringEncoding encoding, int tracking) getTextWidth;
 
 	// raw framebuffer access
 	///
-  ubyte* function() getFrame; // row stride = @nogc LCD_ROWSIZE
+  ubyte* function() getFrame; // row stride = LCD_ROWSIZE
 	///
-  ubyte* function() getDisplayFrame; // row stride = @nogc LCD_ROWSIZE
+  ubyte* function() getDisplayFrame; // row stride = LCD_ROWSIZE
 	///
-  LCDBitmap* function() getDebugBitmap; // valid in simulator only, function is NULL on @nogc device
+  LCDBitmap* function() getDebugBitmap; // valid in simulator only, function is NULL on device
 	///
-  LCDBitmap* function() @nogc copyFrameBufferBitmap;
+  LCDBitmap* function() copyFrameBufferBitmap;
 	///
-  void function(int start, int end) @nogc markUpdatedRows;
+  void function(int start, int end) markUpdatedRows;
 	///
-  void function() @nogc display;
+  void function() display;
 
 	/// misc util.
-  void function(LCDColor* color, LCDBitmap* bitmap, int x, int y) @nogc setColorToPattern;
+  void function(LCDColor* color, LCDBitmap* bitmap, int x, int y) setColorToPattern;
   ///
 	int function(
 		LCDBitmap* bitmap1, int x1, int y1, LCDBitmapFlip flip1,
 		LCDBitmap* bitmap2, int x2, int y2, LCDBitmapFlip flip2,
 		LCDRect rect
-	) @nogc checkMaskCollision;
+	) checkMaskCollision;
 
 	///
   @AddedIn(1, 1)
-	void function(int x, int y, int width, int height) @nogc setScreenClipRect;
+	void function(int x, int y, int width, int height) setScreenClipRect;
 
 	///
   @AddedIn(1, 1, 1)
-	void function(int nPoints, int* coords, LCDColor color, LCDPolygonFillRule fillrule) @nogc fillPolygon;
+	void function(int nPoints, int* coords, LCDColor color, LCDPolygonFillRule fillrule) fillPolygon;
 	///
   @AddedIn(1, 1, 1)
-  ubyte function(LCDFont* font) @nogc getFontHeight;
+  ubyte function(LCDFont* font) getFontHeight;
 
 	///
   @AddedIn(1, 7)
-	LCDBitmap* function() @nogc getDisplayBufferBitmap;
+	LCDBitmap* function() getDisplayBufferBitmap;
   ///
   @AddedIn(1, 7)
 	void function(
 		LCDBitmap* bitmap, int x, int y, float rotation, float centerx, float centery, float xscale, float yscale
-	) @nogc drawRotatedBitmap;
+	) drawRotatedBitmap;
   ///
   @AddedIn(1, 7)
-	void function(int lineHeightAdustment) @nogc setTextLeading;
+	void function(int lineHeightAdustment) setTextLeading;
 
 	///
   @AddedIn(1, 8)
-	int function(LCDBitmap* bitmap, LCDBitmap* mask) @nogc setBitmapMask;
+	int function(LCDBitmap* bitmap, LCDBitmap* mask) setBitmapMask;
   ///
-	LCDBitmap* function(LCDBitmap* bitmap) @nogc getBitmapMask;
+	LCDBitmap* function(LCDBitmap* bitmap) getBitmapMask;
 
 	///
   @AddedIn(1, 10)
-	void function(LCDBitmap* stencil, int tile) @nogc setStencilImage;
+	void function(LCDBitmap* stencil, int tile) setStencilImage;
 
 	///
   @AddedIn(1, 12)
-	LCDFont* function(LCDFontData* data, int wide) @nogc makeFontFromData;
+	LCDFont* function(LCDFontData* data, int wide) makeFontFromData;
 }
 
 ///
 int drawText(
   Graphics* gfx, string text, int x, int y, PDStringEncoding encoding = PDStringEncoding.asciiEncoding
-) @nogc {
+) {
   return gfx.drawText(text.ptr, text.length, encoding, x, y);
 }
 
 version (unittest) {
   static txt = "test";
-  extern (C) int drawTextTest(const void* text, size_t len, PDStringEncoding encoding, int x, int y) @nogc {
+  extern (C) int drawTextTest(const void* text, size_t len, PDStringEncoding encoding, int x, int y) {
     assert(text == txt.ptr);
     assert(len == txt.length);
     assert(encoding == PDStringEncoding.asciiEncoding);
@@ -620,29 +646,32 @@ unittest {
 
 ///
 struct Sprite {
+  @nogc nothrow:
   // TODO: Implement Playdate Sprite API
 }
 
 ///
 struct Display {
-	///
-  int function() @nogc getWidth;
-	///
-  int function() @nogc getHeight;
+  @nogc nothrow:
 
 	///
-  void function(float rate) @nogc setRefreshRate;
+  int function() getWidth;
+	///
+  int function() getHeight;
 
 	///
-  void function(int flag) @nogc setInverted;
+  void function(float rate) setRefreshRate;
+
 	///
-  void function(uint s) @nogc setScale;
+  void function(int flag) setInverted;
 	///
-  void function(uint x, uint y) @nogc setMosaic;
+  void function(uint s) setScale;
 	///
-  void function(int x, int y) @nogc setFlipped;
+  void function(uint x, uint y) setMosaic;
 	///
-  void function(int x, int y) @nogc setOffset;
+  void function(int x, int y) setFlipped;
+	///
+  void function(int x, int y) setOffset;
 }
 
 /// A SoundChannel contains `SoundSource`s and `SoundEffect`s.
@@ -650,65 +679,72 @@ alias SoundChannel = Alias!(void*);
 
 ///
 struct SoundChannelApi {
+  @nogc nothrow:
+
   ///
-  SoundChannel function() @nogc newChannel;
+  SoundChannel function() newChannel;
 	///
-  void function(SoundChannel channel) @nogc freeChannel;
+  void function(SoundChannel channel) freeChannel;
 	///
-  int function(SoundChannel channel, SoundSource* source) @nogc addSource;
+  int function(SoundChannel channel, SoundSource* source) addSource;
 	///
-  int function(SoundChannel channel, SoundSource* source) @nogc removeSource;
+  int function(SoundChannel channel, SoundSource* source) removeSource;
   /// Creates a new `SoundSource` using the given data provider `callback` and adds it to the default channel.
   /// Remarks: The caller takes ownership of the allocated `SoundSource`, and should free it with `playdate.system.realloc(source, NULL);` when it is no longer in use.
   SoundSource* function(
     SoundChannel channel, AudioSourceFunction* callback, void* context, int stereo
-  ) @nogc addCallbackSource;
+  ) addCallbackSource;
 	///
-  void function(SoundChannel channel, SoundEffect* effect) @nogc addEffect;
+  void function(SoundChannel channel, SoundEffect* effect) addEffect;
 	///
-  void function(SoundChannel channel, SoundEffect* effect) @nogc removeEffect;
+  void function(SoundChannel channel, SoundEffect* effect) removeEffect;
 	///
-  void function(SoundChannel channel, float volume) @nogc setVolume;
+  void function(SoundChannel channel, float volume) setVolume;
 	///
-  float function(SoundChannel channel) @nogc getVolume;
+  float function(SoundChannel channel) getVolume;
 	///
-  void function(SoundChannel channel, PDSynthSignalValue mod) @nogc setVolumeModulator;
+  void function(SoundChannel channel, PDSynthSignalValue mod) setVolumeModulator;
 	///
-  PDSynthSignalValue function(SoundChannel channel) @nogc getVolumeModulator;
+  PDSynthSignalValue function(SoundChannel channel) getVolumeModulator;
 	///
-  void function(SoundChannel channel, float pan) @nogc setPan;
+  void function(SoundChannel channel, float pan) setPan;
 	///
-  void function(SoundChannel channel, PDSynthSignalValue mod) @nogc setPanModulator;
+  void function(SoundChannel channel, PDSynthSignalValue mod) setPanModulator;
 	///
-  PDSynthSignalValue function(SoundChannel channel) @nogc getPanModulator;
+  PDSynthSignalValue function(SoundChannel channel) getPanModulator;
 	///
-  PDSynthSignalValue function(SoundChannel channel) @nogc getDryLevelSignal;
+  PDSynthSignalValue function(SoundChannel channel) getDryLevelSignal;
 	///
-  PDSynthSignalValue function(SoundChannel channel) @nogc getWetLevelSignal;
+  PDSynthSignalValue function(SoundChannel channel) getWetLevelSignal;
 }
 
 ///
 struct SoundFileplayer {
+  @nogc nothrow:
   // TODO: Implement Playdate Sound Fileplayer API
 }
 
 ///
 struct SoundSample {
+  @nogc nothrow:
   // TODO: Implement Playdate Sound Sample API
 }
 
 ///
 struct SoundSampleplayer {
+  @nogc nothrow:
   // TODO: Implement Playdate Sound Sampleplayer API
 }
 
 ///
 struct SoundSynth {
+  @nogc nothrow:
   // TODO: Implement Playdate Sound Synth API
 }
 
 ///
 struct SoundSequence {
+  @nogc nothrow:
   // TODO: Implement Playdate Sound Sequence API
 }
 
@@ -717,36 +753,43 @@ alias SoundEffect = Alias!(void*);
 
 ///
 struct SoundEffectApi {
+  @nogc nothrow:
   // TODO: Implement Playdate Sound Effect API
 }
 
 ///
 struct SoundLfo {
+  @nogc nothrow:
   // TODO: Implement Playdate Sound Lfo API
 }
 
 ///
 struct SoundEnvelope {
+  @nogc nothrow:
   // TODO: Implement Playdate Sound Envelope API
 }
 
 ///
 struct SoundSource {
+  @nogc nothrow:
   // TODO: Implement Playdate Sound Source API
 }
 
 ///
 struct ControlSignal {
+  @nogc nothrow:
   // TODO: Implement Playdate Contr olSignal API
 }
 
 ///
 struct SoundTrack {
+  @nogc nothrow:
   // TODO: Implement Playdate Sound Track API
 }
 
 ///
 struct SoundInstrument {
+  @nogc nothrow:
   // TODO: Implement Playdate Sound Instrument API
 }
 
@@ -758,11 +801,14 @@ alias PDSynthSignal = Alias!(void*);
 
 ///
 struct SoundSignal {
+  @nogc nothrow:
   // TODO: Implement Playdate Sound Signal API
 }
 
 ///
 struct Sound {
+  @nogc nothrow:
+
 	///
   SoundChannelApi* channel;
 	///
@@ -791,30 +837,30 @@ struct Sound {
   SoundInstrument* instrument;
 
 	///
-  uint function() @nogc getCurrentTime;
+  uint function() getCurrentTime;
 	/// The `callback` function you pass in will be called every audio render cycle.
-  SoundSource* function(AudioSourceFunction callback, void* context, bool stereo) @nogc addSource;
+  SoundSource* function(AudioSourceFunction callback, void* context, bool stereo) addSource;
 
 	///
-  SoundChannel function() @nogc getDefaultChannel;
+  SoundChannel function() getDefaultChannel;
 
 	///
-  void function(SoundChannel channel) @nogc addChannel;
+  void function(SoundChannel channel) addChannel;
 	///
-  void function(SoundChannel channel) @nogc removeChannel;
+  void function(SoundChannel channel) removeChannel;
 
 	/// The `callback` you pass in will be called every audio cycle.
   ///
   /// If `forceInternal` is set, the device microphone is used regardless of whether the headset has a microphone.
-  void function(RecordCallback callback, void* context, bool forceInternal) @nogc setMicCallback;
+  void function(RecordCallback callback, void* context, bool forceInternal) setMicCallback;
 	/// If `headphone` contains a non-null pointer, the value is set to `true` if headphones are currently plugged in.
   /// Likewise, mic is set if the headphones include a microphone.
   /// If `changeCallback` is provided, it will be called when the headset or mic status changes, and audio output
   /// will not automatically switch from speaker to headphones when headphones are plugged in (and vice versa).
   /// In this case, the callback should use `playdate.sound.setOutputsActive()` to change the output if needed.
   void function(
-    bool* headphone, bool* headsetmic, void function(bool headphone, bool mic) @nogc changeCallback
-  ) @nogc getHeadphoneState;
+    bool* headphone, bool* headsetmic, void function(bool headphone, bool mic) changeCallback
+  ) getHeadphoneState;
 	/// Force audio output to the given outputs, regardless of headphone status.
   void function(bool headphone, bool speaker) setOutputsActive;
 
@@ -829,16 +875,19 @@ struct Sound {
 
 ///
 struct Lua {
+  @nogc nothrow:
 	// TODO: Implement Playdate Lua API
 }
 
 ///
 struct Json {
+  @nogc nothrow:
 	// TODO: Implement Playdate Json API
 }
 
 ///
 struct Scoreboards {
+  @nogc nothrow:
 	// TODO: Implement Playdate Scoreboards API
 }
 
@@ -866,7 +915,7 @@ struct PlaydateAPI {
 
 /// Generates a shim around your `eventHandler` used by the Playdate OS as the entry-point to your application.
 mixin template EventHandlerShim() {
-  extern (C) int eventHandlerShim(PlaydateAPI* playdate, PDSystemEvent event, uint arg) @nogc {
+  extern (C) int eventHandlerShim(PlaydateAPI* playdate, PDSystemEvent event, uint arg) @nogc nothrow {
     return eventHandler(playdate, event, arg);
   }
 }
