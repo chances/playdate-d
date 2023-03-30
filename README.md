@@ -12,16 +12,20 @@ D bindings to the [Playdate SDK](https://sdk.play.date/1.12.3/Inside%20Playdate%
 "dependencies": {
     "playdate": "1.12.0"
 },
+"targetPath": "dist",
 "configurations": [
     {
         "name": "simulator",
+        "targetName": "pdex",
         "targetType": "dynamicLibrary",
         "postBuildCommands-osx": [
             "mv dist/libpdex.dylib dist/pdex.dylib"
         ],
         "postBuildCommands-posix": [
             "touch dist/pdex.bin",
-            "$PLAYDATE_SDK_PATH/bin/pdc $PACKAGE_DIR/dist app.pdx"
+            "$PLAYDATE_SDK_PATH/bin/pdc $PACKAGE_DIR/dist app.pdx",
+            "(cat views/pdxinfo; cat app.pdx/pdxinfo) > /tmp/pdxinfo",
+            "mv /tmp/pdxinfo app.pdx/pdxinfo"
         ],
         "postBuildCommands-windows": [
             "pdc $PACKAGE_DIR/dist app.pdx"
