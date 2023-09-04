@@ -7,8 +7,8 @@
 <url><loc>http://127.0.0.1/playdate/allocator/PDAllocator.alignment.html</loc></url>
 <url><loc>http://127.0.0.1/playdate/allocator/PDAllocator.allocate.html</loc></url>
 <url><loc>http://127.0.0.1/playdate/allocator/PDAllocator.deallocate.html</loc></url>
-<url><loc>http://127.0.0.1/playdate/allocator/PDAllocator.instance.html</loc></url>
 <url><loc>http://127.0.0.1/playdate/allocator/PDAllocator.reallocate.html</loc></url>
+<url><loc>http://127.0.0.1/playdate/allocator/theAllocator.html</loc></url>
 <url><loc>http://127.0.0.1/playdate.html</loc></url>
 <url><loc>http://127.0.0.1/playdate/AddedIn.html</loc></url>
 <url><loc>http://127.0.0.1/playdate/AddedIn.this.html</loc></url>

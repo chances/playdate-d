@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8"/>
-		<title>Enum member PDAllocator.alignment</title>
+		<title>Variable theAllocator</title>
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
@@ -35,32 +35,17 @@ $('#symbolSearchPane').show();</script>
 			</ul>
 		</nav>
 		<div id="main-contents">
-			<h1>Enum member PDAllocator.alignment</h1><p>The alignment is a static constant equal to <code class="lang-d"><span class="pln">platformAlignment</span></code>, which ensures proper alignment for any D data type.
+			<h1>Variable theAllocator</h1><p>The global instance of this allocator
 </p>
 			<div class="prototype">
 				<code class="lang-d">
 					<div class="single-prototype">
-			<span class="kwd">struct</span> <a href="../../playdate/allocator/PDAllocator.html"><span class="typ">PDAllocator</span></a>
-			<br/>
-			<span class="pun">
-				{
-				<br/>
-			</span>
-			&nbsp;&nbsp;<span class="com">// ...</span>
-			<br/>
-			&nbsp;&nbsp;<span class="kwd">enum</span> <span class="pln">alignment</span>
-			 <span class="pun">=</span> <span class="lit">16u</span><span class="pun">;</span>
-			<br/>
-			&nbsp;&nbsp;<span class="com">// ...</span>
-			<br/>
-			<span class="pun">}</span>
+			<a href="../../playdate/allocator/PDAllocator.html"><span class="typ">PDAllocator</span></a> <span class="pln">theAllocator</span>
+			<span class="pun">;</span>
 					</div>
 				</code>
 			</div>
-			<section><p>The alignment that is guaranteed to accommodate any D object allocation on the current platform.
-</p>
-</section>
-
+			
 			
 			<footer>
 				<table class="license-info">
