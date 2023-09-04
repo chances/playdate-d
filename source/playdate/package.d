@@ -620,9 +620,7 @@ struct Graphics {
 }
 
 ///
-int drawText(
-  Graphics* gfx, string text, int x, int y, PDStringEncoding encoding = PDStringEncoding.asciiEncoding
-) {
+int drawText(Graphics* gfx, string text, int x, int y, PDStringEncoding encoding = PDStringEncoding.utf8Encoding) {
   return gfx.drawText(text.ptr, text.length, encoding, x, y);
 }
 
@@ -631,7 +629,7 @@ version (unittest) {
   extern (C) int drawTextTest(const void* text, size_t len, PDStringEncoding encoding, int x, int y) {
     assert(text == txt.ptr);
     assert(len == txt.length);
-    assert(encoding == PDStringEncoding.asciiEncoding);
+    assert(encoding == PDStringEncoding.utf8Encoding);
     assert(x >= 0);
     assert(y >= 0);
     return 0;
