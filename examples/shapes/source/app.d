@@ -17,6 +17,8 @@ mixin EventHandlerShim;
 @nogc nothrow:
 
 int eventHandler(PlaydateAPI* playdate, PDSystemEvent event, uint arg) {
+  assert(arg >= 0);
+
 	final switch (event) {
 		case PDSystemEvent.init:
 			pd = playdate;
