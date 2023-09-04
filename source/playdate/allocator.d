@@ -10,18 +10,18 @@ import playdate : PlaydateAPI;
 ///
 static PlaydateAPI* pd;
 
-shared static this() {
-  import std.experimental.allocator: allocatorObject, theAllocator;
-  theAllocator = allocatorObject(PDAllocator.instance);
-}
+/// The global instance of this allocator
+static PDAllocator theAllocator;
 
 /// Playdate heap allocator.
 /// Remarks: Adapted from <a href="https://github.com/dlang/phobos/blob/17b1a11afd74f9f8a69af93d77d4548a557e1b89/std/experimental/allocator/mallocator.d">std.experimental.allocator.mallocator</a>
 struct PDAllocator {
-  import std.experimental.allocator.common: platformAlignment;
+  import std.algorithm : max;
 
   /// The alignment is a static constant equal to `platformAlignment`, which ensures proper alignment for any D data type.
-  enum uint alignment = platformAlignment;
+  ///
+  /// The alignment that is guaranteed to accommodate any D object allocation on the current platform.
+  enum uint alignment = max(double.alignof, real.alignof);
 
   @nogc nothrow:
 
@@ -54,7 +54,4 @@ struct PDAllocator {
     b = p[0 .. s];
     return true;
   }
-
-  /// Returns: The global instance of this allocator type.
-  static PDAllocator instance;
 }

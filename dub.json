@@ -6,11 +6,11 @@
 	],
   "license": "MIT",
 	"copyright": "Copyright © 2022, Chance Snow",
-  "targetType": "sourceLibrary",
-  "systemDependencies": "Playdate SDK >= 1.12.1",
   "subPackages": [
     "./examples/shapes"
   ],
+  "systemDependencies": "Playdate SDK >= 1.12.1",
+  "targetType": "sourceLibrary",
   "configurations": [
     {
       "name": "library",
