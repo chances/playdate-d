@@ -1,3 +1,6 @@
+.envrc
+
+# Dub
 .dub
 dub.selections.json
 docs.json
@@ -14,3 +17,6 @@ playdate-test-*
 *.o
 *.obj
 *.lst
+
+# Node.js
+node_modules/

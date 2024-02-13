@@ -1,0 +1,7 @@
+{
+  "name": "playdate-d",
+  "private:": true,
+  "devDependencies": {
+    "pd-usb": "^2.0.1"
+  }
+}
