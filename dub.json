@@ -10,7 +10,8 @@
     "./examples/shapes"
   ],
   "systemDependencies": "Playdate SDK >= 1.12.1",
-  "targetType": "sourceLibrary",
+  "targetPath": "bin",
+  "targetType": "staticLibrary",
   "configurations": [
     {
       "name": "library",
