@@ -32,9 +32,8 @@ jobs:
         key: ${{ runner.os }}-dub-${{ hashFiles('**/dub.json') }}
         restore-keys: |
           ${{ runner.os }}-dub-
-    # TODO: Re-enable this step
-    # - name: Lint
-    #   run: dub lint
+    - name: Lint
+      run: dub run dscanner -- lint source
     - name: Test
       run: dub test --coverage
     - name: Upload Coverage to Codecov
