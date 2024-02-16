@@ -4,11 +4,12 @@
   "authors": [
     "Chance Snow"
   ],
-  "license": "BSD 3-clause",
+  "license": "MIT",
   "copyright": "Copyright © 2022, Chance Snow",
   "targetPath": "dist",
   "targetName": "pdex",
   "systemDependencies": "Playdate SDK >= 1.12.1",
+  "buildOptions": ["betterC"],
   "dependencies": {
     "playdate": {
       "path": "../../"
@@ -23,10 +24,11 @@
       ],
       "postBuildCommands-posix": [
         "touch dist/pdex.bin",
-        "$PLAYDATE_SDK_PATH/bin/pdc $PACKAGE_DIR/dist app.pdx"
+        "mv dist/libpdex.so dist/pdex.so",
+        "$PLAYDATE_SDK_PATH/bin/pdc --skip-unknown $PACKAGE_DIR/dist app.pdx"
       ],
       "postBuildCommands-windows": [
-        "pdc $PACKAGE_DIR/dist app.pdx"
+        "$PLAYDATE_SDK_PATH/bin/pdc --skip-unknown $PACKAGE_DIR/dist app.pdx"
       ]
     },
     {
