@@ -21,5 +21,8 @@ playdate-test-*
 *.obj
 *.lst
 
+# Temporary Files
+*~
+
 # Node.js
 node_modules/
