@@ -19,7 +19,10 @@
       ],
       "buildOptions": ["syntaxOnly"],
       "dflags": ["-Dddocs"],
-      "postBuildCommands-posix": ["cp views/index.html docs"]
+      "postBuildCommands-posix": [
+        "cp views/index.html docs",
+        "node scripts/docs.js"
+      ]
     }
   },
   "configurations": [

@@ -16,7 +16,7 @@ DDOC=<!DOCTYPE html>
     <main>
       <a id="downloadButton" href="https://code.dlang.org/packages/playdate-d">
         <div class="bs-hbtn right black">
-          <div class="content">get <strong>playdate-d</strong><br><large>{{ DUB_VERSION }}</large></div>
+          <div class="content">get <strong>playdate</strong><br><large>{{ DUB_VERSION }}</large></div>
         </div><div class="bs-hbtn left red">
           <div class="dub-logo"></div>
         </div>
@@ -42,7 +42,9 @@ DDOC=<!DOCTYPE html>
             </li>
           </ul>
           <h2>API Reference</h2>
-          <ul>{{ MODULE_TREE }}</ul>
+          <ul id="symbols">{{#each array}}
+            <li>{{ this }}</li>
+          {{/each}}</ul>
         </nav>
       </aside>
       <article class="module">

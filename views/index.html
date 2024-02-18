@@ -10,7 +10,7 @@
   <main>
     <a id="downloadButton" href="https://code.dlang.org/packages/playdate-d">
       <div class="bs-hbtn right black">
-        <div class="content">get <strong>playdate-d</strong><br><large>{{ DUB_VERSION }}</large></div>
+        <div class="content">get <strong>playdate</strong><br><large>{{ DUB_VERSION }}</large></div>
       </div><div class="bs-hbtn left red">
         <div class="dub-logo"></div>
       </div>
@@ -36,7 +36,12 @@
           </li>
         </ul>
         <h2>API Reference</h2>
-        <ul>{{ MODULE_TREE }}</ul>
+        <form id="symbolSearchForm" action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();" tabindex="1000">
+				</form>
+        <ul id="symbols">{{#each SYMBOLS}}
+          <li>{{ this }}</li>
+        {{/each}}</ul>
       </nav>
     </aside>
     <article>
@@ -71,11 +76,13 @@
       <h3>Shapes</h3>
       <pre>dub run playdate:shapes</pre>
       <h2>Modules</h2>
-      {{ MODULE_LIST }}
+      {{#each MODULES}}<li><a href="{{ this.file }}">{{ this.name }}</a></li>{{/each}}
     </article>
   </main>
   <footer>
     <a href="https://github.com/chances/playdate-d#readme">GitHub</a>
     <span class="faint" style="float: right;">Generated using <a href="https://dlang.org/spec/ddoc.html">Ddoc</a></span>
   </footer>
+  <script type="application/javascript">const symbols = [{{#each SYMBOLS}}{{ this }},{{/each}}]</script>
+  <script type="application/javascript" src="scripts/symbols.js"></script>
 </body>
