@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>playdate.allocator - Playdate SDK D API</title>
+    <link rel="stylesheet" href="styles/docs.css" />
+    <link rel="stylesheet" href="styles/dub.css" />
+  </head>
+  <body>
+    
+    <main>
+      <a id="downloadButton" href="https://code.dlang.org/packages/playdate-d">
+        <div class="bs-hbtn right black">
+          <div class="content">get <strong>playdate</strong><br><large>v1.13.2</large></div>
+        </div><div class="bs-hbtn left red">
+          <div class="dub-logo"></div>
+        </div>
+      </a>
+      <aside class="flex row">
+        <nav>
+          <header class="flex row">
+            <img id="logo" src="https://chances.github.io/playdate-d/images/playdate.png" alt="Playdate Logo">
+            <h1>
+              <span>Playdate SDK</span>
+              <span class="faint">D Bindings</span>
+            </h1>
+          </header>
+          <ul style="list-style: none; padding: 0;">
+            <li>
+              <a href="https://chances.github.io/playdate-d">API Reference</a>
+            </li>
+            <li>
+              <a href="https://code.dlang.org/packages/playdate-d">Download</a>
+            </li>
+            <li>
+              <a href="https://github.com/chances/playdate-d#readme">Open Source on GitHub</a>
+            </li>
+          </ul>
+          <h2>API Reference</h2>
+          <ul id="symbols"></ul>
+        </nav>
+      </aside>
+      <article class="module">
+        
+        <h1>Module playdate.allocator</h1>
+        <section class="source">
+          <h4>Source</h4>
+          <p><a href="https://github.com/chances/playdate-d/blob/main/source/playdate/allocator.d">source/playdate/allocator.d</a></p>
+        </section>
+        <section class="authors">
+  <h4>Authors</h4>
+  <p>
+    Chance Snow
+
+  </p>
+</section>
+<section class="license">
+  <h4>License</h4>
+  <p>
+    MIT License
+  </p>
+</section>
+<section class="members">
+    <h2>Members</h2>
+    <ul><li class="member">
+  <h3><a id="pd" href="#pd"><code class="code">pd</code></a></h3><dt class="decl"><code><span class="anchor" id="pd"></span>static PlaydateAPI* <strong>pd</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="theAllocator" href="#theAllocator"><code class="code">theAllocator</code></a></h3><dt class="decl"><code><span class="anchor" id="theAllocator"></span>static PDAllocator <strong>theAllocator</strong>;
+</code></dt>
+<dd class="decl"><p>The global instance of this allocator</p></dd>
+
+</li><li class="member">
+  <h3><a id="PDAllocator" href="#PDAllocator"><code class="code">PDAllocator</code></a></h3><dt class="decl"><code><span class="anchor" id="PDAllocator"></span>struct <strong>PDAllocator</strong>;
+</code></dt>
+<dd class="decl"><p>Playdate heap allocator.
+</p><p><h4 class="section">Remarks</h4>Adapted from <a href="https://github.com/dlang/phobos/blob/17b1a11afd74f9f8a69af93d77d4548a557e1b89/std/experimental/allocator/mallocator.d">std.experimental.allocator.mallocator</a></p><ul class="struct members">
+  <li class="member">
+  <h3><a id="PDAllocator.alignment" href="#PDAllocator.alignment"><code class="code">alignment</code></a></h3><dt class="decl"><code><span class="anchor" id="PDAllocator.alignment"></span>enum uint <strong>alignment</strong>;
+</code></dt>
+<dd class="decl"><p>The <strong>alignment</strong> is a static constant equal to <code class="code">platformAlignment</code>, which ensures proper <strong>alignment</strong> for any D data type.
+</p><p>The <strong>alignment</strong> that is guaranteed to accommodate any D object allocation on the current platform.</p></dd>
+
+</li><li class="member">
+  <h3><a id="PDAllocator.allocate" href="#PDAllocator.allocate"><code class="code">allocate</code></a></h3><dt class="decl"><code><span class="anchor" id="PDAllocator.allocate"></span>const nothrow @nogc void[] <strong>allocate</strong>(size_t <code><i>bytes</i></code>);
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="PDAllocator.deallocate" href="#PDAllocator.deallocate"><code class="code">deallocate</code></a></h3><dt class="decl"><code><span class="anchor" id="PDAllocator.deallocate"></span>const nothrow @nogc @system bool <strong>deallocate</strong>(void[] <code><i>b</i></code>);
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="PDAllocator.reallocate" href="#PDAllocator.reallocate"><code class="code">reallocate</code></a></h3><dt class="decl"><code><span class="anchor" id="PDAllocator.reallocate"></span>const nothrow @nogc @system bool <strong>reallocate</strong>(ref void[] <code><i>b</i></code>, size_t <code><i>s</i></code>);
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li>
+</ul></dd>
+
+</li></ul>
+  </section>
+      </article>
+    </main>
+    <footer>
+  <a href="https://github.com/chances/playdate-d#readme">GitHub</a>
+  <span class="faint" style="float: right;">Generated using <a href="https://code.dlang.org/packages/ddox">DDOX</a></span>
+</footer>
+  </body>
+</html>
