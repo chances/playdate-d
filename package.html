@@ -1,0 +1,1700 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>playdate - Playdate SDK D API</title>
+    <link rel="stylesheet" href="styles/docs.css" />
+    <link rel="stylesheet" href="styles/dub.css" />
+  </head>
+  <body>
+    
+    <main>
+      <a id="downloadButton" href="https://code.dlang.org/packages/playdate-d">
+        <div class="bs-hbtn right black">
+          <div class="content">get <strong>playdate</strong><br><large>v1.13.2</large></div>
+        </div><div class="bs-hbtn left red">
+          <div class="dub-logo"></div>
+        </div>
+      </a>
+      <aside class="flex row">
+        <nav>
+          <header class="flex row">
+            <img id="logo" src="https://chances.github.io/playdate-d/images/playdate.png" alt="Playdate Logo">
+            <h1>
+              <span>Playdate SDK</span>
+              <span class="faint">D Bindings</span>
+            </h1>
+          </header>
+          <ul style="list-style: none; padding: 0;">
+            <li>
+              <a href="https://chances.github.io/playdate-d">API Reference</a>
+            </li>
+            <li>
+              <a href="https://code.dlang.org/packages/playdate-d">Download</a>
+            </li>
+            <li>
+              <a href="https://github.com/chances/playdate-d#readme">Open Source on GitHub</a>
+            </li>
+          </ul>
+          <h2>API Reference</h2>
+          <ul id="symbols"></ul>
+        </nav>
+      </aside>
+      <article class="module">
+        
+        <h1>Module playdate</h1>
+        <section class="source">
+          <h4>Source</h4>
+          <p><a href="https://github.com/chances/playdate-d/blob/main/source/playdate/package.d">source/playdate/package.d</a></p>
+        </section>
+        <section class="see-also">
+  <h4>See Also</h4>
+  <p>
+    <a href="https://sdk.play.date/1.12.3/Inside Playdate with C.html">Inside Playdate with C</a> - Official Playdate SDK Documentation
+
+
+  </p>
+</section>
+<section class="authors">
+  <h4>Authors</h4>
+  <p>
+    Chance Snow
+
+  </p>
+</section>
+<section class="license">
+  <h4>License</h4>
+  <p>
+    MIT License
+  </p>
+</section>
+<section class="members">
+    <h2>Members</h2>
+    <ul><li class="member">
+  <h3><a id="AddedIn" href="#AddedIn"><code class="code">AddedIn</code></a></h3><dt class="decl"><code><span class="anchor" id="AddedIn"></span>struct <strong>AddedIn</strong>;
+</code></dt>
+<dd class="decl"><p>Attribute specifying which version a symbol was added to the Playdate C SDK.</p><ul class="struct members">
+  <li class="member">
+  <h3><a id="AddedIn.this" href="#AddedIn.this"><code class="code">this</code></a></h3><dt class="decl"><code><span class="anchor" id="AddedIn.this"></span>this(ubyte <code><i>major</i></code>, ubyte <code><i>minor</i></code>, ubyte <code><i>patch</i></code> = 0);
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li>
+</ul></dd>
+
+</li><li class="member">
+  <h3><a id="PDButtons" href="#PDButtons"><code class="code">PDButtons</code></a></h3><dt class="decl"><code><span class="anchor" id="PDButtons"></span>enum <strong>PDButtons</strong>: <a href="https://dlang.org/spec/type.html#basic-data-types">int</a>;
+</code></dt>
+<dd class="decl">
+<ul class="enum members">
+  <li class="member">
+  <h3><a id="PDButtons.buttonLeft" href="#PDButtons.buttonLeft"><code class="code">buttonLeft</code></a></h3><dt class="decl"><code><span class="anchor" id="PDButtons.buttonLeft"></span><strong>buttonLeft</strong></code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="PDButtons.buttonRight" href="#PDButtons.buttonRight"><code class="code">buttonRight</code></a></h3><dt class="decl"><code><span class="anchor" id="PDButtons.buttonRight"></span><strong>buttonRight</strong></code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="PDButtons.buttonUp" href="#PDButtons.buttonUp"><code class="code">buttonUp</code></a></h3><dt class="decl"><code><span class="anchor" id="PDButtons.buttonUp"></span><strong>buttonUp</strong></code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="PDButtons.buttonDown" href="#PDButtons.buttonDown"><code class="code">buttonDown</code></a></h3><dt class="decl"><code><span class="anchor" id="PDButtons.buttonDown"></span><strong>buttonDown</strong></code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="PDButtons.buttonB" href="#PDButtons.buttonB"><code class="code">buttonB</code></a></h3><dt class="decl"><code><span class="anchor" id="PDButtons.buttonB"></span><strong>buttonB</strong></code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="PDButtons.buttonA" href="#PDButtons.buttonA"><code class="code">buttonA</code></a></h3><dt class="decl"><code><span class="anchor" id="PDButtons.buttonA"></span><strong>buttonA</strong></code></dt>
+<dd class="decl">
+</dd>
+
+</li>
+</ul></dd>
+
+</li><li class="member">
+  <h3><a id="PDLanguage" href="#PDLanguage"><code class="code">PDLanguage</code></a></h3><dt class="decl"><code><span class="anchor" id="PDLanguage"></span>enum <strong>PDLanguage</strong>: <a href="https://dlang.org/spec/type.html#basic-data-types">int</a>;
+</code></dt>
+<dd class="decl">
+<ul class="enum members">
+  <li class="member">
+  <h3><a id="PDLanguage.english" href="#PDLanguage.english"><code class="code">english</code></a></h3><dt class="decl"><code><span class="anchor" id="PDLanguage.english"></span><strong>english</strong></code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="PDLanguage.japanese" href="#PDLanguage.japanese"><code class="code">japanese</code></a></h3><dt class="decl"><code><span class="anchor" id="PDLanguage.japanese"></span><strong>japanese</strong></code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="PDLanguage.unknown" href="#PDLanguage.unknown"><code class="code">unknown</code></a></h3><dt class="decl"><code><span class="anchor" id="PDLanguage.unknown"></span><strong>unknown</strong></code></dt>
+<dd class="decl">
+</dd>
+
+</li>
+</ul></dd>
+
+</li><li class="member">
+  <h3><a id="PDDateTime" href="#PDDateTime"><code class="code">PDDateTime</code></a></h3><dt class="decl"><code><span class="anchor" id="PDDateTime"></span>struct <strong>PDDateTime</strong>;
+</code></dt>
+<dd class="decl">
+<ul class="struct members">
+  <li class="member">
+  <h3><a id="PDDateTime.year" href="#PDDateTime.year"><code class="code">year</code></a></h3><dt class="decl"><code><span class="anchor" id="PDDateTime.year"></span>ushort <strong>year</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="PDDateTime.month" href="#PDDateTime.month"><code class="code">month</code></a></h3><dt class="decl"><code><span class="anchor" id="PDDateTime.month"></span>ubyte <strong>month</strong>;
+</code></dt>
+<dd class="decl"><p>1-12</p></dd>
+
+</li><li class="member">
+  <h3><a id="PDDateTime.day" href="#PDDateTime.day"><code class="code">day</code></a></h3><dt class="decl"><code><span class="anchor" id="PDDateTime.day"></span>ubyte <strong>day</strong>;
+</code></dt>
+<dd class="decl"><p>1-31</p></dd>
+
+</li><li class="member">
+  <h3><a id="PDDateTime.weekday" href="#PDDateTime.weekday"><code class="code">weekday</code></a></h3><dt class="decl"><code><span class="anchor" id="PDDateTime.weekday"></span>ubyte <strong>weekday</strong>;
+</code></dt>
+<dd class="decl"><p>1 = Monday, 7 = Sunday</p></dd>
+
+</li><li class="member">
+  <h3><a id="PDDateTime.hour" href="#PDDateTime.hour"><code class="code">hour</code></a></h3><dt class="decl"><code><span class="anchor" id="PDDateTime.hour"></span>ubyte <strong>hour</strong>;
+</code></dt>
+<dd class="decl"><p>0-23</p></dd>
+
+</li><li class="member">
+  <h3><a id="PDDateTime.minute" href="#PDDateTime.minute"><code class="code">minute</code></a></h3><dt class="decl"><code><span class="anchor" id="PDDateTime.minute"></span>ubyte <strong>minute</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="PDDateTime.second" href="#PDDateTime.second"><code class="code">second</code></a></h3><dt class="decl"><code><span class="anchor" id="PDDateTime.second"></span>ubyte <strong>second</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li>
+</ul></dd>
+
+</li><li class="member">
+  <h3><a id="PDPeripherals" href="#PDPeripherals"><code class="code">PDPeripherals</code></a></h3><dt class="decl"><code><span class="anchor" id="PDPeripherals"></span>enum <strong>PDPeripherals</strong>: <a href="https://dlang.org/spec/type.html#basic-data-types">int</a>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="LCDRect" href="#LCDRect"><code class="code">LCDRect</code></a></h3><dt class="decl"><code><span class="anchor" id="LCDRect"></span>struct <strong>LCDRect</strong>;
+</code></dt>
+<dd class="decl">
+<ul class="struct members">
+  <li class="member">
+  <h3><a id="LCDRect.left" href="#LCDRect.left"><code class="code">left</code></a></h3><dt class="decl"><code><span class="anchor" id="LCDRect.left"></span>int <strong>left</strong>;
+</code></dt>
+<dd class="decl"><p>Left edge along x-axis.</p></dd>
+
+</li><li class="member">
+  <h3><a id="LCDRect.right" href="#LCDRect.right"><code class="code">right</code></a></h3><dt class="decl"><code><span class="anchor" id="LCDRect.right"></span>int <strong>right</strong>;
+</code></dt>
+<dd class="decl"><p>Right edge along x-axis, not inclusive.</p></dd>
+
+</li><li class="member">
+  <h3><a id="LCDRect.top" href="#LCDRect.top"><code class="code">top</code></a></h3><dt class="decl"><code><span class="anchor" id="LCDRect.top"></span>int <strong>top</strong>;
+</code></dt>
+<dd class="decl"><p>Top edge along y-axis.</p></dd>
+
+</li><li class="member">
+  <h3><a id="LCDRect.bottom" href="#LCDRect.bottom"><code class="code">bottom</code></a></h3><dt class="decl"><code><span class="anchor" id="LCDRect.bottom"></span>int <strong>bottom</strong>;
+</code></dt>
+<dd class="decl"><p>Bottom edge along y-axis, not inclusive.</p></dd>
+
+</li><li class="member">
+  <h3><a id="LCDRect.translate" href="#LCDRect.translate"><code class="code">translate</code></a></h3><dt class="decl"><code><span class="anchor" id="LCDRect.translate"></span>const nothrow @nogc LCDRect <strong>translate</strong>(int <code><i>dx</i></code>, int <code><i>dy</i></code>);
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li>
+</ul></dd>
+
+</li><li class="member">
+  <h3><a id="makeRect" href="#makeRect"><code class="code">makeRect</code></a></h3><dt class="decl"><code><span class="anchor" id="makeRect"></span>nothrow @nogc LCDRect <strong>makeRect</strong>(int <code><i>x</i></code>, int <code><i>y</i></code>, int <code><i>width</i></code>, int <code><i>height</i></code>);
+</code></dt>
+<dd class="decl"><p><h4 class="section">Remarks</h4>Assumes <code><i>width</i></code> and <code><i>height</i></code> are positive.</p></dd>
+
+</li><li class="member">
+  <h3><a id="LCD_COLUMNS" href="#LCD_COLUMNS"><code class="code">LCD_COLUMNS</code></a></h3><dt class="decl"><code><span class="anchor" id="LCD_COLUMNS"></span>enum int <strong>LCD_COLUMNS</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="LCD_ROWS" href="#LCD_ROWS"><code class="code">LCD_ROWS</code></a></h3><dt class="decl"><code><span class="anchor" id="LCD_ROWS"></span>enum int <strong>LCD_ROWS</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="LCD_ROWSIZE" href="#LCD_ROWSIZE"><code class="code">LCD_ROWSIZE</code></a></h3><dt class="decl"><code><span class="anchor" id="LCD_ROWSIZE"></span>enum int <strong>LCD_ROWSIZE</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="LCD_SCREEN_RECT" href="#LCD_SCREEN_RECT"><code class="code">LCD_SCREEN_RECT</code></a></h3><dt class="decl"><code><span class="anchor" id="LCD_SCREEN_RECT"></span>enum LCDRect <strong>LCD_SCREEN_RECT</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="LCDBitmapDrawMode" href="#LCDBitmapDrawMode"><code class="code">LCDBitmapDrawMode</code></a></h3><dt class="decl"><code><span class="anchor" id="LCDBitmapDrawMode"></span>enum <strong>LCDBitmapDrawMode</strong>: <a href="https://dlang.org/spec/type.html#basic-data-types">int</a>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="LCDBitmapFlip" href="#LCDBitmapFlip"><code class="code">LCDBitmapFlip</code></a></h3><dt class="decl"><code><span class="anchor" id="LCDBitmapFlip"></span>enum <strong>LCDBitmapFlip</strong>: <a href="https://dlang.org/spec/type.html#basic-data-types">int</a>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="LCDSolidColor" href="#LCDSolidColor"><code class="code">LCDSolidColor</code></a></h3><dt class="decl"><code><span class="anchor" id="LCDSolidColor"></span>enum <strong>LCDSolidColor</strong>: <a href="https://dlang.org/spec/type.html#basic-data-types">int</a>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="LCDLineCapStyle" href="#LCDLineCapStyle"><code class="code">LCDLineCapStyle</code></a></h3><dt class="decl"><code><span class="anchor" id="LCDLineCapStyle"></span>enum <strong>LCDLineCapStyle</strong>: <a href="https://dlang.org/spec/type.html#basic-data-types">int</a>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="PDStringEncoding" href="#PDStringEncoding"><code class="code">PDStringEncoding</code></a></h3><dt class="decl"><code><span class="anchor" id="PDStringEncoding"></span>enum <strong>PDStringEncoding</strong>: <a href="https://dlang.org/spec/type.html#basic-data-types">int</a>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="LCDPolygonFillRule" href="#LCDPolygonFillRule"><code class="code">LCDPolygonFillRule</code></a></h3><dt class="decl"><code><span class="anchor" id="LCDPolygonFillRule"></span>enum <strong>LCDPolygonFillRule</strong>: <a href="https://dlang.org/spec/type.html#basic-data-types">int</a>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="PDSystemEvent" href="#PDSystemEvent"><code class="code">PDSystemEvent</code></a></h3><dt class="decl"><code><span class="anchor" id="PDSystemEvent"></span>enum <strong>PDSystemEvent</strong>: <a href="https://dlang.org/spec/type.html#basic-data-types">int</a>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="PDCallbackFunction" href="#PDCallbackFunction"><code class="code">PDCallbackFunction</code></a></h3><dt class="decl"><code><span class="anchor" id="PDCallbackFunction"></span>alias <strong>PDCallbackFunction</strong> = int function(void* userData) nothrow @nogc;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="PDMenuItemCallbackFunction" href="#PDMenuItemCallbackFunction"><code class="code">PDMenuItemCallbackFunction</code></a></h3><dt class="decl"><code><span class="anchor" id="PDMenuItemCallbackFunction"></span>alias <strong>PDMenuItemCallbackFunction</strong> = void function(void* userdata) nothrow @nogc;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="AudioSourceFunction" href="#AudioSourceFunction"><code class="code">AudioSourceFunction</code></a></h3><dt class="decl"><code><span class="anchor" id="AudioSourceFunction"></span>alias <strong>AudioSourceFunction</strong> = bool function(void* context, short* left, short* right, int len) nothrow @nogc;
+</code></dt>
+<dd class="decl"><p>Fill the passed-in <code class="code">left</code> buffer (and <code class="code">right</code> if it’s a stereo source) with <code class="code">len</code> samples each and return <code class="code">true</code>, or <code class="code">false</code> if the source is silent through the cycle.</p></dd>
+
+</li><li class="member">
+  <h3><a id="RecordCallback" href="#RecordCallback"><code class="code">RecordCallback</code></a></h3><dt class="decl"><code><span class="anchor" id="RecordCallback"></span>alias <strong>RecordCallback</strong> = bool function(void* context, short* buffer, int length) nothrow @nogc;
+</code></dt>
+<dd class="decl"><p>Called with the recorded audio data, a monophonic stream of samples.
+</p><p>Return <code class="code">true</code> to continue recording, <code class="code">false</code> to stop recording.
+</p><section class="see-also">
+  <h4>See Also</h4>
+  <p>
+    <code class="code">Sound.setMicCallback</code>
+  </p>
+</section>
+</dd>
+
+</li><li class="member">
+  <h3><a id="effectProc" href="#effectProc"><code class="code">effectProc</code></a></h3><dt class="decl"><code><span class="anchor" id="effectProc"></span>alias <strong>effectProc</strong> = bool function(void* e, int* left, int* right, int nsamples, bool bufactive) nothrow @nogc;
+</code></dt>
+<dd class="decl"><p><code class="code">bufactive</code> is <code class="code">true</code> if samples have been set in the left or right buffers.
+Return <code class="code">true</code> if it changed the buffer samples, otherwise <code class="code">false</code>.
+<code class="code">left</code> and <code class="code">right</code> (if the effect is on a stereo channel) are sample buffers in signed Q8.24 format.</p></dd>
+
+</li><li class="member">
+  <h3><a id="System" href="#System"><code class="code">System</code></a></h3><dt class="decl"><code><span class="anchor" id="System"></span>struct <strong>System</strong>;
+</code></dt>
+<dd class="decl">
+<ul class="struct members">
+  <li class="member">
+  <h3><a id="System.realloc" href="#System.realloc"><code class="code">realloc</code></a></h3><dt class="decl"><code><span class="anchor" id="System.realloc"></span>void* function(void* ptr, size_t size) <strong>realloc</strong>;
+</code></dt>
+<dd class="decl"><p>ptr = NULL -&gt; malloc, size = 0 -&gt; free</p></dd>
+
+</li><li class="member">
+  <h3><a id="System.formatString" href="#System.formatString"><code class="code">formatString</code></a></h3><dt class="decl"><code><span class="anchor" id="System.formatString"></span>int function(char** ret, const char* fmt, ...) <strong>formatString</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="System.logToConsole" href="#System.logToConsole"><code class="code">logToConsole</code></a></h3><dt class="decl"><code><span class="anchor" id="System.logToConsole"></span>void function(const char* fmt, ...) <strong>logToConsole</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="System.error" href="#System.error"><code class="code">error</code></a></h3><dt class="decl"><code><span class="anchor" id="System.error"></span>void function(const char* fmt, ...) <strong>error</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="System.getLanguage" href="#System.getLanguage"><code class="code">getLanguage</code></a></h3><dt class="decl"><code><span class="anchor" id="System.getLanguage"></span>PDLanguage function() <strong>getLanguage</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="System.getCurrentTimeMilliseconds" href="#System.getCurrentTimeMilliseconds"><code class="code">getCurrentTimeMilliseconds</code></a></h3><dt class="decl"><code><span class="anchor" id="System.getCurrentTimeMilliseconds"></span>uint function() <strong>getCurrentTimeMilliseconds</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="System.getSecondsSinceEpoch" href="#System.getSecondsSinceEpoch"><code class="code">getSecondsSinceEpoch</code></a></h3><dt class="decl"><code><span class="anchor" id="System.getSecondsSinceEpoch"></span>uint function(uint* milliseconds) <strong>getSecondsSinceEpoch</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="System.drawFPS" href="#System.drawFPS"><code class="code">drawFPS</code></a></h3><dt class="decl"><code><span class="anchor" id="System.drawFPS"></span>void function(int x, int y) <strong>drawFPS</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="System.setUpdateCallback" href="#System.setUpdateCallback"><code class="code">setUpdateCallback</code></a></h3><dt class="decl"><code><span class="anchor" id="System.setUpdateCallback"></span>void function(PDCallbackFunction update, void* userdata) <strong>setUpdateCallback</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="System.getButtonState" href="#System.getButtonState"><code class="code">getButtonState</code></a></h3><dt class="decl"><code><span class="anchor" id="System.getButtonState"></span>void function(PDButtons* current, PDButtons* pushed, PDButtons* released) <strong>getButtonState</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="System.setPeripheralsEnabled" href="#System.setPeripheralsEnabled"><code class="code">setPeripheralsEnabled</code></a></h3><dt class="decl"><code><span class="anchor" id="System.setPeripheralsEnabled"></span>void function(PDPeripherals mask) <strong>setPeripheralsEnabled</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="System.getAccelerometer" href="#System.getAccelerometer"><code class="code">getAccelerometer</code></a></h3><dt class="decl"><code><span class="anchor" id="System.getAccelerometer"></span>void function(float* outx, float* outy, float* outz) <strong>getAccelerometer</strong>;
+</code></dt>
+<dd class="decl"><p>Returns the last-read accelerometer data.</p></dd>
+
+</li><li class="member">
+  <h3><a id="System.getCrankChange" href="#System.getCrankChange"><code class="code">getCrankChange</code></a></h3><dt class="decl"><code><span class="anchor" id="System.getCrankChange"></span>float function() <strong>getCrankChange</strong>;
+</code></dt>
+<dd class="decl"><p>Returns the angle change of the crank since the last time this function was called. Negative values are anti-clockwise.</p></dd>
+
+</li><li class="member">
+  <h3><a id="System.getCrankAngle" href="#System.getCrankAngle"><code class="code">getCrankAngle</code></a></h3><dt class="decl"><code><span class="anchor" id="System.getCrankAngle"></span>float function() <strong>getCrankAngle</strong>;
+</code></dt>
+<dd class="decl"><p>Returns the current position of the crank, in the range 0-360.
+Zero is pointing up, and the value increases as the crank moves clockwise, as viewed from the right side of the device.</p></dd>
+
+</li><li class="member">
+  <h3><a id="System.isCrankDocked" href="#System.isCrankDocked"><code class="code">isCrankDocked</code></a></h3><dt class="decl"><code><span class="anchor" id="System.isCrankDocked"></span>bool function() <strong>isCrankDocked</strong>;
+</code></dt>
+<dd class="decl"><p>Returns <code class="code">true</code> or <code class="code">false</code> indicating whether or not the crank is folded into the unit.</p></dd>
+
+</li><li class="member">
+  <h3><a id="System.setCrankSoundsDisabled" href="#System.setCrankSoundsDisabled"><code class="code">setCrankSoundsDisabled</code></a></h3><dt class="decl"><code><span class="anchor" id="System.setCrankSoundsDisabled"></span>int function(int flag) <strong>setCrankSoundsDisabled</strong>;
+</code></dt>
+<dd class="decl"><p>Returns the previous value for this setting.
+</p><p><h4 class="section">Remarks</h4>0.12 adds sound effects for various system events, such as the menu opening or closing, USB cable plugged or
+unplugged, and the crank docked or undocked. Since games can receive notification of the crank docking and
+undocking, and may incorporate this into the game, we’ve provided a function for muting the default sounds for
+these events.</p></dd>
+
+</li><li class="member">
+  <h3><a id="System.getFlipped" href="#System.getFlipped"><code class="code">getFlipped</code></a></h3><dt class="decl"><code><span class="anchor" id="System.getFlipped"></span>int function() <strong>getFlipped</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="System.setAutoLockDisabled" href="#System.setAutoLockDisabled"><code class="code">setAutoLockDisabled</code></a></h3><dt class="decl"><code><span class="anchor" id="System.setAutoLockDisabled"></span>void function(bool disable) <strong>setAutoLockDisabled</strong>;
+</code></dt>
+<dd class="decl"><p>Disables or enables the 60 second auto lock feature. When called, the timer is reset to 60 seconds.
+</p><p><h4 class="section">Remarks</h4>As of 0.10.3, the device will automatically lock if the user doesn’t press any buttons or use the crank for more
+than 60 seconds. In order for games that expect longer periods without interaction to continue to function, it is
+possible to manually disable the auto lock feature. Note that when disabling the timeout, developers should take
+care to re-enable the timeout when appropiate.</p></dd>
+
+</li><li class="member">
+  <h3><a id="System.setMenuImage" href="#System.setMenuImage"><code class="code">setMenuImage</code></a></h3><dt class="decl"><code><span class="anchor" id="System.setMenuImage"></span>void function(LCDBitmap* bitmap, int xOffset) <strong>setMenuImage</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="System.addMenuItem" href="#System.addMenuItem"><code class="code">addMenuItem</code></a></h3><dt class="decl"><code><span class="anchor" id="System.addMenuItem"></span>PDMenuItem* function(const char* title, PDMenuItemCallbackFunction callback, void* userdata) <strong>addMenuItem</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="System.addCheckmarkMenuItem" href="#System.addCheckmarkMenuItem"><code class="code">addCheckmarkMenuItem</code></a></h3><dt class="decl"><code><span class="anchor" id="System.addCheckmarkMenuItem"></span>PDMenuItem* function(const char* title, int value, PDMenuItemCallbackFunction callback, void* userdata) <strong>addCheckmarkMenuItem</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="System.addOptionsMenuItem" href="#System.addOptionsMenuItem"><code class="code">addOptionsMenuItem</code></a></h3><dt class="decl"><code><span class="anchor" id="System.addOptionsMenuItem"></span>PDMenuItem* function(const char* title, const char** optionTitles, int optionsCount, PDMenuItemCallbackFunction f, void* userdata) <strong>addOptionsMenuItem</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="System.removeAllMenuItems" href="#System.removeAllMenuItems"><code class="code">removeAllMenuItems</code></a></h3><dt class="decl"><code><span class="anchor" id="System.removeAllMenuItems"></span>void function() <strong>removeAllMenuItems</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="System.removeMenuItem" href="#System.removeMenuItem"><code class="code">removeMenuItem</code></a></h3><dt class="decl"><code><span class="anchor" id="System.removeMenuItem"></span>void function(PDMenuItem* menuItem) <strong>removeMenuItem</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="System.getMenuItemValue" href="#System.getMenuItemValue"><code class="code">getMenuItemValue</code></a></h3><dt class="decl"><code><span class="anchor" id="System.getMenuItemValue"></span>int function(PDMenuItem* menuItem) <strong>getMenuItemValue</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="System.setMenuItemValue" href="#System.setMenuItemValue"><code class="code">setMenuItemValue</code></a></h3><dt class="decl"><code><span class="anchor" id="System.setMenuItemValue"></span>void function(PDMenuItem* menuItem, int value) <strong>setMenuItemValue</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="System.getMenuItemTitle" href="#System.getMenuItemTitle"><code class="code">getMenuItemTitle</code></a></h3><dt class="decl"><code><span class="anchor" id="System.getMenuItemTitle"></span>const(char*) function(PDMenuItem* menuItem) <strong>getMenuItemTitle</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="System.setMenuItemTitle" href="#System.setMenuItemTitle"><code class="code">setMenuItemTitle</code></a></h3><dt class="decl"><code><span class="anchor" id="System.setMenuItemTitle"></span>void function(PDMenuItem* menuItem, const char* title) <strong>setMenuItemTitle</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="System.getMenuItemUserdata" href="#System.getMenuItemUserdata"><code class="code">getMenuItemUserdata</code></a></h3><dt class="decl"><code><span class="anchor" id="System.getMenuItemUserdata"></span>void* function(PDMenuItem* menuItem) <strong>getMenuItemUserdata</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="System.setMenuItemUserdata" href="#System.setMenuItemUserdata"><code class="code">setMenuItemUserdata</code></a></h3><dt class="decl"><code><span class="anchor" id="System.setMenuItemUserdata"></span>void function(PDMenuItem* menuItem, void* ud) <strong>setMenuItemUserdata</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="System.getReduceFlashing" href="#System.getReduceFlashing"><code class="code">getReduceFlashing</code></a></h3><dt class="decl"><code><span class="anchor" id="System.getReduceFlashing"></span>bool function() <strong>getReduceFlashing</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="System.getElapsedTime" href="#System.getElapsedTime"><code class="code">getElapsedTime</code></a></h3><dt class="decl"><code><span class="anchor" id="System.getElapsedTime"></span>float function() <strong>getElapsedTime</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="System.resetElapsedTime" href="#System.resetElapsedTime"><code class="code">resetElapsedTime</code></a></h3><dt class="decl"><code><span class="anchor" id="System.resetElapsedTime"></span>void function() <strong>resetElapsedTime</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="System.getBatteryPercentage" href="#System.getBatteryPercentage"><code class="code">getBatteryPercentage</code></a></h3><dt class="decl"><code><span class="anchor" id="System.getBatteryPercentage"></span>float function() <strong>getBatteryPercentage</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="System.getBatteryVoltage" href="#System.getBatteryVoltage"><code class="code">getBatteryVoltage</code></a></h3><dt class="decl"><code><span class="anchor" id="System.getBatteryVoltage"></span>float function() <strong>getBatteryVoltage</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="System.getTimezoneOffset" href="#System.getTimezoneOffset"><code class="code">getTimezoneOffset</code></a></h3><dt class="decl"><code><span class="anchor" id="System.getTimezoneOffset"></span>int function() <strong>getTimezoneOffset</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="System.shouldDisplay24HourTime" href="#System.shouldDisplay24HourTime"><code class="code">shouldDisplay24HourTime</code></a></h3><dt class="decl"><code><span class="anchor" id="System.shouldDisplay24HourTime"></span>bool function() <strong>shouldDisplay24HourTime</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="System.convertEpochToDateTime" href="#System.convertEpochToDateTime"><code class="code">convertEpochToDateTime</code></a></h3><dt class="decl"><code><span class="anchor" id="System.convertEpochToDateTime"></span>void function(int epoch, PDDateTime* datetime) <strong>convertEpochToDateTime</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="System.convertDateTimeToEpoch" href="#System.convertDateTimeToEpoch"><code class="code">convertDateTimeToEpoch</code></a></h3><dt class="decl"><code><span class="anchor" id="System.convertDateTimeToEpoch"></span>int function(PDDateTime* datetime) <strong>convertDateTimeToEpoch</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li>
+</ul></dd>
+
+</li><li class="member">
+  <h3><a id="alloc" href="#alloc"><code class="code">alloc</code></a></h3><dt class="decl"><code><span class="anchor" id="alloc"></span>T* <strong>alloc</strong>(T)(System* <code><i>system</i></code>);
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="alloc" href="#alloc"><code class="code">alloc</code></a></h3><dt class="decl"><code><span class="anchor" id="alloc.2"></span>T[] <strong>alloc</strong>(T)(System* <code><i>system</i></code>, ulong <code><i>size</i></code>);
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="free" href="#free"><code class="code">free</code></a></h3><dt class="decl"><code><span class="anchor" id="free"></span>void <strong>free</strong>(T)(System* <code><i>system</i></code>, T* <code><i>value</i></code>);
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="logToConsole" href="#logToConsole"><code class="code">logToConsole</code></a></h3><dt class="decl"><code><span class="anchor" id="logToConsole"></span>nothrow @nogc void <strong>logToConsole</strong>(System* <code><i>system</i></code>, string <code><i>message</i></code>);
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="FileOptions" href="#FileOptions"><code class="code">FileOptions</code></a></h3><dt class="decl"><code><span class="anchor" id="FileOptions"></span>enum <strong>FileOptions</strong>: <a href="https://dlang.org/spec/type.html#basic-data-types">int</a>;
+</code></dt>
+<dd class="decl">
+<ul class="enum members">
+  <li class="member">
+  <h3><a id="FileOptions.read" href="#FileOptions.read"><code class="code">read</code></a></h3><dt class="decl"><code><span class="anchor" id="FileOptions.read"></span><strong>read</strong></code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="FileOptions.readData" href="#FileOptions.readData"><code class="code">readData</code></a></h3><dt class="decl"><code><span class="anchor" id="FileOptions.readData"></span><strong>readData</strong></code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="FileOptions.write" href="#FileOptions.write"><code class="code">write</code></a></h3><dt class="decl"><code><span class="anchor" id="FileOptions.write"></span><strong>write</strong></code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="FileOptions.append" href="#FileOptions.append"><code class="code">append</code></a></h3><dt class="decl"><code><span class="anchor" id="FileOptions.append"></span><strong>append</strong></code></dt>
+<dd class="decl">
+</dd>
+
+</li>
+</ul></dd>
+
+</li><li class="member">
+  <h3><a id="FileStat" href="#FileStat"><code class="code">FileStat</code></a></h3><dt class="decl"><code><span class="anchor" id="FileStat"></span>struct <strong>FileStat</strong>;
+</code></dt>
+<dd class="decl">
+<ul class="struct members">
+  <li class="member">
+  <h3><a id="FileStat.isDir" href="#FileStat.isDir"><code class="code">isDir</code></a></h3><dt class="decl"><code><span class="anchor" id="FileStat.isDir"></span>bool <strong>isDir</strong>;
+</code></dt>
+<dd class="decl"><p>Whether the file is a directory.</p></dd>
+
+</li><li class="member">
+  <h3><a id="FileStat.size" href="#FileStat.size"><code class="code">size</code></a></h3><dt class="decl"><code><span class="anchor" id="FileStat.size"></span>uint <strong>size</strong>;
+</code></dt>
+<dd class="decl"><p>Size of the file, in bytes.</p></dd>
+
+</li><li class="member">
+  <h3><a id="FileStat.year" href="#FileStat.year"><code class="code">year</code></a></h3><dt class="decl"><code><span class="anchor" id="FileStat.year"></span>int <strong>year</strong>;
+</code></dt>
+<dd class="decl"><p>Year component of the file's last modified date.</p></dd>
+
+</li><li class="member">
+  <h3><a id="FileStat.month" href="#FileStat.month"><code class="code">month</code></a></h3><dt class="decl"><code><span class="anchor" id="FileStat.month"></span>int <strong>month</strong>;
+</code></dt>
+<dd class="decl"><p>Month component of the file's last modified date.</p></dd>
+
+</li><li class="member">
+  <h3><a id="FileStat.day" href="#FileStat.day"><code class="code">day</code></a></h3><dt class="decl"><code><span class="anchor" id="FileStat.day"></span>int <strong>day</strong>;
+</code></dt>
+<dd class="decl"><p>Day component of the file's last modified date.</p></dd>
+
+</li><li class="member">
+  <h3><a id="FileStat.hour" href="#FileStat.hour"><code class="code">hour</code></a></h3><dt class="decl"><code><span class="anchor" id="FileStat.hour"></span>int <strong>hour</strong>;
+</code></dt>
+<dd class="decl"><p>Hour component of the file's last modified date.</p></dd>
+
+</li><li class="member">
+  <h3><a id="FileStat.minute" href="#FileStat.minute"><code class="code">minute</code></a></h3><dt class="decl"><code><span class="anchor" id="FileStat.minute"></span>int <strong>minute</strong>;
+</code></dt>
+<dd class="decl"><p>Minute component of the file's last modified date.</p></dd>
+
+</li><li class="member">
+  <h3><a id="FileStat.second" href="#FileStat.second"><code class="code">second</code></a></h3><dt class="decl"><code><span class="anchor" id="FileStat.second"></span>int <strong>second</strong>;
+</code></dt>
+<dd class="decl"><p>Second component of the file's last modified date.</p></dd>
+
+</li>
+</ul></dd>
+
+</li><li class="member">
+  <h3><a id="File" href="#File"><code class="code">File</code></a></h3><dt class="decl"><code><span class="anchor" id="File"></span>struct <strong>File</strong>;
+</code></dt>
+<dd class="decl">
+<ul class="struct members">
+  <li class="member">
+  <h3><a id="File.geterr" href="#File.geterr"><code class="code">geterr</code></a></h3><dt class="decl"><code><span class="anchor" id="File.geterr"></span>const(char*) function() <strong>geterr</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="File.listfiles" href="#File.listfiles"><code class="code">listfiles</code></a></h3><dt class="decl"><code><span class="anchor" id="File.listfiles"></span>int function(const char* path, void function(const char* path, void* userdata) callback, void* userdata, bool showHidden) <strong>listfiles</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="File.stat" href="#File.stat"><code class="code">stat</code></a></h3><dt class="decl"><code><span class="anchor" id="File.stat"></span>int function(const char* path, FileStat* <strong>stat</strong>) <strong>stat</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="File.mkdir" href="#File.mkdir"><code class="code">mkdir</code></a></h3><dt class="decl"><code><span class="anchor" id="File.mkdir"></span>int function(const char* path) <strong>mkdir</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="File.unlink" href="#File.unlink"><code class="code">unlink</code></a></h3><dt class="decl"><code><span class="anchor" id="File.unlink"></span>int function(const char* name, int recursive) <strong>unlink</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="File.rename" href="#File.rename"><code class="code">rename</code></a></h3><dt class="decl"><code><span class="anchor" id="File.rename"></span>int function(const char* from, const char* to) <strong>rename</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="File.open" href="#File.open"><code class="code">open</code></a></h3><dt class="decl"><code><span class="anchor" id="File.open"></span>SDFile function(const char* name, FileOptions mode) <strong>open</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="File.close" href="#File.close"><code class="code">close</code></a></h3><dt class="decl"><code><span class="anchor" id="File.close"></span>int function(SDFile file) <strong>close</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="File.read" href="#File.read"><code class="code">read</code></a></h3><dt class="decl"><code><span class="anchor" id="File.read"></span>int function(SDFile file, void* buf, uint len) <strong>read</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="File.write" href="#File.write"><code class="code">write</code></a></h3><dt class="decl"><code><span class="anchor" id="File.write"></span>int function(SDFile file, const void* buf, uint len) <strong>write</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="File.flush" href="#File.flush"><code class="code">flush</code></a></h3><dt class="decl"><code><span class="anchor" id="File.flush"></span>int function(SDFile file) <strong>flush</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="File.tell" href="#File.tell"><code class="code">tell</code></a></h3><dt class="decl"><code><span class="anchor" id="File.tell"></span>int function(SDFile file) <strong>tell</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="File.seek" href="#File.seek"><code class="code">seek</code></a></h3><dt class="decl"><code><span class="anchor" id="File.seek"></span>int function(SDFile file, int pos, int whence) <strong>seek</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li>
+</ul></dd>
+
+</li><li class="member">
+  <h3><a id="Video" href="#Video"><code class="code">Video</code></a></h3><dt class="decl"><code><span class="anchor" id="Video"></span>struct <strong>Video</strong>;
+</code></dt>
+<dd class="decl">
+<ul class="struct members">
+  <li class="member">
+  <h3><a id="Video.loadVideo" href="#Video.loadVideo"><code class="code">loadVideo</code></a></h3><dt class="decl"><code><span class="anchor" id="Video.loadVideo"></span>LCDVideoPlayer* function(const char* path) <strong>loadVideo</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Video.freePlayer" href="#Video.freePlayer"><code class="code">freePlayer</code></a></h3><dt class="decl"><code><span class="anchor" id="Video.freePlayer"></span>void function(LCDVideoPlayer* p) <strong>freePlayer</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Video.setContext" href="#Video.setContext"><code class="code">setContext</code></a></h3><dt class="decl"><code><span class="anchor" id="Video.setContext"></span>int function(LCDVideoPlayer* p, LCDBitmap* context) <strong>setContext</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Video.useScreenContext" href="#Video.useScreenContext"><code class="code">useScreenContext</code></a></h3><dt class="decl"><code><span class="anchor" id="Video.useScreenContext"></span>void function(LCDVideoPlayer* p) <strong>useScreenContext</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Video.renderFrame" href="#Video.renderFrame"><code class="code">renderFrame</code></a></h3><dt class="decl"><code><span class="anchor" id="Video.renderFrame"></span>int function(LCDVideoPlayer* p, int n) <strong>renderFrame</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Video.getError" href="#Video.getError"><code class="code">getError</code></a></h3><dt class="decl"><code><span class="anchor" id="Video.getError"></span>const(char*) function(LCDVideoPlayer* p) <strong>getError</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Video.getInfo" href="#Video.getInfo"><code class="code">getInfo</code></a></h3><dt class="decl"><code><span class="anchor" id="Video.getInfo"></span>void function(LCDVideoPlayer* p, int* outWidth, int* outHeight, float* outFrameRate, int* outFrameCount, int* outCurrentFrame) <strong>getInfo</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Video.getContext" href="#Video.getContext"><code class="code">getContext</code></a></h3><dt class="decl"><code><span class="anchor" id="Video.getContext"></span>LCDBitmap* function(LCDVideoPlayer* p) <strong>getContext</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li>
+</ul></dd>
+
+</li><li class="member">
+  <h3><a id="Graphics" href="#Graphics"><code class="code">Graphics</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics"></span>struct <strong>Graphics</strong>;
+</code></dt>
+<dd class="decl">
+<ul class="struct members">
+  <li class="member">
+  <h3><a id="Graphics.video" href="#Graphics.video"><code class="code">video</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.video"></span>Video* <strong>video</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.clear" href="#Graphics.clear"><code class="code">clear</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.clear"></span>void function(LCDColor color) <strong>clear</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.setBackgroundColor" href="#Graphics.setBackgroundColor"><code class="code">setBackgroundColor</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.setBackgroundColor"></span>void function(LCDSolidColor color) <strong>setBackgroundColor</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.setStencil" href="#Graphics.setStencil"><code class="code">setStencil</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.setStencil"></span>void function(LCDBitmap* stencil) <strong>setStencil</strong>;
+</code></dt>
+<dd class="decl"><section class="deprecated">
+  <h4>Deprecated</h4>
+  <p>
+    In favor of <code class="code">setStencilImage</code>, which adds a "tile" flag
+  </p>
+</section>
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.setDrawMode" href="#Graphics.setDrawMode"><code class="code">setDrawMode</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.setDrawMode"></span>void function(LCDBitmapDrawMode mode) <strong>setDrawMode</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.setDrawOffset" href="#Graphics.setDrawOffset"><code class="code">setDrawOffset</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.setDrawOffset"></span>void function(int dx, int dy) <strong>setDrawOffset</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.setClipRect" href="#Graphics.setClipRect"><code class="code">setClipRect</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.setClipRect"></span>void function(int x, int y, int width, int height) <strong>setClipRect</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.clearClipRect" href="#Graphics.clearClipRect"><code class="code">clearClipRect</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.clearClipRect"></span>void function() <strong>clearClipRect</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.setLineCapStyle" href="#Graphics.setLineCapStyle"><code class="code">setLineCapStyle</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.setLineCapStyle"></span>void function(LCDLineCapStyle endCapStyle) <strong>setLineCapStyle</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.setFont" href="#Graphics.setFont"><code class="code">setFont</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.setFont"></span>void function(LCDFont* font) <strong>setFont</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.setTextTracking" href="#Graphics.setTextTracking"><code class="code">setTextTracking</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.setTextTracking"></span>void function(int tracking) <strong>setTextTracking</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.pushContext" href="#Graphics.pushContext"><code class="code">pushContext</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.pushContext"></span>void function(LCDBitmap* target) <strong>pushContext</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.popContext" href="#Graphics.popContext"><code class="code">popContext</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.popContext"></span>void function() <strong>popContext</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.drawBitmap" href="#Graphics.drawBitmap"><code class="code">drawBitmap</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.drawBitmap"></span>void function(LCDBitmap* bitmap, int x, int y, LCDBitmapFlip flip) <strong>drawBitmap</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.tileBitmap" href="#Graphics.tileBitmap"><code class="code">tileBitmap</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.tileBitmap"></span>void function(LCDBitmap* bitmap, int x, int y, int width, int height, LCDBitmapFlip flip) <strong>tileBitmap</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.drawLine" href="#Graphics.drawLine"><code class="code">drawLine</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.drawLine"></span>void function(int x1, int y1, int x2, int y2, int width, LCDColor color) <strong>drawLine</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.fillTriangle" href="#Graphics.fillTriangle"><code class="code">fillTriangle</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.fillTriangle"></span>void function(int x1, int y1, int x2, int y2, int x3, int y3, LCDColor color) <strong>fillTriangle</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.drawRect" href="#Graphics.drawRect"><code class="code">drawRect</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.drawRect"></span>void function(int x, int y, int width, int height, LCDColor color) <strong>drawRect</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.fillRect" href="#Graphics.fillRect"><code class="code">fillRect</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.fillRect"></span>void function(int x, int y, int width, int height, LCDColor color) <strong>fillRect</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.drawEllipse" href="#Graphics.drawEllipse"><code class="code">drawEllipse</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.drawEllipse"></span>void function(int x, int y, int width, int height, int lineWidth, float startAngle, float endAngle, LCDColor color) <strong>drawEllipse</strong>;
+</code></dt>
+<dd class="decl"><p>stroked inside the rect</p></dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.fillEllipse" href="#Graphics.fillEllipse"><code class="code">fillEllipse</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.fillEllipse"></span>void function(int x, int y, int width, int height, float startAngle, float endAngle, LCDColor color) <strong>fillEllipse</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.drawScaledBitmap" href="#Graphics.drawScaledBitmap"><code class="code">drawScaledBitmap</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.drawScaledBitmap"></span>void function(LCDBitmap* bitmap, int x, int y, float xscale, float yscale) <strong>drawScaledBitmap</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.drawText" href="#Graphics.drawText"><code class="code">drawText</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.drawText"></span>int function(const void* text, size_t len, PDStringEncoding encoding, int x, int y) <strong>drawText</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.newBitmap" href="#Graphics.newBitmap"><code class="code">newBitmap</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.newBitmap"></span>LCDBitmap* function(int width, int height, LCDColor bgcolor) <strong>newBitmap</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.freeBitmap" href="#Graphics.freeBitmap"><code class="code">freeBitmap</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.freeBitmap"></span>void function(LCDBitmap*) <strong>freeBitmap</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.loadBitmap" href="#Graphics.loadBitmap"><code class="code">loadBitmap</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.loadBitmap"></span>LCDBitmap* function(const char* path, const char** outerr) <strong>loadBitmap</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.copyBitmap" href="#Graphics.copyBitmap"><code class="code">copyBitmap</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.copyBitmap"></span>LCDBitmap* function(LCDBitmap* bitmap) <strong>copyBitmap</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.loadIntoBitmap" href="#Graphics.loadIntoBitmap"><code class="code">loadIntoBitmap</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.loadIntoBitmap"></span>void function(const char* path, LCDBitmap* bitmap, const char** outerr) <strong>loadIntoBitmap</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.getBitmapData" href="#Graphics.getBitmapData"><code class="code">getBitmapData</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.getBitmapData"></span>void function(LCDBitmap* bitmap, int* width, int* height, int* rowbytes, ubyte** mask, ubyte** data) <strong>getBitmapData</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.clearBitmap" href="#Graphics.clearBitmap"><code class="code">clearBitmap</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.clearBitmap"></span>void function(LCDBitmap* bitmap, LCDColor bgcolor) <strong>clearBitmap</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.rotatedBitmap" href="#Graphics.rotatedBitmap"><code class="code">rotatedBitmap</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.rotatedBitmap"></span>LCDBitmap* function(LCDBitmap* bitmap, float rotation, float xscale, float yscale, int* allocedSize) <strong>rotatedBitmap</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.newBitmapTable" href="#Graphics.newBitmapTable"><code class="code">newBitmapTable</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.newBitmapTable"></span>LCDBitmapTable* function(int count, int width, int height) <strong>newBitmapTable</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.freeBitmapTable" href="#Graphics.freeBitmapTable"><code class="code">freeBitmapTable</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.freeBitmapTable"></span>void function(LCDBitmapTable* table) <strong>freeBitmapTable</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.loadBitmapTable" href="#Graphics.loadBitmapTable"><code class="code">loadBitmapTable</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.loadBitmapTable"></span>LCDBitmapTable* function(const char* path, const char** outerr) <strong>loadBitmapTable</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.loadIntoBitmapTable" href="#Graphics.loadIntoBitmapTable"><code class="code">loadIntoBitmapTable</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.loadIntoBitmapTable"></span>void function(const char* path, LCDBitmapTable* table, const char** outerr) <strong>loadIntoBitmapTable</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.getTableBitmap" href="#Graphics.getTableBitmap"><code class="code">getTableBitmap</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.getTableBitmap"></span>LCDBitmap* function(LCDBitmapTable* table, int idx) <strong>getTableBitmap</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.loadFont" href="#Graphics.loadFont"><code class="code">loadFont</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.loadFont"></span>LCDFont* function(const char* path, const char** outErr) <strong>loadFont</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.getFontPage" href="#Graphics.getFontPage"><code class="code">getFontPage</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.getFontPage"></span>LCDFontPage* function(LCDFont* font, uint c) <strong>getFontPage</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.getPageGlyph" href="#Graphics.getPageGlyph"><code class="code">getPageGlyph</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.getPageGlyph"></span>LCDFontGlyph* function(LCDFontPage* page, uint c, LCDBitmap** bitmap, int* advance) <strong>getPageGlyph</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.getGlyphKerning" href="#Graphics.getGlyphKerning"><code class="code">getGlyphKerning</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.getGlyphKerning"></span>int function(LCDFontGlyph* glyph, uint glyphcode, uint nextcode) <strong>getGlyphKerning</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.getTextWidth" href="#Graphics.getTextWidth"><code class="code">getTextWidth</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.getTextWidth"></span>int function(LCDFont* font, const void* text, size_t len, PDStringEncoding encoding, int tracking) <strong>getTextWidth</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.getFrame" href="#Graphics.getFrame"><code class="code">getFrame</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.getFrame"></span>ubyte* function() <strong>getFrame</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.getDisplayFrame" href="#Graphics.getDisplayFrame"><code class="code">getDisplayFrame</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.getDisplayFrame"></span>ubyte* function() <strong>getDisplayFrame</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.getDebugBitmap" href="#Graphics.getDebugBitmap"><code class="code">getDebugBitmap</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.getDebugBitmap"></span>LCDBitmap* function() <strong>getDebugBitmap</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.copyFrameBufferBitmap" href="#Graphics.copyFrameBufferBitmap"><code class="code">copyFrameBufferBitmap</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.copyFrameBufferBitmap"></span>LCDBitmap* function() <strong>copyFrameBufferBitmap</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.markUpdatedRows" href="#Graphics.markUpdatedRows"><code class="code">markUpdatedRows</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.markUpdatedRows"></span>void function(int start, int end) <strong>markUpdatedRows</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.display" href="#Graphics.display"><code class="code">display</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.display"></span>void function() <strong>display</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.setColorToPattern" href="#Graphics.setColorToPattern"><code class="code">setColorToPattern</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.setColorToPattern"></span>void function(LCDColor* color, LCDBitmap* bitmap, int x, int y) <strong>setColorToPattern</strong>;
+</code></dt>
+<dd class="decl"><p>misc util.</p></dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.checkMaskCollision" href="#Graphics.checkMaskCollision"><code class="code">checkMaskCollision</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.checkMaskCollision"></span>int function(LCDBitmap* bitmap1, int x1, int y1, LCDBitmapFlip flip1, LCDBitmap* bitmap2, int x2, int y2, LCDBitmapFlip flip2, LCDRect rect) <strong>checkMaskCollision</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.setScreenClipRect" href="#Graphics.setScreenClipRect"><code class="code">setScreenClipRect</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.setScreenClipRect"></span>void function(int x, int y, int width, int height) <strong>setScreenClipRect</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.fillPolygon" href="#Graphics.fillPolygon"><code class="code">fillPolygon</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.fillPolygon"></span>void function(int nPoints, int* coords, LCDColor color, LCDPolygonFillRule fillrule) <strong>fillPolygon</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.getFontHeight" href="#Graphics.getFontHeight"><code class="code">getFontHeight</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.getFontHeight"></span>ubyte function(LCDFont* font) <strong>getFontHeight</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.getDisplayBufferBitmap" href="#Graphics.getDisplayBufferBitmap"><code class="code">getDisplayBufferBitmap</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.getDisplayBufferBitmap"></span>LCDBitmap* function() <strong>getDisplayBufferBitmap</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.drawRotatedBitmap" href="#Graphics.drawRotatedBitmap"><code class="code">drawRotatedBitmap</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.drawRotatedBitmap"></span>void function(LCDBitmap* bitmap, int x, int y, float rotation, float centerx, float centery, float xscale, float yscale) <strong>drawRotatedBitmap</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.setTextLeading" href="#Graphics.setTextLeading"><code class="code">setTextLeading</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.setTextLeading"></span>void function(int lineHeightAdustment) <strong>setTextLeading</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.setBitmapMask" href="#Graphics.setBitmapMask"><code class="code">setBitmapMask</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.setBitmapMask"></span>int function(LCDBitmap* bitmap, LCDBitmap* mask) <strong>setBitmapMask</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.getBitmapMask" href="#Graphics.getBitmapMask"><code class="code">getBitmapMask</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.getBitmapMask"></span>LCDBitmap* function(LCDBitmap* bitmap) <strong>getBitmapMask</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.setStencilImage" href="#Graphics.setStencilImage"><code class="code">setStencilImage</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.setStencilImage"></span>void function(LCDBitmap* stencil, int tile) <strong>setStencilImage</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Graphics.makeFontFromData" href="#Graphics.makeFontFromData"><code class="code">makeFontFromData</code></a></h3><dt class="decl"><code><span class="anchor" id="Graphics.makeFontFromData"></span>LCDFont* function(LCDFontData* data, int wide) <strong>makeFontFromData</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li>
+</ul></dd>
+
+</li><li class="member">
+  <h3><a id="drawText" href="#drawText"><code class="code">drawText</code></a></h3><dt class="decl"><code><span class="anchor" id="drawText"></span>nothrow @nogc int <strong>drawText</strong>(Graphics* <code><i>gfx</i></code>, string <code><i>text</i></code>, int <code><i>x</i></code>, int <code><i>y</i></code>, PDStringEncoding <code><i>encoding</i></code> = PDStringEncoding.utf8Encoding);
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Sprite" href="#Sprite"><code class="code">Sprite</code></a></h3><dt class="decl"><code><span class="anchor" id="Sprite"></span>struct <strong>Sprite</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Display" href="#Display"><code class="code">Display</code></a></h3><dt class="decl"><code><span class="anchor" id="Display"></span>struct <strong>Display</strong>;
+</code></dt>
+<dd class="decl">
+<ul class="struct members">
+  <li class="member">
+  <h3><a id="Display.getWidth" href="#Display.getWidth"><code class="code">getWidth</code></a></h3><dt class="decl"><code><span class="anchor" id="Display.getWidth"></span>int function() <strong>getWidth</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Display.getHeight" href="#Display.getHeight"><code class="code">getHeight</code></a></h3><dt class="decl"><code><span class="anchor" id="Display.getHeight"></span>int function() <strong>getHeight</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Display.setRefreshRate" href="#Display.setRefreshRate"><code class="code">setRefreshRate</code></a></h3><dt class="decl"><code><span class="anchor" id="Display.setRefreshRate"></span>void function(float rate) <strong>setRefreshRate</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Display.setInverted" href="#Display.setInverted"><code class="code">setInverted</code></a></h3><dt class="decl"><code><span class="anchor" id="Display.setInverted"></span>void function(int flag) <strong>setInverted</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Display.setScale" href="#Display.setScale"><code class="code">setScale</code></a></h3><dt class="decl"><code><span class="anchor" id="Display.setScale"></span>void function(uint s) <strong>setScale</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Display.setMosaic" href="#Display.setMosaic"><code class="code">setMosaic</code></a></h3><dt class="decl"><code><span class="anchor" id="Display.setMosaic"></span>void function(uint x, uint y) <strong>setMosaic</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Display.setFlipped" href="#Display.setFlipped"><code class="code">setFlipped</code></a></h3><dt class="decl"><code><span class="anchor" id="Display.setFlipped"></span>void function(int x, int y) <strong>setFlipped</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Display.setOffset" href="#Display.setOffset"><code class="code">setOffset</code></a></h3><dt class="decl"><code><span class="anchor" id="Display.setOffset"></span>void function(int x, int y) <strong>setOffset</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li>
+</ul></dd>
+
+</li><li class="member">
+  <h3><a id="SoundChannel" href="#SoundChannel"><code class="code">SoundChannel</code></a></h3><dt class="decl"><code><span class="anchor" id="SoundChannel"></span>alias <strong>SoundChannel</strong> = void*;
+</code></dt>
+<dd class="decl"><p>A <strong>SoundChannel</strong> contains <code class="code">SoundSource</code>s and <code class="code">SoundEffect</code>s.</p></dd>
+
+</li><li class="member">
+  <h3><a id="SoundChannelApi" href="#SoundChannelApi"><code class="code">SoundChannelApi</code></a></h3><dt class="decl"><code><span class="anchor" id="SoundChannelApi"></span>struct <strong>SoundChannelApi</strong>;
+</code></dt>
+<dd class="decl">
+<ul class="struct members">
+  <li class="member">
+  <h3><a id="SoundChannelApi.newChannel" href="#SoundChannelApi.newChannel"><code class="code">newChannel</code></a></h3><dt class="decl"><code><span class="anchor" id="SoundChannelApi.newChannel"></span>SoundChannel function() <strong>newChannel</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="SoundChannelApi.freeChannel" href="#SoundChannelApi.freeChannel"><code class="code">freeChannel</code></a></h3><dt class="decl"><code><span class="anchor" id="SoundChannelApi.freeChannel"></span>void function(SoundChannel channel) <strong>freeChannel</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="SoundChannelApi.addSource" href="#SoundChannelApi.addSource"><code class="code">addSource</code></a></h3><dt class="decl"><code><span class="anchor" id="SoundChannelApi.addSource"></span>int function(SoundChannel channel, SoundSource* source) <strong>addSource</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="SoundChannelApi.removeSource" href="#SoundChannelApi.removeSource"><code class="code">removeSource</code></a></h3><dt class="decl"><code><span class="anchor" id="SoundChannelApi.removeSource"></span>int function(SoundChannel channel, SoundSource* source) <strong>removeSource</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="SoundChannelApi.addCallbackSource" href="#SoundChannelApi.addCallbackSource"><code class="code">addCallbackSource</code></a></h3><dt class="decl"><code><span class="anchor" id="SoundChannelApi.addCallbackSource"></span>SoundSource* function(SoundChannel channel, AudioSourceFunction* callback, void* context, int stereo) <strong>addCallbackSource</strong>;
+</code></dt>
+<dd class="decl"><p>Creates a new <code class="code">SoundSource</code> using the given data provider <code class="code">callback</code> and adds it to the default channel.
+</p><p><h4 class="section">Remarks</h4>The caller takes ownership of the allocated <code class="code">SoundSource</code>, and should free it with <code class="code">playdate.system.realloc(source, NULL);</code> when it is no longer in use.</p></dd>
+
+</li><li class="member">
+  <h3><a id="SoundChannelApi.addEffect" href="#SoundChannelApi.addEffect"><code class="code">addEffect</code></a></h3><dt class="decl"><code><span class="anchor" id="SoundChannelApi.addEffect"></span>void function(SoundChannel channel, SoundEffect* effect) <strong>addEffect</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="SoundChannelApi.removeEffect" href="#SoundChannelApi.removeEffect"><code class="code">removeEffect</code></a></h3><dt class="decl"><code><span class="anchor" id="SoundChannelApi.removeEffect"></span>void function(SoundChannel channel, SoundEffect* effect) <strong>removeEffect</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="SoundChannelApi.setVolume" href="#SoundChannelApi.setVolume"><code class="code">setVolume</code></a></h3><dt class="decl"><code><span class="anchor" id="SoundChannelApi.setVolume"></span>void function(SoundChannel channel, float volume) <strong>setVolume</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="SoundChannelApi.getVolume" href="#SoundChannelApi.getVolume"><code class="code">getVolume</code></a></h3><dt class="decl"><code><span class="anchor" id="SoundChannelApi.getVolume"></span>float function(SoundChannel channel) <strong>getVolume</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="SoundChannelApi.setVolumeModulator" href="#SoundChannelApi.setVolumeModulator"><code class="code">setVolumeModulator</code></a></h3><dt class="decl"><code><span class="anchor" id="SoundChannelApi.setVolumeModulator"></span>void function(SoundChannel channel, PDSynthSignalValue mod) <strong>setVolumeModulator</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="SoundChannelApi.getVolumeModulator" href="#SoundChannelApi.getVolumeModulator"><code class="code">getVolumeModulator</code></a></h3><dt class="decl"><code><span class="anchor" id="SoundChannelApi.getVolumeModulator"></span>PDSynthSignalValue function(SoundChannel channel) <strong>getVolumeModulator</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="SoundChannelApi.setPan" href="#SoundChannelApi.setPan"><code class="code">setPan</code></a></h3><dt class="decl"><code><span class="anchor" id="SoundChannelApi.setPan"></span>void function(SoundChannel channel, float pan) <strong>setPan</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="SoundChannelApi.setPanModulator" href="#SoundChannelApi.setPanModulator"><code class="code">setPanModulator</code></a></h3><dt class="decl"><code><span class="anchor" id="SoundChannelApi.setPanModulator"></span>void function(SoundChannel channel, PDSynthSignalValue mod) <strong>setPanModulator</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="SoundChannelApi.getPanModulator" href="#SoundChannelApi.getPanModulator"><code class="code">getPanModulator</code></a></h3><dt class="decl"><code><span class="anchor" id="SoundChannelApi.getPanModulator"></span>PDSynthSignalValue function(SoundChannel channel) <strong>getPanModulator</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="SoundChannelApi.getDryLevelSignal" href="#SoundChannelApi.getDryLevelSignal"><code class="code">getDryLevelSignal</code></a></h3><dt class="decl"><code><span class="anchor" id="SoundChannelApi.getDryLevelSignal"></span>PDSynthSignalValue function(SoundChannel channel) <strong>getDryLevelSignal</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="SoundChannelApi.getWetLevelSignal" href="#SoundChannelApi.getWetLevelSignal"><code class="code">getWetLevelSignal</code></a></h3><dt class="decl"><code><span class="anchor" id="SoundChannelApi.getWetLevelSignal"></span>PDSynthSignalValue function(SoundChannel channel) <strong>getWetLevelSignal</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li>
+</ul></dd>
+
+</li><li class="member">
+  <h3><a id="SoundFileplayer" href="#SoundFileplayer"><code class="code">SoundFileplayer</code></a></h3><dt class="decl"><code><span class="anchor" id="SoundFileplayer"></span>struct <strong>SoundFileplayer</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="SoundSample" href="#SoundSample"><code class="code">SoundSample</code></a></h3><dt class="decl"><code><span class="anchor" id="SoundSample"></span>struct <strong>SoundSample</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="SoundSampleplayer" href="#SoundSampleplayer"><code class="code">SoundSampleplayer</code></a></h3><dt class="decl"><code><span class="anchor" id="SoundSampleplayer"></span>struct <strong>SoundSampleplayer</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="SoundSynth" href="#SoundSynth"><code class="code">SoundSynth</code></a></h3><dt class="decl"><code><span class="anchor" id="SoundSynth"></span>struct <strong>SoundSynth</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="SoundSequence" href="#SoundSequence"><code class="code">SoundSequence</code></a></h3><dt class="decl"><code><span class="anchor" id="SoundSequence"></span>struct <strong>SoundSequence</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="SoundEffect" href="#SoundEffect"><code class="code">SoundEffect</code></a></h3><dt class="decl"><code><span class="anchor" id="SoundEffect"></span>alias <strong>SoundEffect</strong> = void*;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="SoundEffectApi" href="#SoundEffectApi"><code class="code">SoundEffectApi</code></a></h3><dt class="decl"><code><span class="anchor" id="SoundEffectApi"></span>struct <strong>SoundEffectApi</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="SoundLfo" href="#SoundLfo"><code class="code">SoundLfo</code></a></h3><dt class="decl"><code><span class="anchor" id="SoundLfo"></span>struct <strong>SoundLfo</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="SoundEnvelope" href="#SoundEnvelope"><code class="code">SoundEnvelope</code></a></h3><dt class="decl"><code><span class="anchor" id="SoundEnvelope"></span>struct <strong>SoundEnvelope</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="SoundSource" href="#SoundSource"><code class="code">SoundSource</code></a></h3><dt class="decl"><code><span class="anchor" id="SoundSource"></span>struct <strong>SoundSource</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="ControlSignal" href="#ControlSignal"><code class="code">ControlSignal</code></a></h3><dt class="decl"><code><span class="anchor" id="ControlSignal"></span>struct <strong>ControlSignal</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="SoundTrack" href="#SoundTrack"><code class="code">SoundTrack</code></a></h3><dt class="decl"><code><span class="anchor" id="SoundTrack"></span>struct <strong>SoundTrack</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="SoundInstrument" href="#SoundInstrument"><code class="code">SoundInstrument</code></a></h3><dt class="decl"><code><span class="anchor" id="SoundInstrument"></span>struct <strong>SoundInstrument</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="PDSynthSignalValue" href="#PDSynthSignalValue"><code class="code">PDSynthSignalValue</code></a></h3><dt class="decl"><code><span class="anchor" id="PDSynthSignalValue"></span>alias <strong>PDSynthSignalValue</strong> = void*;
+</code></dt>
+<dd class="decl"><p>A <strong>PDSynthSignalValue</strong> represents a signal that can be used as an input to a modulator.
+Its <code class="code">PDSynthSignal</code> subclass is used for "active" signals that change their values automatically.
+<code class="code">PDSynthLFO</code> and <code class="code">PDSynthEnvelope</code> are subclasses of <code class="code">PDSynthSignal</code>.</p></dd>
+
+</li><li class="member">
+  <h3><a id="SoundSignal" href="#SoundSignal"><code class="code">SoundSignal</code></a></h3><dt class="decl"><code><span class="anchor" id="SoundSignal"></span>struct <strong>SoundSignal</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Sound" href="#Sound"><code class="code">Sound</code></a></h3><dt class="decl"><code><span class="anchor" id="Sound"></span>struct <strong>Sound</strong>;
+</code></dt>
+<dd class="decl">
+<ul class="struct members">
+  <li class="member">
+  <h3><a id="Sound.channel" href="#Sound.channel"><code class="code">channel</code></a></h3><dt class="decl"><code><span class="anchor" id="Sound.channel"></span>SoundChannelApi* <strong>channel</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Sound.fileplayer" href="#Sound.fileplayer"><code class="code">fileplayer</code></a></h3><dt class="decl"><code><span class="anchor" id="Sound.fileplayer"></span>SoundFileplayer* <strong>fileplayer</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Sound.sample" href="#Sound.sample"><code class="code">sample</code></a></h3><dt class="decl"><code><span class="anchor" id="Sound.sample"></span>SoundSample* <strong>sample</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Sound.sampleplayer" href="#Sound.sampleplayer"><code class="code">sampleplayer</code></a></h3><dt class="decl"><code><span class="anchor" id="Sound.sampleplayer"></span>SoundSampleplayer* <strong>sampleplayer</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Sound.synth" href="#Sound.synth"><code class="code">synth</code></a></h3><dt class="decl"><code><span class="anchor" id="Sound.synth"></span>SoundSynth* <strong>synth</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Sound.sequence" href="#Sound.sequence"><code class="code">sequence</code></a></h3><dt class="decl"><code><span class="anchor" id="Sound.sequence"></span>SoundSequence* <strong>sequence</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Sound.effect" href="#Sound.effect"><code class="code">effect</code></a></h3><dt class="decl"><code><span class="anchor" id="Sound.effect"></span>SoundEffectApi* <strong>effect</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Sound.lfo" href="#Sound.lfo"><code class="code">lfo</code></a></h3><dt class="decl"><code><span class="anchor" id="Sound.lfo"></span>SoundLfo* <strong>lfo</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Sound.envelope" href="#Sound.envelope"><code class="code">envelope</code></a></h3><dt class="decl"><code><span class="anchor" id="Sound.envelope"></span>SoundEnvelope* <strong>envelope</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Sound.source" href="#Sound.source"><code class="code">source</code></a></h3><dt class="decl"><code><span class="anchor" id="Sound.source"></span>SoundSource* <strong>source</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Sound.controlsignal" href="#Sound.controlsignal"><code class="code">controlsignal</code></a></h3><dt class="decl"><code><span class="anchor" id="Sound.controlsignal"></span>ControlSignal* <strong>controlsignal</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Sound.track" href="#Sound.track"><code class="code">track</code></a></h3><dt class="decl"><code><span class="anchor" id="Sound.track"></span>SoundTrack* <strong>track</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Sound.instrument" href="#Sound.instrument"><code class="code">instrument</code></a></h3><dt class="decl"><code><span class="anchor" id="Sound.instrument"></span>SoundInstrument* <strong>instrument</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Sound.getCurrentTime" href="#Sound.getCurrentTime"><code class="code">getCurrentTime</code></a></h3><dt class="decl"><code><span class="anchor" id="Sound.getCurrentTime"></span>uint function() <strong>getCurrentTime</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Sound.addSource" href="#Sound.addSource"><code class="code">addSource</code></a></h3><dt class="decl"><code><span class="anchor" id="Sound.addSource"></span>SoundSource* function(AudioSourceFunction callback, void* context, bool stereo) <strong>addSource</strong>;
+</code></dt>
+<dd class="decl"><p>The <code class="code">callback</code> function you pass in will be called every audio render cycle.</p></dd>
+
+</li><li class="member">
+  <h3><a id="Sound.getDefaultChannel" href="#Sound.getDefaultChannel"><code class="code">getDefaultChannel</code></a></h3><dt class="decl"><code><span class="anchor" id="Sound.getDefaultChannel"></span>SoundChannel function() <strong>getDefaultChannel</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Sound.addChannel" href="#Sound.addChannel"><code class="code">addChannel</code></a></h3><dt class="decl"><code><span class="anchor" id="Sound.addChannel"></span>void function(SoundChannel channel) <strong>addChannel</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Sound.removeChannel" href="#Sound.removeChannel"><code class="code">removeChannel</code></a></h3><dt class="decl"><code><span class="anchor" id="Sound.removeChannel"></span>void function(SoundChannel channel) <strong>removeChannel</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Sound.setMicCallback" href="#Sound.setMicCallback"><code class="code">setMicCallback</code></a></h3><dt class="decl"><code><span class="anchor" id="Sound.setMicCallback"></span>void function(RecordCallback callback, void* context, bool forceInternal) <strong>setMicCallback</strong>;
+</code></dt>
+<dd class="decl"><p>The <code class="code">callback</code> you pass in will be called every audio cycle.
+</p><p>If <code class="code">forceInternal</code> is set, the device microphone is used regardless of whether the headset has a microphone.</p></dd>
+
+</li><li class="member">
+  <h3><a id="Sound.getHeadphoneState" href="#Sound.getHeadphoneState"><code class="code">getHeadphoneState</code></a></h3><dt class="decl"><code><span class="anchor" id="Sound.getHeadphoneState"></span>void function(bool* headphone, bool* headsetmic, void function(bool headphone, bool mic) changeCallback) <strong>getHeadphoneState</strong>;
+</code></dt>
+<dd class="decl"><p>If <code class="code">headphone</code> contains a non-<code class="code">null</code> pointer, the value is set to <code class="code">true</code> if headphones are currently plugged in.
+Likewise, mic is set if the headphones include a microphone.
+If <code class="code">changeCallback</code> is provided, it will be called when the headset or mic status changes, and audio output
+will not automatically switch from speaker to headphones when headphones are plugged in (and vice versa).
+In this case, the callback should use <code class="code">playdate.sound.setOutputsActive()</code> to change the output if needed.</p></dd>
+
+</li><li class="member">
+  <h3><a id="Sound.setOutputsActive" href="#Sound.setOutputsActive"><code class="code">setOutputsActive</code></a></h3><dt class="decl"><code><span class="anchor" id="Sound.setOutputsActive"></span>void function(bool headphone, bool speaker) <strong>setOutputsActive</strong>;
+</code></dt>
+<dd class="decl"><p>Force audio output to the given outputs, regardless of headphone status.</p></dd>
+
+</li><li class="member">
+  <h3><a id="Sound.removeSource" href="#Sound.removeSource"><code class="code">removeSource</code></a></h3><dt class="decl"><code><span class="anchor" id="Sound.removeSource"></span>void function(SoundSource* source) <strong>removeSource</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Sound.signal" href="#Sound.signal"><code class="code">signal</code></a></h3><dt class="decl"><code><span class="anchor" id="Sound.signal"></span>SoundSignal* <strong>signal</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li>
+</ul></dd>
+
+</li><li class="member">
+  <h3><a id="Lua" href="#Lua"><code class="code">Lua</code></a></h3><dt class="decl"><code><span class="anchor" id="Lua"></span>struct <strong>Lua</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Json" href="#Json"><code class="code">Json</code></a></h3><dt class="decl"><code><span class="anchor" id="Json"></span>struct <strong>Json</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="Scoreboards" href="#Scoreboards"><code class="code">Scoreboards</code></a></h3><dt class="decl"><code><span class="anchor" id="Scoreboards"></span>struct <strong>Scoreboards</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="PlaydateAPI" href="#PlaydateAPI"><code class="code">PlaydateAPI</code></a></h3><dt class="decl"><code><span class="anchor" id="PlaydateAPI"></span>struct <strong>PlaydateAPI</strong>;
+</code></dt>
+<dd class="decl">
+<ul class="struct members">
+  <li class="member">
+  <h3><a id="PlaydateAPI.system" href="#PlaydateAPI.system"><code class="code">system</code></a></h3><dt class="decl"><code><span class="anchor" id="PlaydateAPI.system"></span>System* <strong>system</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="PlaydateAPI.file" href="#PlaydateAPI.file"><code class="code">file</code></a></h3><dt class="decl"><code><span class="anchor" id="PlaydateAPI.file"></span>File* <strong>file</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="PlaydateAPI.graphics" href="#PlaydateAPI.graphics"><code class="code">graphics</code></a></h3><dt class="decl"><code><span class="anchor" id="PlaydateAPI.graphics"></span>Graphics* <strong>graphics</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="PlaydateAPI.sprite" href="#PlaydateAPI.sprite"><code class="code">sprite</code></a></h3><dt class="decl"><code><span class="anchor" id="PlaydateAPI.sprite"></span>Sprite* <strong>sprite</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="PlaydateAPI.display" href="#PlaydateAPI.display"><code class="code">display</code></a></h3><dt class="decl"><code><span class="anchor" id="PlaydateAPI.display"></span>Display* <strong>display</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="PlaydateAPI.sound" href="#PlaydateAPI.sound"><code class="code">sound</code></a></h3><dt class="decl"><code><span class="anchor" id="PlaydateAPI.sound"></span>Sound* <strong>sound</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="PlaydateAPI.lua" href="#PlaydateAPI.lua"><code class="code">lua</code></a></h3><dt class="decl"><code><span class="anchor" id="PlaydateAPI.lua"></span>Lua* <strong>lua</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="PlaydateAPI.json" href="#PlaydateAPI.json"><code class="code">json</code></a></h3><dt class="decl"><code><span class="anchor" id="PlaydateAPI.json"></span>Json* <strong>json</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li><li class="member">
+  <h3><a id="PlaydateAPI.scoreboards" href="#PlaydateAPI.scoreboards"><code class="code">scoreboards</code></a></h3><dt class="decl"><code><span class="anchor" id="PlaydateAPI.scoreboards"></span>Scoreboards* <strong>scoreboards</strong>;
+</code></dt>
+<dd class="decl">
+</dd>
+
+</li>
+</ul></dd>
+
+</li><li class="member">
+  <h3><a id="EventHandlerShim" href="#EventHandlerShim"><code class="code">EventHandlerShim</code></a></h3><dt class="decl"><code><span class="anchor" id="EventHandlerShim"></span>template <strong>EventHandlerShim</strong>()</code></dt>
+<dd class="decl"><p>Generates a shim around your <code class="code">eventHandler</code> used by the Playdate OS as the entry-point to your application.</p></dd>
+
+</li></ul>
+  </section>
+      </article>
+    </main>
+    <footer>
+  <a href="https://github.com/chances/playdate-d#readme">GitHub</a>
+  <span class="faint" style="float: right;">Generated using <a href="https://code.dlang.org/packages/ddox">DDOX</a></span>
+</footer>
+  </body>
+</html>

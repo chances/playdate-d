@@ -1,66 +1,86 @@
-<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8"/>
-		<title>API documentation</title>
-		<link rel="stylesheet" type="text/css" href="./styles/ddox.css"/>
-		<link rel="stylesheet" href="./prettify/prettify.css" type="text/css"/>
-		<script type="text/javascript" src="./scripts/jquery.js">/**/</script><script type="text/javascript" src="./scripts/ddox.js">/**/</script>
-	</head>
-	<body onload="setupDdox();">
-		<nav id="main-nav">
-			<noscript>
-				<p style="color: red">The search functionality needs JavaScript enabled</p>
-			</noscript>
-			<div id="symbolSearchPane" style="display: none">
-				<form action="#" method="GET">
-					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+  <title>Playdate SDK D API Documentation</title>
+  <link rel="stylesheet" href="styles/docs.css" />
+  <link rel="stylesheet" href="styles/dub.css" />
+</head>
+<body>
+  <main>
+    <a id="downloadButton" href="https://code.dlang.org/packages/playdate-d">
+      <div class="bs-hbtn right black">
+        <div class="content">get <strong>playdate</strong><br><large>v1.13.2</large></div>
+      </div><div class="bs-hbtn left red">
+        <div class="dub-logo"></div>
+      </div>
+    </a>
+    <aside class="flex row">
+      <nav>
+        <header class="flex row">
+          <img id="logo" src="https://chances.github.io/playdate-d/images/playdate.png" alt="Playdate Logo">
+          <h1>
+            <span>Playdate SDK</span>
+            <span class="faint">D Bindings</span>
+          </h1>
+        </header>
+        <ul style="list-style: none; padding: 0;">
+          <li>
+            <a href="https://chances.github.io/playdate-d">API Reference</a>
+          </li>
+          <li>
+            <a href="https://code.dlang.org/packages/playdate-d">Download</a>
+          </li>
+          <li>
+            <a href="https://github.com/chances/playdate-d#readme">Open Source on GitHub</a>
+          </li>
+        </ul>
+        <h2>API Reference</h2>
+        <form id="symbolSearchForm" action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();" tabindex="1000">
 				</form>
-				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="./symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "./";
-$('#symbolSearchPane').show();</script>
-			</div>
-			<ul class="tree-view">
-				<li class="tree-view ">
-					<div class="package ">
-						<a href="./playdate.html">playdate</a>
-					</div>
-			<ul class="tree-view">
-				<li>
-					<div class="module ">
-						<a href="./playdate/allocator.html">allocator</a>
-					</div>
-				</li>
-			</ul>
-				</li>
-			</ul>
-		</nav>
-		<div id="main-contents">
-			<h1>API documentation</h1>
-			<table>
-				<col class="caption"/>
-				<tr>
-					<th>Module</th><th>Description</th>
-				</tr>
-			<tr>
-				<td>
-					<a href="./playdate/allocator.html">playdate.allocator</a>
-				</td>
-				<td>
-					
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<a href="./playdate.html">playdate</a>
-				</td>
-				<td>
-					
-				</td>
-			</tr>
-			</table>
-			<footer>
-				<p class="faint">Generated using the DDOX documentation generator</p>
-			</footer>
-		</div>
-	</body>
-</html>
+        <ul id="symbols"></ul>
+      </nav>
+    </aside>
+    <article>
+      <h1>Playdate SDK API Reference</h1>
+      <p>
+        <a href="https://code.dlang.org/packages/playdate-d">
+          <img src="https://img.shields.io/dub/v/playdate-d.svg" alt="DUB Package">
+        </a>
+        <a target="_blank" href="https://opensource.org/licenses/MIT">
+          <img src="https://img.shields.io/badge/license-MIT-blue" alt="MIT License">
+        </a>
+        <a target="_blank" rel="noopener noreferrer" href="https://github.com/chances/playdate-d/workflows/playdate-d%20CI/badge.svg?branch=master">
+          <img src="https://github.com/chances/playdate-d/workflows/playdate-d%20CI/badge.svg?branch=master" alt="playdate-d CI">
+        </a>
+        <a href="https://codecov.io/gh/chances/playdate-d">
+          <img src="https://codecov.io/gh/chances/playdate-d/branch/master/graph/badge.svg" alt="codecov">
+        </a>
+      </p>
+      <p>D bindings to the <a href="https://play.date/dev">Playdate SDK</a> as an idiomatic D wrapper around the API.</p>
+      <h3>Version Relation to Playdate SDK</h3>
+      <p>
+        Published versions of this library are guaranteed to align with the Playdate SDK's <i>MAJOR</i> <strong>and</strong> <i>MINOR</i> versions. For example, version <code>1.12.3</code> of the library aligns with <code>1.12.x</code> versions of the Playdate SDK.
+      </p>
+      <h2 id="Usage">Usage</h2>
+      <pre class="json">
+"dependencies": {
+  "playdate": "v1.13.2"
+}
+      </pre>
+      <h2>Examples</h2>
+      <p>You can try the examples before installing:</p>
+      <h3>Shapes</h3>
+      <pre>dub run playdate:shapes</pre>
+      <h2>Modules</h2>
+      <li><a href="package.html">package</a></li><li><a href="allocator.html">allocator</a></li>
+    </article>
+  </main>
+  <footer>
+    <a href="https://github.com/chances/playdate-d#readme">GitHub</a>
+    <span class="faint" style="float: right;">Generated using <a href="https://dlang.org/spec/ddoc.html">Ddoc</a></span>
+  </footer>
+  <script type="application/javascript">const symbols = []</script>
+  <script type="application/javascript" src="scripts/symbols.js"></script>
+</body>
