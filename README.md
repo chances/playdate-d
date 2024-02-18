@@ -26,7 +26,7 @@ D bindings to the [Playdate SDK](https://sdk.play.date/1.12.3/Inside%20Playdate%
         ],
         "postBuildCommands-posix": [
             "touch dist/pdex.bin",
-            "cp views/pdxinfo dist/pdxinfo,
+            "cp views/pdxinfo dist/pdxinfo",
             "$PLAYDATE_SDK_PATH/bin/pdc $PACKAGE_DIR/dist app.pdx"
         ],
         "postBuildCommands-windows": [
