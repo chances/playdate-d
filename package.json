@@ -1,7 +1,10 @@
 {
   "name": "playdate-d",
   "private:": true,
+  "type": "module",
   "devDependencies": {
+    "handlebars": "^4.7.8",
+    "jsdom": "^24.0.0",
     "pd-usb": "^2.0.1"
   }
 }

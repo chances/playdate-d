@@ -21,14 +21,16 @@ D bindings to the [Playdate SDK](https://sdk.play.date/1.12.3/Inside%20Playdate%
         "postBuildCommands-osx": [
             "mv dist/libpdex.dylib dist/pdex.dylib"
         ],
+        "postBuildCommands-linux": [
+            "mv dist/libpdex.so dist/pdex.so"
+        ],
         "postBuildCommands-posix": [
             "touch dist/pdex.bin",
-            "$PLAYDATE_SDK_PATH/bin/pdc $PACKAGE_DIR/dist app.pdx",
-            "(cat views/pdxinfo; cat app.pdx/pdxinfo) > /tmp/pdxinfo",
-            "mv /tmp/pdxinfo app.pdx/pdxinfo"
+            "cp views/pdxinfo dist/pdxinfo,
+            "$PLAYDATE_SDK_PATH/bin/pdc $PACKAGE_DIR/dist app.pdx"
         ],
         "postBuildCommands-windows": [
-            "pdc $PACKAGE_DIR/dist app.pdx"
+            "$PLAYDATE_SDK_PATH/bin/pdc $PACKAGE_DIR/dist app.pdx"
         ]
     },
     {
@@ -40,5 +42,4 @@ D bindings to the [Playdate SDK](https://sdk.play.date/1.12.3/Inside%20Playdate%
 
 ## Version Relation to Playdate SDK
 
-Published versions of this library are guaranteed to align with the Playdate SDK for _MAJOR_ **and** _MINOR_ versions.
-For example, version `1.12.3` of the library aligns with `1.12.x` versions of the Playdate SDK.
+Published versions of this library are guaranteed to align with the Playdate SDK's _MAJOR_ **and** _MINOR_ versions. For example, version `1.12.3` of the library aligns with `1.12.x` versions of the Playdate SDK.

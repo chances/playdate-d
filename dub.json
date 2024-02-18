@@ -12,6 +12,16 @@
   "systemDependencies": "Playdate SDK >= 1.12.1",
   "targetPath": "bin",
   "targetType": "staticLibrary",
+  "buildTypes": {
+    "docs": {
+      "sourceFiles": [
+        "views/docs.ddoc"
+      ],
+      "buildOptions": ["syntaxOnly"],
+      "dflags": ["-Dddocs"],
+      "postBuildCommands-posix": ["cp views/index.html docs"]
+    }
+  },
   "configurations": [
     {
       "name": "library",

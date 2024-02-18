@@ -380,17 +380,17 @@ struct FileStat {
 	/// Size of the file, in bytes.
   uint size;
 	/// Year component of the file's last modified date.
-  int m_year;
+  int year;
 	/// Month component of the file's last modified date.
-  int m_month;
+  int month;
 	/// Day component of the file's last modified date.
-  int m_day;
+  int day;
 	/// Hour component of the file's last modified date.
-  int m_hour;
+  int hour;
 	/// Minute component of the file's last modified date.
-  int m_minute;
+  int minute;
 	/// Second component of the file's last modified date.
-  int m_second;
+  int second;
 }
 
 ///
