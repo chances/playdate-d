@@ -10,7 +10,7 @@ D bindings to the [Playdate SDK](https://sdk.play.date/1.12.3/Inside%20Playdate%
 
 ```json
 "dependencies": {
-    "playdate": "1.12.0"
+    "playdate": "1.13.3"
 },
 "targetPath": "dist",
 "configurations": [
@@ -42,4 +42,4 @@ D bindings to the [Playdate SDK](https://sdk.play.date/1.12.3/Inside%20Playdate%
 
 ## Version Relation to Playdate SDK
 
-Published versions of this library are guaranteed to align with the Playdate SDK's _MAJOR_ **and** _MINOR_ versions. For example, version `1.12.3` of the library aligns with `1.12.x` versions of the Playdate SDK.
+Published versions of this library are guaranteed to align with the Playdate SDK's _MAJOR_ **and** _MINOR_ versions. For example, version `1.12.3` of the library aligns with `1.12.*` versions of the Playdate SDK.
