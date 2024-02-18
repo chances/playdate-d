@@ -27,7 +27,7 @@ jobs:
             ${{ runner.os }}-dub-
 
       - name: Build Documentation
-        run: dub build -b ddox
+        run: dub build -b docs
 
       - name: GitHub Pages
         if: success() && github.ref == 'refs/heads/main'
