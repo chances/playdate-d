@@ -10,7 +10,7 @@ D bindings to the [Playdate SDK](https://sdk.play.date/1.12.3/Inside%20Playdate%
 
 ```json
 "dependencies": {
-    "playdate": "1.13.3"
+    "playdate": "1.13.4"
 },
 "targetPath": "dist",
 "configurations": [
