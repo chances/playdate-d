@@ -1,0 +1,30 @@
+{
+  "actions" : {
+    "build" : {
+      "postActions" : [
+        {
+          "sound" : "Funk",
+          "type" : "sound"
+        }
+      ],
+      "preActions" : [
+        {
+          "script" : "#!\/bin\/sh\nsource ~\/dlang\/ldc-1.36.0\/activate\ndub build playdate:shapes",
+          "type" : "runScript"
+        }
+      ]
+    }
+  },
+  "extension" : {
+    "identifier" : "com.panic.Playdate",
+    "name" : "Playdate"
+  },
+  "extensionTemplate" : "simulator",
+  "extensionValues" : {
+    "playdate.build-type" : "pdc",
+    "playdate.main-path" : "examples\/shapes\/dist",
+    "playdate.output-path" : "examples\/shapes",
+    "playdate.product-name" : "app"
+  },
+  "openLogOnRun" : "fail"
+}
