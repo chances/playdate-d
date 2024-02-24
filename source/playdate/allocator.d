@@ -1,7 +1,8 @@
 /// Authors: Chance Snow
-/// Copyright:
-/// Copyright © 2014-2017 Panic, Inc. All rights reserved.
-/// Copyright © 2022 Chance Snow.
+/// Copyright: $(UL
+///   $(LI Copyright © 2014-2017 Panic, Inc. All rights reserved.)
+///   $(LI Copyright © 2022 Chance Snow.)
+/// )
 /// License: MIT License
 module playdate.allocator;
 
