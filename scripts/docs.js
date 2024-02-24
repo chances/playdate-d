@@ -21,16 +21,19 @@ async function sh(cmdAndArgs) {
 const files = (await sh`find docs -name '*.html'`).split("\n").map(doc => doc.trim())
 
 const DUB_VERSION = await sh`git describe --tags --abbrev=0`
-// TODO: Calculate tree of symbols
-const SYMBOLS = []
-const MODULES = files.filter(file => file.includes("docs/index.html") === false).map(file => ({
+const MODULES = files.filter(file => {
+  const segments = file.split(path.sep).length;
+  return segments < 3 && file.includes("docs/index.html") === false
+}).map(file => ({
   name: path.basename(file, ".html"),
   file: path.basename(file)
 }))
+// TODO: Calculate tree of symbols
+const SYMBOLS = []
 const constants = {
   DUB_VERSION,
+  MODULES,
   SYMBOLS,
-  MODULES
 }
 
 files.forEach(file => {
